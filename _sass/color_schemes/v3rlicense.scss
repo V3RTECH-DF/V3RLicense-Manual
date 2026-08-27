@@ -1,0 +1,20 @@
+// Esquema de cores V3RLicense — herda 1:1 a paleta do V3REvent, por decisão
+// do dono do produto (Projeto/docs/design-system.md §3): a família V3R usa
+// uma paleta só, e o V3RLicense não recebe cor própria até a logo provar o
+// contrário. Não recolorir sem atualizar o design-system primeiro.
+//
+// Marca:
+//   brand-primary #1e2d2b -> navegação, botões primários, links, foco, títulos
+//   brand-primary-hover #24393a -> hover do primário
+//   brand-accent  #c2272d -> realce/CTA comedido (não é cor de ação destrutiva)
+//   brand-amber   #da8c1c -> detalhes/ícones (não usar em texto pequeno)
+// Neutros: escala Slate do Tailwind.
+
+$link-color:            #1e2d2b; // brand-primary — links e ações textuais
+$btn-primary-color:     #1e2d2b; // brand-primary — botões primários
+$body-heading-color:    #1e2d2b; // brand-primary — títulos
+$body-text-color:       #1e293b; // slate-800 — texto principal
+$nav-child-link-color:  #475569; // slate-600 — navegação secundária
+$sidebar-color:         #f8fafc; // slate-50 — fundo da barra lateral
+$border-color:          #e2e8f0; // slate-200 — bordas/divisórias
+$code-background-color: #f1f5f9; // slate-100 — fundo de código

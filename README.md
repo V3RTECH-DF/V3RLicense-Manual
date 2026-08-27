@@ -4,17 +4,21 @@ Manual do usuário do V3RLicense. Público.
 
 Faz parte do container `V3RTECH/V3RLicense`, que reúne também `Code/`
 (código do servidor) e `Projeto/` (documentação e gestão). Publicado no
-GitHub Pages: <https://v3rtech-df.github.io/V3RLicense-Manual/>
+GitHub Pages, domínio próprio: <https://docs.v3rlicense.v3rtech.com.br>
 
 ## Para quem é este manual
 
-Para quem já tem, ou vai receber, uma licença de um dos plugins da V3RTECH ou
-da RIT (V3REvent, V3RHelp, V3RLGPD, GE Associados, RIT360 Solidário,
-RIT360 Premiado) e precisa ativá-la no WordPress da sua organização.
+Para quem **opera** o V3RLicense — a equipe V3RTECH/RIT que emite licença,
+cadastra produto, gera token de publicação e resolve chamado de "meu plugin
+não atualiza". **Não** é para o cliente final que instalou um plugin
+licenciado por aqui — esse nunca entra no V3RLicense; o que ele precisa
+saber mora na aba de licença do próprio plugin.
 
-**Este manual ainda está em construção.** A página inicial (`index.md`) hoje é
-um esqueleto — as instruções completas de ativação, renovação e solução de
-problemas vêm em seguida.
+A exceção é a página **[Como funciona a licença](como-funciona.md)**, que
+descreve a política de licenciamento em si e é a referência que os manuais
+de cada plugin (V3REvent, V3RHelp, V3RLGPD, GE Associados, RIT360 Solidário,
+RIT360 Premiado…) apontam quando o cliente final quer entender a própria
+licença.
 
 ## A coisa mais importante para entender sobre a licença
 
@@ -27,5 +31,12 @@ uma funcionalidade extra. Isso significa duas coisas:
 - Manter a licença ativa é o que garante que o plugin continue recebendo
   melhorias e, principalmente, correções de segurança.
 
-Se você usa um plugin de uma organização filiada à RIT, a licença é gratuita
-e não exige nenhuma etapa de compra.
+Se a organização é filiada à RIT, a licença é gratuita e não exige nenhuma
+etapa de compra — veja `processos/emitir-isencao.md`.
+
+## Estado
+
+Conteúdo escrito por completo (índice, primeiros passos, política de
+licenciamento, 12 páginas de processo, referência por tela, FAQ, novidades,
+legal). **Faltam as capturas de tela** — veja o roteiro entregue no
+relatório da sessão que criou este manual.

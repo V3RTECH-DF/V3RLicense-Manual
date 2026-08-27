@@ -1,0 +1,37 @@
+---
+title: Perguntas Frequentes
+nav_order: 6
+---
+
+# Perguntas Frequentes
+
+{: .note }
+> Este é um painel interno, sem mecanismo de feedback do usuário final. As perguntas abaixo vêm dos comportamentos mais fáceis de interpretar errado, confirmados no código — não são inventadas, mas também não são um recorte de dúvidas reais registradas em algum canal (que este produto ainda não tem).
+
+## A licença do cliente venceu. O plugin dele parou de funcionar?
+
+Não. Licença vencida ou revogada nunca desliga o plugin — o que para é a atualização e o download de novas versões. Veja **[Como funciona a licença](/como-funciona/)**.
+
+## Por que o cliente tem mais ativações na lista do que o limite da licença?
+
+Provavelmente algumas são de ambiente de teste — essas não contam na cota. Confira a coluna "Ambiente de teste" em **Ver ativações**.
+
+## Renovei a licença. O cliente precisa colar uma chave nova no plugin?
+
+Não. Renovar reaproveita a mesma chave e preserva as ativações já existentes — o cliente não faz nada do lado dele.
+
+## Emiti uma licença e agora tenho dois clientes parecidos na lista de Clientes. O que houve?
+
+O e-mail informado na emissão provavelmente não bateu exatamente com o cliente já cadastrado (maiúscula, espaço, domínio diferente) — o sistema criou um cliente novo em vez de vincular ao existente. Veja **[Cadastrar cliente](/processos/cadastrar-cliente/)**.
+
+## Um token de publicação rotulado "só para o produto X" pode publicar release de outro produto?
+
+Hoje sim — não existe escopo por produto no token, apesar do que o rótulo sugira. Veja o aviso completo em **[Gerenciar tokens de publicação](/processos/gerenciar-tokens-publicacao/)**.
+
+## Revoguei uma licença por engano. Tem como desfazer?
+
+Não pela tela. A saída é emitir uma licença nova para o mesmo cliente — o que exige que ele troque a chave no plugin. Veja **[Revogar uma licença](/processos/revogar-licenca/)**.
+
+## Organizações filiadas à RIT têm renovação automática da isenção?
+
+Não hoje. A validade é controlada manualmente, do mesmo jeito que qualquer licença anual — está registrado como funcionalidade futura. Veja **[Emitir uma isenção RIT](/processos/emitir-isencao/)**.

@@ -3,21 +3,64 @@ title: Início
 nav_order: 1
 ---
 
+<img src="/assets/logo.svg" alt="V3RLicense — Gestão de licenças dos plugins WordPress da V3RTECH e da RIT" width="360" style="max-width:100%;height:auto;margin:0 0 12px">
+
 # Manual do V3RLicense
+{: .fs-8 }
 
-Esqueleto criado em 25/08/2026. O manual de verdade é escrito pela skill
-`user-manual`, organizado por papel e por tarefa.
+**O servidor de licenças que emite, valida e distribui atualização para todos os plugins WordPress da V3RTECH e da RIT.**
+{: .fs-6 .fw-300 }
 
-Enquanto isso, esta página existe por um motivo prático: o GitHub Pages não
-publica repositório vazio. Com ela, o endereço já responde e o
-`bin/publish-manual.sh` já tem o que empurrar.
+Este manual é para quem **opera** o V3RLicense: a equipe da V3RTECH e da RIT que emite licença, cadastra produto, gera token de publicação e resolve o chamado de "meu plugin não atualiza". Não é para o cliente que instalou um plugin — esse nunca entra aqui; o que ele precisa saber mora na aba de licença do próprio plugin.
+
+{: .note }
+> **Uma exceção:** a página **[Como funciona a licença](/como-funciona/)** descreve a política de licenciamento em si — o que uma licença dá direito, o que acontece quando vence, como funciona a isenção RIT. Essa página é a referência que os manuais dos outros plugins apontam quando o cliente final quer entender a própria licença.
+
+[Primeiros passos](/primeiros-passos/){: .btn .btn-primary .mr-2 }
+[Como funciona a licença](/como-funciona/){: .btn }
+
+---
+
+## Como faço…
+
+<div class="grid" markdown="1">
+
+- **[…emitir uma licença?](/processos/emitir-licenca/)**
+- **[…emitir uma isenção RIT?](/processos/emitir-isencao/)**
+- **[…renovar uma licença vencida?](/processos/renovar-licenca/)**
+- **[…revogar uma licença?](/processos/revogar-licenca/)**
+- **[…liberar uma ativação para o cliente trocar de domínio?](/processos/liberar-ativacao/)**
+- **[…publicar uma versão nova?](/processos/publicar-uma-versao/)**
+- **[…o cliente diz que o plugin não atualiza — o que eu confiro?](/processos/diagnostico-sem-atualizacao/)**
+
+</div>
+
+Veja o índice completo em **[Como faço…](/processos/)**.
+
+---
 
 ## Por onde começar
 
-1. Escrever a visão geral: o que o V3RLicense resolve, para quem.
-2. Uma página por tarefa que o usuário precisa realizar.
-3. Prints das telas (capturados com Playwright, nunca à mão).
+- **[Primeiros passos](/primeiros-passos/)** — o painel, a instalação e a primeira licença emitida, ponta a ponta.
+- **[Como funciona a licença](/como-funciona/)** — a política de licenciamento, para explicar ao cliente ou para consulta rápida.
+- **[Como faço…](/processos/)** — uma página por tarefa do dia a dia.
+- **[Telas do painel](/modulos/)** — referência de campo por campo de cada aba.
+- **[Novidades](/novidades/)** — o que mudou a cada versão, em linguagem simples.
+- **[Perguntas Frequentes](/faq/)** — as dúvidas que mais aparecem.
 
-> Domínio próprio ainda não definido. Quando existir, preencha
-> `MANUAL_CUSTOM_DOMAIN` em `Projeto/bin/config.sh` — e só então, porque CNAME
-> apontando para domínio que não resolve tira o manual do ar.
+---
+
+## O que o V3RLicense faz
+
+- **Emite e controla licenças** — por produto, por cliente, com tipo (mensal, anual, perpétua…), origem (venda, cortesia, isenção…) e limite de ativações.
+- **Valida a licença do lado do plugin cliente** — o endpoint que cada plugin consulta para saber o próprio status, sem nunca travar o plugin por causa disso.
+- **Controla ativação por domínio** — cada site em que o plugin roda conta como uma ativação; ambientes de teste não contam.
+- **Distribui atualização** — o mesmo mecanismo que o WordPress usa para plugins do repositório oficial, mas para os nossos: verifica versão nova, entrega o changelog, libera o download.
+- **Publica release por token** — de máquina (pipeline de CI) ou manualmente, pela tela, com uma conferência tripla que impede publicar pacote trocado.
+
+{: .note }
+> **Versão instalada:** `v0.5.0`. Este manual descreve o que existe **hoje** — a integração com WooCommerce e um dashboard de métricas de negócio ainda não foram construídos; quando existirem, este manual é atualizado.
+
+---
+
+<small>© 2026 [V3RTECH](https://v3rtech.com.br). Uso interno V3RTECH/RIT.</small>
