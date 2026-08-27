@@ -133,7 +133,7 @@ Estes Termos são regidos pelas leis brasileiras. Eventuais disputas serão reso
 
 ## 13. Do Contato
 
-- **Suporte:** [suporte@v3rtech.com.br](mailto:suporte@v3rtech.com.br) — *a confirmar se este é o canal correto para assunto de licenciamento especificamente.*
+- **Suporte:** [suporte@v3rtech.com.br](mailto:suporte@v3rtech.com.br) ou a página [v3rtech.com.br/suporte](https://v3rtech.com.br/suporte/)
 - **Documentação:** [docs.v3rlicense.v3rtech.com.br](https://docs.v3rlicense.v3rtech.com.br)
 
 ---

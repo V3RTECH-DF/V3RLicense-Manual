@@ -8,12 +8,11 @@ nav_order: 8
 
 Veja o passo a passo em **[Publicar uma versão](/processos/publicar-uma-versao/)** e **[Remover um release publicado](/processos/remover-release/)**.
 
-{: .captura-pendente }
-> **Print pendente:** tela de Releases com a lista de versões de um produto e o formulário de publicação. Viewport: desktop e mobile.
+![Lista de releases do V3RLGPD: versão 1.67.1 com a estrela e status "Ativa", versão 1.67.0 com status "Antiga"](/assets/screenshots/releases-lista.png)
 
 ## Colunas da listagem
 
-Versão (com estrela se for a mais recente) · Status (Ativo/Antiga) · Changelog · Publicado em.
+Versão (com **estrela** ao lado se for a mais recente) · Status (**Ativa** / **Antiga**) · Changelog · Publicado em.
 
 ## Campos do formulário
 

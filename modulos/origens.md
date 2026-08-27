@@ -8,8 +8,7 @@ nav_order: 5
 
 Veja o passo a passo em **[Cadastrar tipo de licença e origem](/processos/cadastrar-tipo-e-origem/)**.
 
-{: .captura-pendente }
-> **Print pendente:** tela de Origens com a lista preenchida. Viewport: desktop e mobile.
+![Lista de origens cadastradas: "Isenção — filiada à RIT" e "Venda (WooCommerce)", ambas com status Ativa](/assets/screenshots/origens-lista.png)
 
 ## Colunas da listagem
 

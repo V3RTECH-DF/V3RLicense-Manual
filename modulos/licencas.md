@@ -8,8 +8,9 @@ nav_order: 1
 
 Veja o passo a passo em **[Emitir uma licença](/processos/emitir-licenca/)**, **[Renovar](/processos/renovar-licenca/)**, **[Revogar](/processos/revogar-licenca/)** e **[Emitir uma isenção RIT](/processos/emitir-isencao/)**.
 
-{: .captura-pendente }
-> **Print pendente:** tela de Licenças com a lista preenchida e o formulário de emissão aberto. Viewport: desktop e mobile.
+![Lista de licenças com cinco linhas: chave, produto, cliente, status "Ativa" em verde, ativações usadas sobre o máximo, data de expiração, origem e tipo](/assets/screenshots/licencas-lista.png)
+
+![Formulário "Emitir licença manualmente" preenchido: produto V3RLGPD, cliente Instituto Semear, tipo Anual, máximo de ativações 3, origem "Isenção — filiada à RIT" e anotação de filiação](/assets/screenshots/licencas-emitir.png)
 
 ## Colunas da listagem
 

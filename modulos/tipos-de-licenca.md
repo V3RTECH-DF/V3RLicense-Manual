@@ -8,8 +8,7 @@ nav_order: 6
 
 Veja o passo a passo em **[Cadastrar tipo de licença e origem](/processos/cadastrar-tipo-e-origem/)**.
 
-{: .captura-pendente }
-> **Print pendente:** tela de Tipos de licença com a lista preenchida. Viewport: desktop e mobile.
+![Lista de tipos de licença: Anual, Mensal, Perpétua, Semestral e Trimestral, cada um com sua periodicidade e status Ativo](/assets/screenshots/tipos-lista.png)
 
 ## Colunas da listagem
 

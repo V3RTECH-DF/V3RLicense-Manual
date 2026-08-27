@@ -8,8 +8,7 @@ nav_order: 2
 
 Tela de detalhe, acessada a partir de uma licença em **Licenças**. Veja o passo a passo em **[Liberar uma ativação](/processos/liberar-ativacao/)**.
 
-{: .captura-pendente }
-> **Print pendente:** tela de Ativações de uma licença específica. Viewport: desktop e mobile.
+![Ativações de uma licença: um domínio de produção ativo, "localhost" marcado como ambiente de teste, e um domínio antigo com status desativado](/assets/screenshots/ativacoes-lista.png)
 
 ## Colunas da listagem
 

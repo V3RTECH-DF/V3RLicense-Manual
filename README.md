@@ -38,5 +38,7 @@ etapa de compra — veja `processos/emitir-isencao.md`.
 
 Conteúdo escrito por completo (índice, primeiros passos, política de
 licenciamento, 12 páginas de processo, referência por tela, FAQ, novidades,
-legal). **Faltam as capturas de tela** — veja o roteiro entregue no
-relatório da sessão que criou este manual.
+legal) e ilustrado com as 10 capturas de `assets/screenshots/`. Falta só o
+modal do token recém-gerado (não capturável sem gerar um token real em
+produção) — descrito em palavras em
+[`modulos/tokens-de-publicacao.md`](modulos/tokens-de-publicacao.md).

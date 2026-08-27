@@ -8,8 +8,7 @@ nav_order: 3
 
 Veja o passo a passo em **[Registrar um plugin novo](/processos/cadastrar-produto/)**.
 
-{: .captura-pendente }
-> **Print pendente:** tela de Produtos com a lista e o formulário de cadastro. Viewport: desktop e mobile.
+![Lista dos sete produtos cadastrados, com identificador, nome, ativações padrão e versões mínimas de WordPress e PHP](/assets/screenshots/produtos-lista.png)
 
 ## Colunas da listagem
 

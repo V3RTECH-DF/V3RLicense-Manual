@@ -8,8 +8,7 @@ nav_order: 4
 
 Veja o passo a passo em **[Cadastrar cliente](/processos/cadastrar-cliente/)**.
 
-{: .captura-pendente }
-> **Print pendente:** tela de Clientes com a lista preenchida. Viewport: desktop e mobile.
+![Lista de clientes com nome e e-mail de cada organização cadastrada](/assets/screenshots/clientes-lista.png)
 
 ## Colunas da listagem
 

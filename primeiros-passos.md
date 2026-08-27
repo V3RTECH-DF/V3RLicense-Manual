@@ -11,8 +11,7 @@ O V3RLicense é o plugin WordPress que roda no site que hospeda o servidor de li
 
 Acesse `https://v3rtech.com.br/wp-admin/` e faça login com sua conta de administrador. No menu lateral do WordPress, o item **V3RLicense** abre o painel — uma aplicação de página única com sete abas, uma por tipo de cadastro.
 
-{: .captura-pendente }
-> **Print pendente:** menu lateral do WordPress com o item V3RLicense em destaque. Rota: `/wp-admin/admin.php?page=v3rlicense`. Viewport: desktop.
+![Menu lateral do WordPress com o item V3RLicense destacado em azul, entre Plugins e Hello](/assets/screenshots/menu-wp-admin.png)
 
 ## 2. As sete abas, em ordem de uso
 

@@ -21,8 +21,10 @@ Organizações do terceiro setor filiadas à RIT recebem licença gratuita, por 
    - **Tipo de licença** = normalmente "Anual", para forçar uma revisão anual da filiação — mas confirme se sua organização decidiu diferente para este caso.
 3. Emita normalmente.
 
+![Formulário "Emitir licença manualmente" preenchido para uma isenção: produto V3RLGPD, cliente Instituto Semear, tipo Anual, máximo de ativações 3, origem "Isenção — filiada à RIT" e anotação "Filiação à RIT confirmada em 12/08/2026."](/assets/screenshots/licencas-emitir.png)
+
 {: .example }
-> **Exemplo:** produto "V3RHelp", cliente "Associação Amigos do Bairro" (`contato@amigosdobairro.org.br`), tipo "Anual", origem "Isenção — filiada à RIT", anotação "Filiação RIT confirmada em 20/08/2026 por [quem confirmou]".
+> **Exemplo (o mesmo da captura acima):** produto "V3RLGPD", cliente "Instituto Semear" (`contato@institutosemear.org.br`), tipo "Anual", máximo de ativações "3", origem "Isenção — filiada à RIT", anotação "Filiação à RIT confirmada em 12/08/2026." — registrando **quem** confirmou é ainda melhor, quando o formulário permitir texto livre maior.
 
 ## Dicas e armadilhas
 

@@ -18,10 +18,10 @@ Versão 0.1 (minuta) — Agosto de 2026
 > Este documento foi produzido por adaptação da política do V3REvent e por
 > levantamento direto do schema de dados do V3RLicense — não foi redigido
 > nem revisado por quem responde juridicamente pelo produto. As bases legais
-> propostas aqui são **sugestão fundamentada**, não decisão. Não trate como
-> vigente até a revisão acontecer; o relatório da sessão que produziu esta
-> minuta lista as perguntas em aberto (prazo de retenção e contato de DPO
-> confirmado, entre outras).
+> propostas aqui são **sugestão fundamentada**, não decisão. Retenção,
+> contato do titular e o tratamento do pedido de eliminação já foram
+> decididos pelo dono do produto e estão refletidos abaixo; o que falta é
+> só a revisão jurídica formal do texto.
 
 ---
 
@@ -68,29 +68,42 @@ Hoje o V3RLicense **não envia** os dados de cliente, licença ou ativação a n
 
 ## Retenção
 
+O cadastro de cliente e o histórico de licença e de ativações são mantidos por **cinco anos após a revogação ou a expiração da licença**.
+
 {: .warning }
-> **Pendente de decisão do dono do produto.** Não há, hoje, prazo de
-> retenção definido nem rotina de expurgo automático — um registro de
-> cliente, licença ou ativação permanece indefinidamente, mesmo depois que
-> a licença associada é revogada ou expira. É preciso decidir: por quanto
-> tempo manter esse histórico (considerando também eventual obrigação
-> fiscal/contábil sobre uma venda), e se cabe expurgo ou anonimização
-> automática depois de um prazo.
+> **Não existe expurgo automático.** Nenhuma rotina roda em segundo plano
+> no V3RLicense para apagar registro nenhum — a eliminação ao fim do prazo
+> de cinco anos é um **ato manual**, feito por alguém da equipe operadora.
+> Não presuma que o prazo acima se cumpre sozinho: sem uma verificação
+> periódica deliberada, um registro pode continuar existindo além do prazo
+> simplesmente porque ninguém o removeu.
 
 ## Direitos do titular, e uma limitação real
 
 O titular (a pessoa de contato cadastrada, ou o representante da organização) tem os direitos previstos na LGPD — confirmação, acesso, correção, eliminação, portabilidade, entre outros.
 
 {: .important }
-> **Limitação encontrada no sistema:** a tela de Clientes **recusa a
-> exclusão** de um cliente que ainda tem alguma licença vinculada — o
-> sistema não apaga em cascata. Isso significa que, hoje, um pedido de
-> eliminação de um cliente com histórico de licença **não pode ser
-> atendido apagando o registro**; a única via disponível é editar
-> nome/e-mail para retirar o dado identificável, o que não é o mesmo que
-> excluir. **Isso é uma lacuna a resolver** — o produto ainda não tem um
-> caminho de anonimização, e a revisão jurídica precisa decidir como tratar
-> um pedido de eliminação nesse cenário até que exista um.
+> **Limitação reconhecida no sistema, com correção planejada:** a tela de
+> Clientes **recusa a exclusão** de um cliente que ainda tem alguma licença
+> vinculada — o sistema não apaga em cascata, e hoje **não existe
+> anonimização** como alternativa. A recusa existe para preservar o
+> **histórico da licença**, que precisa sobreviver pelo prazo de retenção
+> de cinco anos acima — mas o que precisa sobreviver é o histórico, não a
+> **identificação da pessoa** por trás dele, e é isso que a anonimização
+> vai resolver. Enquanto o recurso não existe, um pedido de eliminação de
+> um cliente com histórico de licença é **atendido por via manual** pela
+> equipe operadora, fora do fluxo normal da tela. A implementação está
+> registrada em **[V3RLicense-Code#19 — Anonimizar cliente com licença
+> vinculada — hoje a exclusão é apenas recusada](https://github.com/V3RTECH-DF/V3RLicense-Code/issues/19)**.
+>
+> **O campo de anotação livre da licença é um caso à parte.** Ele é texto
+> digitado pelo operador e pode conter dado pessoal colado por descuido
+> (ver alerta acima) — uma rotina de anonimização automática não consegue
+> varrer texto livre com segurança, então esse campo **depende de
+> conferência humana** mesmo depois que a anonimização existir. Se uma
+> anotação já tiver recebido dado pessoal indevido, a correção hoje também
+> é manual: localizar a licença e editar o texto da anotação para retirar
+> o dado, na mesma via usada para atender pedido de eliminação.
 
 Correção, acesso e portabilidade dos dados de contato são atendidos manualmente pela equipe operadora, editando o cadastro em **[Cadastrar cliente](/processos/cadastrar-cliente/)**.
 
@@ -109,7 +122,8 @@ Esta é uma minuta. A versão vigente, quando revisada e aprovada, estará dispo
 
 ## Contato
 
-- **DPO da V3RTECH:** [dpo@v3rtech.com.br](mailto:dpo@v3rtech.com.br) — *a confirmar se este é também o contato correto para pedido de titular relativo ao V3RLicense especificamente.*
+- **DPO da V3RTECH:** [dpo@v3rtech.com.br](mailto:dpo@v3rtech.com.br)
+- **Central de Privacidade da V3RTECH:** [v3rtech.com.br/central-de-privacidade](https://v3rtech.com.br/central-de-privacidade/) — canal para exercer os direitos do titular (acesso, correção, eliminação, portabilidade e demais previstos na LGPD).
 
 ---
 

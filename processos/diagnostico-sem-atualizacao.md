@@ -16,7 +16,7 @@ nav_order: 12
 
 2. **A licença é do produto certo?** Confira a coluna "Produto" na linha da licença. Cliente com licença de um plugin não recebe atualização de outro — parece óbvio, mas é comum quando o cliente usa vários plugins da casa e confunde qual licença é qual.
 
-3. **A ativação do domínio dele está de pé?** Abra **Ver ativações** na licença e confirme que o domínio do cliente aparece com status "ativo", não "desativado". Se foi desativado por engano (veja **[Liberar uma ativação](/processos/liberar-ativacao/)**), o plugin perde a ativação — ele pode continuar funcionando, mas a validação falha.
+3. **A ativação do domínio dele está de pé?** Abra **Ver ativações** na licença e confirme que o domínio do cliente aparece com status "ativo", não "desativado". Se foi desativado por engano (veja **[Liberar uma ativação](/processos/liberar-ativacao/)**), o plugin perde a ativação — ele pode continuar funcionando, mas a validação falha. Já que você está nessa tela: se o número de ativações parecer maior do que deveria, olhe a coluna **"Ambiente de teste"** — linhas marcadas "sim" não contam na cota, então não são elas que estão ocupando a vaga do cliente.
 
 4. **O release existe mesmo?** Abra **Releases**, selecione o produto, confirme que a versão que você acha que publicou está realmente lá e marcada como a mais recente (estrela). Um release removido por engano (veja **[Remover um release publicado](/processos/remover-release/)**) explica por que ninguém recebe o aviso.
 
