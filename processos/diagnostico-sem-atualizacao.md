@@ -20,7 +20,9 @@ nav_order: 12
 
 4. **O release existe mesmo?** Abra **Releases**, selecione o produto, confirme que a versão que você acha que publicou está realmente lá e marcada como a mais recente (estrela). Um release removido por engano (veja **[Remover um release publicado](/processos/remover-release/)**) explica por que ninguém recebe o aviso.
 
-5. **Chegou até aqui e nada bateu?** É hora de olhar o lado do cliente: confirme com ele que a chave de licença colada no plugin é exatamente a chave certa (sem espaço, sem caractere cortado), e que o domínio dele bate com o que está ativado aqui — um subdomínio (`www.` a mais ou a menos) pode contar como domínio diferente.
+5. **O PHP do site dele atende ao mínimo do produto?** Desde 27/08/2026, todos os plugins da casa exigem **PHP 8.2**. Se o site do cliente roda uma versão mais antiga, o WordPress **recusa a atualização em vez de instalar e quebrar o site** — mas não avisa o motivo em lugar nenhum visível: o aviso de atualização simplesmente não aparece, como se estivesse tudo em dia. É a causa mais fácil de passar batido, porque não gera nenhum erro para o cliente reportar. Peça para ele confirmar em **Ferramentas → Saúde do site → Informações**, no painel do WordPress dele. Se o PHP estiver abaixo do exigido, a saída é o cliente (ou a hospedagem dele) atualizar o PHP — não há nada a fazer daqui. Se, além de desatualizado, o plugin **já estiver ativo** nesse PHP insuficiente, ele se autodesativa sozinho e mostra ao administrador do site uma mensagem com o mínimo exigido e o instalado — o que também ajuda a confirmar o diagnóstico sem precisar pedir print de "Saúde do site".
+
+6. **Chegou até aqui e nada bateu?** É hora de olhar o lado do cliente: confirme com ele que a chave de licença colada no plugin é exatamente a chave certa (sem espaço, sem caractere cortado), e que o domínio dele bate com o que está ativado aqui — um subdomínio (`www.` a mais ou a menos) pode contar como domínio diferente.
 
 ## Exemplo
 
@@ -29,13 +31,13 @@ Cliente reporta que o V3RHelp diz "nenhuma atualização disponível" mesmo sabe
 ## Dicas e armadilhas
 
 {: .tip }
-> **Siga a ordem.** Os quatro primeiros passos cobrem a esmagadora maioria dos casos e são todos verificáveis sem sair do painel do V3RLicense — resolva por aqui antes de pedir print ou log ao cliente.
+> **Siga a ordem.** Os quatro primeiros passos cobrem a esmagadora maioria dos casos e são todos verificáveis sem sair do painel do V3RLicense — resolva por aqui antes de pedir print ou log ao cliente. O passo do PHP é o único que depende de uma informação do lado do cliente, mas vale confirmar cedo: é a causa mais silenciosa de todas.
 
 - **Licença ativa não garante versão nova visível na hora** — o wp-admin do cliente consulta o servidor periodicamente (cache do próprio WordPress), não em tempo real. Se tudo aqui está correto, pode ser só uma questão de o cliente forçar a checagem de atualizações no painel dele.
 
 ## Quando dá errado
 
-Se os cinco passos não explicarem o caso, é hora de apoio técnico — pode ser um problema de rede entre o site do cliente e o servidor, não algo visível neste painel.
+Se os seis passos não explicarem o caso, é hora de apoio técnico — pode ser um problema de rede entre o site do cliente e o servidor, não algo visível neste painel.
 
 ## Limites do papel
 

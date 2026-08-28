@@ -18,17 +18,20 @@ O V3RLicense só emite licença e aceita release para um produto que já existe 
    - **Identificador (slug)** — minúsculo, sem espaço, no padrão `algo` ou `algo-com-hifen`. É travado depois de criado.
    - **Nome** — o nome de exibição do plugin.
    - **Ativações padrão (vazio = ilimitado)** — quantos domínios uma licença desse produto pode ativar, quando a licença não define um valor próprio.
-   - **WordPress mínimo**, **PHP mínimo**, **Testado até** — opcionais, informativos.
+   - **WordPress mínimo**, **PHP mínimo**, **Testado até** — opcionais, mas **não são só informativos**: são os campos que o servidor devolve para o wp-admin do cliente decidir se mostra e libera a atualização (veja a armadilha abaixo).
    - **URL do changelog** — opcional.
 4. Salve.
 
 {: .example }
-> **Exemplo:** cadastrando o V3RHelp — slug `v3rhelp`, nome "V3RHelp", ativações padrão `1` (a maioria dos clientes usa em um site só), WordPress mínimo `6.0`, PHP mínimo `8.0`.
+> **Exemplo:** cadastrando o V3RHelp — slug `v3rhelp`, nome "V3RHelp", ativações padrão `1` (a maioria dos clientes usa em um site só), WordPress mínimo `6.0`, PHP mínimo `8.2` (o piso atual de todos os plugins da casa).
 
 ## Dicas e armadilhas
 
 {: .warning }
 > **O slug precisa ser exatamente o nome da pasta dentro do zip do plugin.** Quando alguém publicar um release desse produto, o servidor confere se o zip tem uma pasta raiz com esse nome exato — é assim que ele garante que o WordPress vai instalar o plugin certo. Slug `v3r-help` cadastrado para um plugin cujo zip usa a pasta `v3rhelp/` faz **toda publicação falhar**, e só se descobre na hora de publicar, não na hora de cadastrar.
+
+{: .warning }
+> **"PHP mínimo" em branco não bloqueia nada — preenchido, ele bloqueia silenciosamente.** O valor desse campo é o que o V3RLicense manda para o WordPress do cliente junto com o aviso de atualização. Se o PHP do site do cliente for menor que o valor cadastrado aqui, o **próprio WordPress recusa oferecer a atualização** — sem erro visível, sem aviso ao cliente, só a ausência do botão de atualizar. Cadastre um valor divergente do que o plugin realmente exige (ou deixe desatualizado quando a casa sobe o piso) e você cria clientes presos numa versão antiga sem que ninguém perceba o motivo. Veja **[Diagnóstico: cliente diz que não atualiza](/processos/diagnostico-sem-atualizacao/)**.
 
 - **Slug é travado depois de criado** — não dá para corrigir um erro de digitação editando; é preciso recadastrar. Confira antes de salvar.
 - **"Ativações padrão" vazio não é zero, é ilimitado.** Se o produto deve ter limite, preencha um número — deixar em branco libera ativação sem teto para toda licença desse produto que também não definir um limite próprio.

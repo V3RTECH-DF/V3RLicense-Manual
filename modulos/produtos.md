@@ -17,3 +17,6 @@ Identificador (slug) · Nome · Ativações padrão · WP mínimo · PHP mínimo
 ## Campos do formulário
 
 Identificador (slug, travado depois de criado) · Nome · Ativações padrão (vazio = ilimitado) · WordPress mínimo (opcional) · PHP mínimo (opcional) · Testado até (opcional) · URL do changelog (opcional).
+
+{: .note }
+> **"PHP mínimo" não é decorativo.** É o valor que o servidor manda no aviso de atualização — se o PHP do site do cliente for menor, o WordPress dele não oferece a atualização, sem erro visível. Veja **[Registrar um plugin novo](/processos/cadastrar-produto/)** e **[Diagnóstico: cliente diz que não atualiza](/processos/diagnostico-sem-atualizacao/)**.

@@ -26,7 +26,11 @@ O e-mail informado na emissão provavelmente não bateu exatamente com o cliente
 
 ## Um token de publicação rotulado "só para o produto X" pode publicar release de outro produto?
 
-Hoje sim — não existe escopo por produto no token, apesar do que o rótulo sugira. Veja o aviso completo em **[Gerenciar tokens de publicação](/processos/gerenciar-tokens-publicacao/)**.
+Não. Desde a v0.6.0, o token só publica o produto escolhido na criação (ou "Todos os produtos", se foi atribuído esse escopo mais permissivo) — o rótulo deixou de ser a única garantia. Veja **[Gerenciar tokens de publicação](/processos/gerenciar-tokens-publicacao/)**.
+
+## O cliente diz que o plugin não recebe a atualização, mas a licença está ativa. E agora?
+
+Confira o PHP do site dele. Desde 27/08/2026 todos os plugins da casa exigem PHP 8.2 — um site abaixo disso não recebe a atualização, e o WordPress não avisa por quê. Veja o roteiro completo em **[Diagnóstico: cliente diz que não atualiza](/processos/diagnostico-sem-atualizacao/)**.
 
 ## Revoguei uma licença por engano. Tem como desfazer?
 

@@ -7,6 +7,17 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.6.1 — 27/08/2026
+
+- **Todos os plugins da casa passam a exigir PHP 8.2.** Um site abaixo dessa versão deixa de receber atualização — de forma silenciosa, sem erro visível — e um plugin ativado nesse PHP se autodesativa e avisa o administrador do site com o mínimo exigido e o instalado. Veja **[Diagnóstico: cliente diz que não atualiza](/processos/diagnostico-sem-atualizacao/)**, que ganhou um passo novo por causa disso.
+- **Correção:** a checagem de PHP insuficiente do próprio V3RLicense não funcionava direito num site realmente desatualizado — em vez de mostrar o aviso claro, o site quebrava com erro fatal. Agora, PHP abaixo do exigido sempre resulta em aviso legível, nunca em tela quebrada.
+- **Correção de bastidor:** o V3RLicense passou a ter verificação automática (CI) a cada mudança de código — sem efeito visível para quem usa o painel.
+
+## v0.6.0 — 27/08/2026
+
+- **Token de publicação passou a valer para um produto só.** Antes, um token vazado podia publicar release de qualquer um dos produtos cadastrados; agora, cada token é preso ao produto escolhido na criação (ou, opcionalmente, a "Todos os produtos", de forma explícita — nunca por omissão). Veja **[Gerenciar tokens de publicação](/processos/gerenciar-tokens-publicacao/)**.
+- **Correção:** um token com escopo errado agora recebe uma mensagem de erro própria, diferente da de "token inválido" — evita confundir "a credencial está certa, mas para o produto errado" com "a credencial não existe mais".
+
 ## v0.5.0 — 27/08/2026
 
 - **Publicação por token, para pipeline automática.** Além de publicar release pela tela, agora dá para publicar por uma credencial de máquina (token) — pensada para pipelines de CI publicarem sozinhas, sem depender de alguém abrir o painel. Veja **[Gerenciar tokens de publicação](/processos/gerenciar-tokens-publicacao/)**.

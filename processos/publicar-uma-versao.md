@@ -10,6 +10,9 @@ nav_order: 10
 
 Publicar é o que faz o cliente com licença ativa receber o aviso de atualização no wp-admin dele. Existem dois caminhos — pela pipeline de CI (token) ou manualmente pela tela — e **os dois passam pela mesma conferência**, para nunca divergir sobre o que é aceito.
 
+{: .note }
+> **O caminho normal, hoje, é a pipeline.** Para os plugins que já têm o workflow de release configurado, quem desenvolve só empurra uma tag `vX.Y.Z` no repositório do plugin — o resto (build, testes, empacotamento, publicação aqui no V3RLicense e conferência do checksum) acontece sozinho. A tela manual continua existindo, mas hoje é o caminho de exceção: produto sem pipeline configurada ainda, ou publicação avulsa fora do fluxo normal de release.
+
 ## A conferência tripla, e por que ela existe
 
 Antes de aceitar um release, o V3RLicense confere que **três fontes de versão concordam entre si**:
@@ -23,7 +26,16 @@ Também confere que o zip tem, na raiz, uma **pasta com o slug exato do produto*
 {: .important }
 > **Por que a conferência existe:** é o que impede publicar um pacote trocado — um zip renomeado às pressas, um build antigo reaproveitado com nome novo, uma pasta com nome errado que instalaria por cima do plugin errado. Se qualquer uma das três versões divergir, ou a pasta não bater com o slug, a publicação é recusada — nada é salvo pela metade.
 
-## Passo a passo — pela tela (manual)
+## Passo a passo — pela pipeline (token), o caminho normal
+
+1. No repositório do plugin, quem desenvolve empurra uma tag no padrão `vX.Y.Z` (ex.: `v1.24.0`), batendo com a versão no cabeçalho do `.php` principal.
+2. O workflow de release do repositório builda o zip, roda a suíte de testes, empacota e envia ao V3RLicense com o token cadastrado para aquele produto (veja **[Gerenciar tokens de publicação](/processos/gerenciar-tokens-publicacao/)**), enviando `product_slug`, a versão e o arquivo.
+3. O V3RLicense aplica a mesma validação da tela — sucesso ou erro, sem etapa manual no meio — e confere o checksum do arquivo recebido contra o que a pipeline calculou, para garantir que nada se corrompeu no caminho.
+4. Você não participa desse fluxo, salvo se algo falhar — veja "Quando dá errado" abaixo.
+
+## Passo a passo — pela tela (manual, caminho de exceção)
+
+Use quando o produto ainda não tem pipeline de release configurada, ou para uma publicação avulsa fora do fluxo normal.
 
 1. Abra a aba **Releases**.
 2. Selecione o **Produto** no seletor do topo.
@@ -33,12 +45,6 @@ Também confere que o zip tem, na raiz, uma **pasta com o slug exato do produto*
    - **Arquivo .zip**
    - **Changelog (opcional)**
 4. Clique em **Publicar release**.
-
-## Passo a passo — pela pipeline (token)
-
-1. Gere um token em **[Gerenciar tokens de publicação](/processos/gerenciar-tokens-publicacao/)**, se ainda não existir um para essa pipeline.
-2. Na pipeline de CI, faça uma requisição autenticada com o token ao endpoint de publicação, enviando `product_slug`, a versão e o arquivo zip do build.
-3. O resultado segue a mesma validação da tela — sucesso ou erro, sem etapa manual no meio.
 
 ## Exemplo
 
