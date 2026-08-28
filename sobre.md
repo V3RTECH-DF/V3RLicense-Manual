@@ -1,6 +1,6 @@
 ---
 title: Sobre
-nav_order: 9
+nav_order: 10
 ---
 
 # Sobre
@@ -13,7 +13,7 @@ Organizações do terceiro setor filiadas à RIT recebem licença gratuita para 
 
 ## Este manual
 
-Escrito para quem **opera** o V3RLicense — a equipe V3RTECH/RIT que emite licença, publica release e resolve chamado de cliente. Não é dirigido ao cliente final que instalou um plugin licenciado por aqui; a exceção é a página **[Como funciona a licença](/como-funciona/)**, escrita para ser linkada a partir de qualquer outro manual.
+Escrito para a equipe V3RTECH/RIT, em dois papéis: quem **opera** o V3RLicense (emite licença, publica release, resolve chamado de cliente) e quem **desenvolve** um plugin da casa e precisa integrá-lo ao licenciamento e à auto-atualização — veja **[Preparar um plugin para o V3RLicense](/integrar-plugin/)**. Não é dirigido ao cliente final que instalou um plugin licenciado por aqui; a exceção é a página **[Como funciona a licença](/como-funciona/)**, escrita para ser linkada a partir de qualquer outro manual.
 
 ## Contato
 

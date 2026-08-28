@@ -11,7 +11,7 @@ nav_order: 1
 **O servidor de licenças que emite, valida e distribui atualização para todos os plugins WordPress da V3RTECH e da RIT.**
 {: .fs-6 .fw-300 }
 
-Este manual é para quem **opera** o V3RLicense: a equipe da V3RTECH e da RIT que emite licença, cadastra produto, gera token de publicação e resolve o chamado de "meu plugin não atualiza". Não é para o cliente que instalou um plugin — esse nunca entra aqui; o que ele precisa saber mora na aba de licença do próprio plugin.
+Este manual é para a equipe da V3RTECH e da RIT, em dois papéis: quem **opera** o V3RLicense (emite licença, cadastra produto, gera token de publicação, resolve o chamado de "meu plugin não atualiza") e quem **desenvolve** um plugin da casa e precisa prepará-lo para o licenciamento e a auto-atualização. Não é para o cliente que instalou um plugin — esse nunca entra aqui; o que ele precisa saber mora na aba de licença do próprio plugin.
 
 {: .note }
 > **Uma exceção:** a página **[Como funciona a licença](/como-funciona/)** descreve a política de licenciamento em si — o que uma licença dá direito, o que acontece quando vence, como funciona a isenção RIT. Essa página é a referência que os manuais dos outros plugins apontam quando o cliente final quer entender a própria licença.
@@ -45,6 +45,7 @@ Veja o índice completo em **[Como faço…](/processos/)**.
 - **[Como funciona a licença](/como-funciona/)** — a política de licenciamento, para explicar ao cliente ou para consulta rápida.
 - **[Como faço…](/processos/)** — uma página por tarefa do dia a dia.
 - **[Telas do painel](/modulos/)** — referência de campo por campo de cada aba.
+- **[Preparar um plugin para o V3RLicense](/integrar-plugin/)** — para quem desenvolve: como integrar um plugin novo ou existente ao licenciamento e à auto-atualização.
 - **[Novidades](/novidades/)** — o que mudou a cada versão, em linguagem simples.
 - **[Perguntas Frequentes](/faq/)** — as dúvidas que mais aparecem.
 
