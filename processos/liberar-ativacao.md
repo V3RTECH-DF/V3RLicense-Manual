@@ -13,10 +13,11 @@ Cada domínio em que o cliente ativa o plugin consome uma vaga — contada **por
 ## Passo a passo
 
 1. Na aba **Licenças**, localize a licença do cliente e clique no ícone **Ver ativações**.
-2. Na lista de ativações, identifique o domínio que não é mais usado (site antigo, staging que já cumpriu o papel, domínio errado ativado por engano).
-3. Clique no ícone **Desativar domínio** na linha correspondente.
-4. Confirme — "Este domínio deixará de contar como ativação desta licença. Ele poderá reativar depois, se necessário."
-5. Avise o cliente que ele já pode ativar no domínio novo.
+2. Se a licença cobrir mais de um produto, use o **filtro por produto** para ver só as ativações do plugin em questão — a cota daquele produto aparece ao lado do filtro.
+3. Na lista de ativações, identifique o domínio que não é mais usado (site antigo, staging que já cumpriu o papel, domínio errado ativado por engano).
+4. Clique no ícone **Desativar domínio** na linha correspondente.
+5. Confirme — a mensagem nomeia o domínio e o produto: "`institutovidanova.org.br` (V3REvent) deixará de contar como ativação desta licença. Ele poderá reativar depois, se necessário."
+6. Avise o cliente que ele já pode ativar no domínio novo.
 
 Para liberar várias de uma vez: marque as caixas e use **Desativar selecionadas (N)**.
 
@@ -31,7 +32,7 @@ O cliente "Instituto Vida Nova" tinha a licença do V3REvent limitada a 1 ativa�
 
 - **"Último contato" ajuda a identificar o que está obsoleto.** Um domínio que não fala com o servidor há meses provavelmente foi desativado ou substituído do lado do cliente — mas confirme com ele antes de desativar algo que ainda pode estar em uso.
 - **Desativar não é permanente** — o mesmo domínio pode reativar depois, se precisar. Não é uma decisão de risco alto como revogar uma licença inteira.
-- **Licença cobrindo mais de um produto:** a lista de ativações mistura os domínios de todos os produtos cobertos, sem indicar qual é qual. Antes de desativar, confirme com o cliente a qual plugin aquele domínio se refere — veja o alerta em **[Ativações](/modulos/ativacoes/)**.
+- **Licença cobrindo mais de um produto: o mesmo domínio pode aparecer mais de uma vez na lista**, uma linha por plugin que ele ativou. A coluna Produto (ou o filtro aplicado) diz qual é qual — confira antes de desativar, porque desativar a linha errada libera a vaga do produto errado. Veja **[Ativações](/modulos/ativacoes/)**.
 
 ## Quando dá errado
 
