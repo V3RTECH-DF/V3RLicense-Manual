@@ -23,3 +23,6 @@ Tela de detalhe, acessada a partir de uma licença em **Licenças**. Veja o pass
 ## Ações
 
 Desativar domínio (linha a linha e em lote) — só disponível em linhas ainda ativas.
+
+{: .warning }
+> **Licença cobrindo vários produtos: esta lista não separa por produto.** Ela mostra todas as ativações da licença, de todos os produtos cobertos, misturadas — sem coluna que diga a qual produto cada domínio pertence. Para saber quantas vagas cada produto está usando, veja a coluna "Ativações" em **[Licenças](/modulos/licencas/)**, que já mostra o número separado por produto. Nesta tela, se precisar liberar vaga de um produto específico, confirme com o cliente qual domínio corresponde a qual plugin antes de desativar.

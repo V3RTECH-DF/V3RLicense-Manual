@@ -8,7 +8,7 @@ nav_order: 8
 
 ## Por que isto importa
 
-Cada domínio em que o cliente ativa o plugin consome uma vaga da licença. Quando o cliente troca de domínio, migra de staging para produção, ou simplesmente atingiu o limite, ele não consegue ativar num site novo até alguém liberar uma vaga aqui. É uma das dúvidas mais comuns — "por que meu plugin diz que a licença já está em uso em outro lugar".
+Cada domínio em que o cliente ativa o plugin consome uma vaga — contada **por produto**, não pela licença inteira. Quando o cliente troca de domínio, migra de staging para produção, ou simplesmente atingiu o limite de um dos produtos cobertos, ele não consegue ativar aquele produto num site novo até alguém liberar uma vaga aqui. É uma das dúvidas mais comuns — "por que meu plugin diz que a licença já está em uso em outro lugar".
 
 ## Passo a passo
 
@@ -31,6 +31,7 @@ O cliente "Instituto Vida Nova" tinha a licença do V3REvent limitada a 1 ativa�
 
 - **"Último contato" ajuda a identificar o que está obsoleto.** Um domínio que não fala com o servidor há meses provavelmente foi desativado ou substituído do lado do cliente — mas confirme com ele antes de desativar algo que ainda pode estar em uso.
 - **Desativar não é permanente** — o mesmo domínio pode reativar depois, se precisar. Não é uma decisão de risco alto como revogar uma licença inteira.
+- **Licença cobrindo mais de um produto:** a lista de ativações mistura os domínios de todos os produtos cobertos, sem indicar qual é qual. Antes de desativar, confirme com o cliente a qual plugin aquele domínio se refere — veja o alerta em **[Ativações](/modulos/ativacoes/)**.
 
 ## Quando dá errado
 

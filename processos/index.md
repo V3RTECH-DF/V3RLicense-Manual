@@ -11,6 +11,7 @@ Uma página por tarefa do dia a dia de quem opera o V3RLicense. Cada página exp
 ## Cadastro-base (uma vez, ou raramente)
 
 - **[Registrar um plugin novo](/processos/cadastrar-produto/)**
+- **[Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/)**
 - **[Cadastrar tipo de licença e origem](/processos/cadastrar-tipo-e-origem/)**
 - **[Cadastrar cliente](/processos/cadastrar-cliente/)**
 

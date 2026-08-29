@@ -14,7 +14,7 @@ nav_order: 12
 
 1. **A licença dele está ativa?** Abra **Licenças**, filtre pelo nome ou e-mail do cliente. Se o status for "Expirada" ou "Revogada", é isso — atualização e download são bloqueados enquanto a licença não estiver ativa (veja **[Como funciona a licença](/como-funciona/)**). A saída é **[renovar](/processos/renovar-licenca/)** (se expirada) ou emitir uma licença nova (se revogada).
 
-2. **A licença é do produto certo?** Confira a coluna "Produto" na linha da licença. Cliente com licença de um plugin não recebe atualização de outro — parece óbvio, mas é comum quando o cliente usa vários plugins da casa e confunde qual licença é qual.
+2. **A licença cobre o produto certo?** Confira a coluna "Cobertura" na linha da licença. Cliente com licença que não cobre aquele plugin não recebe atualização dele — parece óbvio, mas é comum quando o cliente usa vários plugins da casa e confunde qual licença é qual, ou quando a licença cobre só parte do catálogo (produtos específicos, ou uma lista de acesso da qual esse plugin ainda não faz parte).
 
 3. **A ativação do domínio dele está de pé?** Abra **Ver ativações** na licença e confirme que o domínio do cliente aparece com status "ativo", não "desativado". Se foi desativado por engano (veja **[Liberar uma ativação](/processos/liberar-ativacao/)**), o plugin perde a ativação — ele pode continuar funcionando, mas a validação falha. Já que você está nessa tela: se o número de ativações parecer maior do que deveria, olhe a coluna **"Ambiente de teste"** — linhas marcadas "sim" não contam na cota, então não são elas que estão ocupando a vaga do cliente.
 

@@ -15,6 +15,8 @@ Quem opera o V3RLicense precisa entender a política com precisão para responde
 
 A licença de um plugin da V3RTECH/RIT dá direito a **atualização e correção** — não a uma funcionalidade extra dentro do plugin. Os plugins são distribuídos sob **GPL** (veja **[Licença de Uso do Software](/legal/licenca/)**), o que significa que o código já pertence a quem o instalou; o que se vende é o serviço de manter esse código atualizado.
 
+Uma mesma chave de licença pode cobrir **mais de um plugin** — é o caso de organizações parceiras ou filiadas à RIT com direito ao catálogo inteiro. Nesse caso, a mesma chave é colada em cada um dos plugins cobertos. Status, expiração e renovação são da **licença como um todo** — vencer ou revogar afeta todos os plugins cobertos ao mesmo tempo. Só a cota de ativação é diferente: ela é contada **separadamente para cada plugin coberto** (veja a seção seguinte).
+
 {: .important }
 > **Licença vencida não desliga o plugin.** Quando uma licença expira ou é revogada, o plugin cliente **continua funcionando exatamente como antes** — nenhuma tela para de abrir, nenhum recurso é bloqueado. O que muda é que o plugin **para de receber atualização e correção** até a licença ser renovada.
 >
@@ -33,7 +35,7 @@ A licença de um plugin da V3RTECH/RIT dá direito a **atualização e correçã
 
 ## Ativação por domínio, e a cota
 
-Cada site (domínio) em que o cliente ativa o plugin conta como **uma ativação**. A licença tem um limite (`activations_max`) — quando o produto não define um padrão, é ilimitado.
+Cada site (domínio) em que o cliente ativa um plugin conta como **uma ativação**, com um limite (`activations_max`) — quando o produto não define um padrão, é ilimitado. Para uma licença que cobre mais de um plugin, esse limite é **contado separadamente para cada plugin**: ativar o V3RLGPD num domínio não usa a cota do V3RHelp! coberto pela mesma chave.
 
 {: .tip }
 > **Ambientes de teste não consomem cota.** O servidor reconhece automaticamente quando uma ativação vem de um ambiente de desenvolvimento ou homologação (por padrões do próprio domínio) e não soma essa ativação ao limite da licença. Isso existe para o cliente poder testar o plugin num site de staging sem gastar a cota da licença de produção — se você olhar a lista de ativações de uma licença e ver mais linhas do que o limite contratado, é provável que algumas sejam de teste (a coluna "Ambiente de teste" mostra isso). Os critérios exatos de reconhecimento não são públicos — não são um dado que o manual expõe.

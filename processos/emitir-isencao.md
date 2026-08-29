@@ -16,17 +16,21 @@ Organizações do terceiro setor filiadas à RIT recebem licença gratuita, por 
 ## Passo a passo
 
 1. Confirme com quem decide (hoje, verificação manual da filiação à RIT) que a organização está apta.
-2. Abra a aba **Licenças** e preencha o formulário **Emitir licença manualmente**, exatamente como em **[Emitir uma licença](/processos/emitir-licenca/)**, com uma diferença:
+2. Abra a aba **Licenças** e preencha o formulário **Emitir licença manualmente**, exatamente como em **[Emitir uma licença](/processos/emitir-licenca/)**, com duas diferenças:
+   - **O que a licença cobre** — se a organização tem direito ao catálogo inteiro (o caso mais comum de filiada RIT), escolha **Segue uma lista de acesso** e a lista correspondente (ex.: "Filiada RIT"). Se o direito é a um plugin só, use **Produtos específicos**.
    - **Origem** = "Isenção — filiada à RIT" (ou o rótulo equivalente cadastrado).
    - **Tipo de licença** = normalmente "Anual", para forçar uma revisão anual da filiação — mas confirme se sua organização decidiu diferente para este caso.
 3. Emita normalmente.
 
-![Formulário "Emitir licença manualmente" preenchido para uma isenção: produto V3RLGPD, cliente Instituto Semear, tipo Anual, máximo de ativações 3, origem "Isenção — filiada à RIT" e anotação "Filiação à RIT confirmada em 12/08/2026."](/assets/screenshots/licencas-emitir.png)
+![Formulário "Emitir licença manualmente" com "Segue uma lista de acesso" selecionado e uma licença emitida para GEJA cobrindo V3RLGPD, V3RHelp! e mais 1, origem "Isenção — filiada à RIT"](/assets/screenshots/licencas-emitir-lista-acesso.png)
 
 {: .example }
-> **Exemplo (o mesmo da captura acima):** produto "V3RLGPD", cliente "Instituto Semear" (`contato@institutosemear.org.br`), tipo "Anual", máximo de ativações "3", origem "Isenção — filiada à RIT", anotação "Filiação à RIT confirmada em 12/08/2026." — registrando **quem** confirmou é ainda melhor, quando o formulário permitir texto livre maior.
+> **Exemplo (o mesmo da captura acima):** lista de acesso "Acesso total (parceria)", cliente "GEJA" (`suporte@geja11df.org.br`), tipo "Anual", origem "Isenção — filiada à RIT", anotação "Filiação à RIT confirmada em 12/08/2026." — registrando **quem** confirmou é ainda melhor, quando o formulário permitir texto livre maior. Com a lista, a chave cobre todos os produtos dela hoje **e** os que forem acrescentados depois, sem nova emissão.
 
 ## Dicas e armadilhas
+
+{: .tip }
+> **Emitir por lista de acesso é o que evita reemitir a isenção a cada plugin novo.** Antes, uma organização filiada com direito ao catálogo inteiro recebia uma chave por plugin; seguindo a lista "Filiada RIT" (ou equivalente), ela recebe uma chave só, e um plugin novo publicado passa a valer para ela assim que alguém acrescenta o produto à lista — veja **[Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/)**.
 
 {: .tip }
 > **Use a anotação para registrar como a filiação foi confirmada e quando.** Como não há checagem automática, esse texto é o único rastro de por que a isenção foi concedida — importante se alguém precisar auditar depois.

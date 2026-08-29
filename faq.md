@@ -36,6 +36,18 @@ Confira o PHP do site dele. Desde 27/08/2026 todos os plugins da casa exigem PHP
 
 Não pela tela. A saída é emitir uma licença nova para o mesmo cliente — o que exige que ele troque a chave no plugin. Veja **[Revogar uma licença](/processos/revogar-licenca/)**.
 
+## Uma licença pode cobrir mais de um plugin?
+
+Sim. Ao emitir, escolha "Segue uma lista de acesso" (a cobertura acompanha a lista, inclusive produtos acrescentados depois) ou "Produtos específicos" (cobertura fixa no que foi marcado na emissão). Veja **[Emitir uma licença](/processos/emitir-licenca/)**.
+
+## Acrescentei um produto a uma lista de acesso. As licenças que já existiam recebem o produto na hora, ou só as próximas?
+
+Na hora — todas as licenças que já seguem aquela lista passam a cobrir o produto novo imediatamente, sem nova emissão. Veja **[Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/)**.
+
+## Removi um produto de uma lista de acesso. Quem já tinha acesso perde na hora?
+
+Não. Remover de uma lista só impede que licenças futuras recebam aquele produto ao seguir a lista — quem já tinha o acesso continua com ele. Para tirar o acesso de um cliente específico, é preciso agir na licença dele, não na lista.
+
 ## Organizações filiadas à RIT têm renovação automática da isenção?
 
 Não hoje. A validade é controlada manualmente, do mesmo jeito que qualquer licença anual — está registrado como funcionalidade futura. Veja **[Emitir uma isenção RIT](/processos/emitir-isencao/)**.

@@ -40,11 +40,12 @@ etapa de compra — veja `processos/emitir-isencao.md`.
 ## Estado
 
 Conteúdo escrito por completo (índice, primeiros passos, política de
-licenciamento, 12 páginas de processo, referência por tela, FAQ, novidades,
-legal, mais a seção `integrar-plugin/` para quem desenvolve) e ilustrado
-com as 10 capturas de `assets/screenshots/`. Falta só o modal do token
-recém-gerado (não capturável sem gerar um token real em produção) —
-descrito em palavras em
+licenciamento, 13 páginas de processo, referência por tela — incluindo
+licença cobrindo mais de um produto e listas de acesso (V3RLicense-Code#26)
+—, FAQ, novidades, legal, mais a seção `integrar-plugin/` para quem
+desenvolve) e ilustrado com as capturas de `assets/screenshots/`. Falta só
+o modal do token recém-gerado (não capturável sem gerar um token real em
+produção) — descrito em palavras em
 [`modulos/tokens-de-publicacao.md`](modulos/tokens-de-publicacao.md). A
 seção `integrar-plugin/` não tem captura — é material de código, sem tela
 própria a ilustrar.

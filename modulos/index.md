@@ -16,5 +16,6 @@ Referência de campo por campo de cada aba — o que ensina o **por quê** e o p
 | Clientes | **[Clientes](/modulos/clientes/)** | [Cadastrar cliente](/processos/cadastrar-cliente/) |
 | Origens | **[Origens](/modulos/origens/)** | [Cadastrar tipo e origem](/processos/cadastrar-tipo-e-origem/) |
 | Tipos de licença | **[Tipos de licença](/modulos/tipos-de-licenca/)** | [Cadastrar tipo e origem](/processos/cadastrar-tipo-e-origem/) |
+| Listas de acesso | **[Listas de acesso](/modulos/listas-de-acesso/)** | [Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/) |
 | Tokens de publicação | **[Tokens de publicação](/modulos/tokens-de-publicacao/)** | [Gerenciar tokens](/processos/gerenciar-tokens-publicacao/) |
 | Releases | **[Releases](/modulos/releases/)** | [Publicar uma versão](/processos/publicar-uma-versao/), [Remover release](/processos/remover-release/) |
