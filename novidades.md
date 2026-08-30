@@ -7,6 +7,16 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.13.2 — 30/08/2026
+
+- **Ajuste fino na identidade visual dos e-mails do cliente:** a logomarca no cabeçalho passou a ficar alinhada à esquerda, igual à dos e-mails da loja — antes das duas alinharem, título e logomarca ficavam desencontrados entre um e-mail e outro.
+
+## v0.13.1 — 30/08/2026
+
+- **E-mails do cliente ganham a identidade visual da V3RTECH.** Chave da licença, avisos de vencimento/carência e o aviso ao operador de uma licença concedida trocam o visual próprio do plugin pela paleta institucional — títulos em verde escuro, rodapé em verde claro, e a chave da licença destacada num bloco amarelo. Conteúdo e comportamento continuam os mesmos. Veja **[Como funciona a licença](/como-funciona/)**.
+- **Os e-mails da loja WooCommerce ganham a mesma identidade** — confirmação de pedido e recibo, para o cliente não notar dois visuais diferentes na mesma compra.
+- **Os avisos ao administrador da loja mudaram de endereço.** Novo pedido, pedido cancelado, malsucedido, gateway de pagamento ativado, e os seis avisos de assinatura passam a ir para `comercial@v3rtech.com.br` — antes, quatro iam para `suporte@v3rtech.com.br` por configuração e seis caíam lá por herdarem o e-mail de administração do WordPress (que continua `suporte@`). O remetente dos e-mails da loja também passa a ser `comercial@v3rtech.com.br`. Quem acompanhava pedido pela caixa do suporte precisa passar a olhar `comercial@`.
+
 ## v0.13.0 — 29/08/2026
 
 - **Carência, suspensão e régua de avisos por e-mail.** Licença que gera cobrança e vence entra em **carência por 15 dias** antes de ser suspensa — dois status novos ("Em carência" e "Suspensa por falta de pagamento"), separados de "Expirada" e "Revogada". Suspensa não derruba nada no plugin do cliente: só para de receber atualização e correção, a mesma regra de sempre. O cliente passa a receber e-mail avisando o vencimento com antecedência (que varia pelo tipo de licença), mais os avisos durante a carência; quem tem assinatura ativa recebe um único aviso, 7 dias antes. **Licença concedida (isenção) avisa o operador, nunca o cliente** — para o endereço configurável na nova tela **[Configurações](/modulos/configuracoes/)**. Estorno **total** de um pedido revoga a licença; estorno **parcial** não mexe nela. Cancelar uma assinatura também não revoga nada — o cliente mantém acesso até o fim do período já pago. Veja **[Como funciona a licença](/como-funciona/)**.

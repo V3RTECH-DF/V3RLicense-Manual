@@ -89,6 +89,17 @@ O V3RLicense avisa por conta própria, sem que o operador precise lembrar de nad
 {: .note }
 > **A régua roda mesmo sem loja.** Ela usa o agendador do próprio WordPress, não o mecanismo do WooCommerce — continua funcionando mesmo para licença vendida fora da loja (sem pedido vinculado) ou se a loja for desativada. O que decide se uma licença entra na régua é a origem estar marcada como "gera cobrança", nunca a existência de um pedido.
 
+### Identidade visual e remetente
+
+Desde a v0.13.1, todo e-mail que o cliente recebe — chave da licença, avisos de vencimento e de carência, e o aviso ao operador de uma licença concedida — usa a identidade visual institucional da V3RTECH: logomarca no cabeçalho, títulos em verde escuro, e a chave da licença destacada num bloco amarelo para não passar despercebida no meio do texto. O conteúdo e o comportamento continuam os mesmos de sempre — só a aparência mudou.
+
+Os e-mails que o **WooCommerce** manda por conta própria (confirmação de pedido, recibo, ao cliente que compra pela loja) ganharam a mesma identidade, para o cliente não notar dois visuais diferentes numa mesma compra.
+
+**Isso também mudou para quem opera:** os avisos que o WooCommerce manda ao **administrador da loja** — novo pedido, pedido cancelado, pedido malsucedido, gateway de pagamento ativado, e os seis avisos de assinatura (nova cobrança de renovação, assinatura trocada, cancelada, expirada, suspensa e reativada) — passaram a ir para `comercial@v3rtech.com.br`. Antes, quatro desses avisos iam para `suporte@v3rtech.com.br` por configuração explícita, e os outros seis caíam lá por herdarem o e-mail de administração do WordPress (que continua sendo `suporte@`). **Quem acompanhava pedido novo pela caixa do suporte precisa passar a olhar `comercial@`.** O remetente dos e-mails da loja também passou a ser `comercial@v3rtech.com.br`, no lugar de `suporte@`.
+
+{: .important }
+> Os e-mails que o **V3RLicense** manda diretamente (chave, vencimento, carência, aviso ao operador de isenção) já saíam como `V3RTECH <comercial@v3rtech.com.br>`, e continuam assim — o remetente deles é definido pelo próprio plugin, não pela configuração da loja nem pelo padrão do WordPress. O que mudou de remetente foram os e-mails nativos da **loja WooCommerce**, que agora saem do mesmo endereço.
+
 ## Ativação por domínio, e a cota
 
 Cada site (domínio) em que o cliente ativa um plugin conta como **uma ativação**, com um limite (`activations_max`) — quando o produto não define um padrão, é ilimitado. Para uma licença que cobre mais de um plugin, esse limite é **contado separadamente para cada plugin**: ativar o V3RLGPD num domínio não usa a cota do V3RHelp! coberto pela mesma chave.

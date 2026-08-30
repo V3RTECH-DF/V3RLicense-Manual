@@ -67,3 +67,7 @@ Só se o estorno for **total**. Estorno parcial (um desconto, um ajuste no pedid
 ## O cliente cancelou a assinatura. Ele perde o acesso na hora?
 
 Não. Cancelar a assinatura não revoga nada — o cliente mantém o acesso normal até o fim do período que já foi pago, sem tratamento especial. Só deixa de haver cobrança seguinte.
+
+## Os avisos de pedido novo pararam de chegar na caixa do suporte. O que houve?
+
+Desde a v0.13.1, os avisos que o WooCommerce manda ao administrador da loja (novo pedido, cancelado, malsucedido, gateway ativado, e os seis de assinatura) passaram a ir para `comercial@v3rtech.com.br`, não mais para `suporte@v3rtech.com.br`. Veja **[Como funciona a licença](/como-funciona/)**.
