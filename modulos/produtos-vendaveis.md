@@ -8,6 +8,9 @@ nav_order: 10
 
 Veja o passo a passo em **[Cadastrar um produto vendável](/processos/cadastrar-produto-vendavel/)**.
 
+{: .note }
+> **Desde a v0.19.0, esta tela é só para dois casos:** licença **perpétua** (avulsa, sem periodicidade) e plano **negociado** com uma empresa específica (oculto da vitrine pública). Para um plugin vendido por assinatura no plano comum — mensal, trimestral, anual, com opção de número de sites —, use **[Oferta na loja](/modulos/oferta-na-loja/)**, que cadastra tudo num produto único.
+
 ![Listagem de produtos vendáveis com três linhas: V3REvent em licença vitalícia publicado como rascunho no WooCommerce, V3RHelp! em assinatura anual ainda não publicado, e V3RLGPD num plano mensal oculto do catálogo](/assets/screenshots/produtos-vendaveis-lista.png)
 
 Um produto vendável liga um produto do V3RLicense (o plugin) a um tipo de licença e, depois de publicado, ao produto correspondente no WooCommerce. **O V3RLicense é dono do período** (a periodicidade do produto na loja vem do tipo de licença escolhido aqui); **a loja é dona do preço** (nunca gravado neste cadastro).

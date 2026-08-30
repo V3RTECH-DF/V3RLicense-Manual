@@ -13,6 +13,7 @@ Referência de campo por campo de cada aba — o que ensina o **por quê** e o p
 | Licenças | **[Licenças](/modulos/licencas/)** | [Emitir](/processos/emitir-licenca/), [Renovar](/processos/renovar-licenca/), [Revogar](/processos/revogar-licenca/) |
 | Ativações | **[Ativações](/modulos/ativacoes/)** | [Liberar uma ativação](/processos/liberar-ativacao/) |
 | Produtos | **[Produtos](/modulos/produtos/)** | [Registrar um plugin novo](/processos/cadastrar-produto/) |
+| Oferta na loja | **[Oferta na loja](/modulos/oferta-na-loja/)** | [Montar a oferta de um plugin na loja](/processos/cadastrar-oferta-na-loja/) |
 | Clientes | **[Clientes](/modulos/clientes/)** | [Cadastrar cliente](/processos/cadastrar-cliente/) |
 | Origens | **[Origens](/modulos/origens/)** | [Cadastrar tipo e origem](/processos/cadastrar-tipo-e-origem/) |
 | Tipos de licença | **[Tipos de licença](/modulos/tipos-de-licenca/)** | [Cadastrar tipo e origem](/processos/cadastrar-tipo-e-origem/) |

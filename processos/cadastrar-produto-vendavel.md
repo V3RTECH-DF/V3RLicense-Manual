@@ -6,9 +6,14 @@ nav_order: 3
 
 # Cadastrar um produto vendável
 
+{: .note }
+> **Desde a v0.19.0, este caminho é só para dois casos:** licença **perpétua** e plano **negociado** com uma empresa específica. Para vender um plugin por assinatura no plano comum (mensal, trimestral, anual, com opção de número de sites), use **[Montar a oferta de um plugin na loja](/processos/cadastrar-oferta-na-loja/)** em vez desta página — lá um produto só reúne todas as combinações, em vez de um cadastro por forma de venda.
+
 ## Por que isto importa
 
 Um produto vendável é o que liga um plugin já cadastrado no V3RLicense a um tipo de licença e, quando publicado, ao produto correspondente na loja WooCommerce. É esse cadastro — não o produto do V3RLicense sozinho — que faz um plugin aparecer para venda. Sem ele, o produto pode até existir na aba **Produtos**, mas ninguém compra: não há nada na loja para clicar em "Comprar".
+
+Os dois casos que continuam aqui são **licença perpétua** (não é assinatura, e não cabe numa combinação de duração) e **plano negociado** com uma empresa específica (preço ou cota combinados à parte, oculto da vitrine pública — toda combinação da tela de Oferta na loja aparece para todo mundo).
 
 A régua de quem é dono do quê importa na hora de editar depois: **o V3RLicense é dono do período** (a periodicidade vem sempre do tipo de licença escolhido aqui, nunca é digitada de novo do lado da loja); **a loja é dona do preço** (o V3RLicense nunca grava nem lê valor em reais).
 

@@ -7,6 +7,13 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.19.0 e v0.19.1 — 30/08/2026
+
+- **Um plugin por assinatura passa a ter um produto só na loja.** Antes, cada forma de vender o mesmo plugin (mensal, anual, com 1 site, com 5 sites…) era um produto separado — agora você cadastra as **combinações** de duração e número de sites numa tela só, a nova **[Oferta na loja](/modulos/oferta-na-loja/)**, cada uma com o próprio preço. Quem compra escolhe as duas coisas na página do produto, e o preço acompanha a escolha. Veja **[Montar a oferta de um plugin na loja](/processos/cadastrar-oferta-na-loja/)**.
+- **O cliente troca de combinação a partir da própria assinatura** — mais sites, outra periodicidade, ou menos sites. A licença acompanha (mesma chave, mesmos sites ativos); descer de plano não tem multa. Descer para menos sites do que ele tem ativado hoje é recusado, com uma mensagem dizendo quantos sites desativar antes — ele mesmo resolve pela aba "Minhas licenças". Veja **[Como funciona a licença](/como-funciona/)**.
+- **Licença perpétua e plano negociado continuam pelo caminho de sempre**, em **[Produtos vendáveis](/modulos/produtos-vendaveis/)** — sem mudança de comportamento.
+- **Correção:** uma assinatura que passava a valer **sem** cobrança associada — teste gratuito, ativação manual pelo operador, meio de pagamento com fluxo próprio — não emitia licença, em silêncio. A compra normal pela loja nunca dependeu disso; agora qualquer caminho que ativa a assinatura emite a licença corretamente.
+
 ## v0.16.1 — 30/08/2026
 
 - **Correção:** o rótulo escrito para o operador vazava para a tela do cliente — uma licença simplesmente vencida chegou a aparecer como "Suspensa por falta de pagamento", que contradizia a frase logo abaixo dizendo que a licença tinha vencido. Painel e cliente agora usam vocabulários independentes de propósito. Veja **[Como funciona a licença](/como-funciona/)**.

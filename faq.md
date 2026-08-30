@@ -83,3 +83,19 @@ Não. Cancelar a assinatura não revoga nada — o cliente mantém o acesso norm
 ## Os avisos de pedido novo pararam de chegar na caixa do suporte. O que houve?
 
 Desde a v0.13.1, os avisos que o WooCommerce manda ao administrador da loja (novo pedido, cancelado, malsucedido, gateway ativado, e os seis de assinatura) passaram a ir para `comercial@v3rtech.com.br`, não mais para `suporte@v3rtech.com.br`. Veja **[Como funciona a licença](/como-funciona/)**.
+
+## Um cliente quer mais sites ou uma periodicidade diferente na assinatura dele. Preciso emitir licença nova?
+
+Não, desde a v0.19.0. Se o plugin foi vendido pela **[Oferta na loja](/modulos/oferta-na-loja/)**, o cliente troca de combinação sozinho, direto na própria assinatura — a licença acompanha automaticamente (mesma chave, mesmos sites já ativos, só o limite e o tipo mudam). Veja **[Como funciona a licença](/como-funciona/)**.
+
+## Um cliente diz que não consegue descer para um plano menor. Por quê?
+
+Porque ele tem mais sites ativados hoje do que o plano novo permite — a troca é barrada antes de entrar no carrinho, e a mensagem já diz quantos sites ele precisa desativar antes de tentar de novo. Ele mesmo resolve pela aba "Minhas licenças" (a mesma ação de **[Liberar uma ativação](/processos/liberar-ativacao/)**, feita por ele); o sistema nunca desativa nada por conta própria. Veja **[Como funciona a licença](/como-funciona/)**.
+
+## Cadastrei uma combinação de duração e sites, mas o tipo de licença que eu queria não aparece no seletor. Por quê?
+
+Confira se o tipo está ativo em **[Tipos de licença](/modulos/tipos-de-licenca/)** e se não é o tipo perpétuo — perpétua não entra na **[Oferta na loja](/modulos/oferta-na-loja/)**; ela só é vendida pelo caminho antigo, em **[Produtos vendáveis](/modulos/produtos-vendaveis/)**.
+
+## Quando eu uso Produtos vendáveis e quando eu uso Oferta na loja?
+
+**[Oferta na loja](/modulos/oferta-na-loja/)** é o caminho comum: um plugin vendido por assinatura, com opções de duração e de número de sites que o cliente escolhe na página do produto. **[Produtos vendáveis](/modulos/produtos-vendaveis/)** continua só para licença **perpétua** (não é assinatura) e para plano **negociado** com uma empresa específica (oculto da vitrine pública — toda combinação da Oferta na loja aparece para todo mundo).

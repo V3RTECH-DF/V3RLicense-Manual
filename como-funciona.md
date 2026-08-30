@@ -24,7 +24,7 @@ Uma mesma chave de licença pode cobrir **mais de um plugin** — é o caso de o
 
 ## A venda pela loja emite a licença sozinha
 
-Um [produto vendável](/processos/cadastrar-produto-vendavel/) publicado na loja WooCommerce não precisa de ninguém do lado do V3RLicense para virar licença — o pedido pago é que dispara tudo:
+Um produto publicado na loja WooCommerce — pela **[Oferta na loja](/modulos/oferta-na-loja/)** (combinações de duração e sites) ou por **[Produtos vendáveis](/modulos/produtos-vendaveis/)** (perpétua e negociado) — não precisa de ninguém do lado do V3RLicense para virar licença: o pedido pago é que dispara tudo:
 
 - **Compra avulsa** (produto de licença perpétua) — pedido pago emite **uma licença por unidade comprada**, e o V3RLicense manda a chave ao cliente por e-mail. Comprou 3, o cliente recebe 3 chaves.
 - **Assinatura** (produto de licença mensal, trimestral, semestral ou anual) — o pagamento inicial emite a licença do mesmo jeito; cada cobrança de renovação seguinte **estende essa mesma licença** — mesma chave, mesmas ativações preservadas — em vez de criar uma segunda. O cliente não reconfigura nada a cada cobrança, e a renovação automática não manda e-mail (o próprio WooCommerce já confirma a cobrança).
@@ -127,6 +127,22 @@ O cliente pode desativar um domínio direto por ali. É a **mesma operação** q
 
 Consequência prática: "troquei de domínio" e "estourei a cota" deixam de exigir sua intervenção na maior parte dos casos.
 
+### Troca de plano, pela própria assinatura
+
+Desde a v0.19.0, o cliente com assinatura ativa (produto vendido pela **[Oferta na loja](/modulos/oferta-na-loja/)**, com combinações de duração e sites) pode trocar de combinação direto na própria assinatura, pelo mecanismo nativo do WooCommerce Subscriptions — subir para mais sites, mudar a periodicidade, ou descer. A licença acompanha a troca automaticamente: número de ativações e tipo passam a ser os da combinação nova, **mantendo a mesma chave e os sites já ativos**.
+
+{: .important }
+> **Descer de plano não tem multa nem custo adicional.** A cobrança menor passa a valer normalmente a partir da própria troca — o preço em si é assunto do WooCommerce Subscriptions; o V3RLicense só decide se a **cobertura** cabe (próxima seção).
+
+#### Descer de plano com mais sites ativos do que o novo permite é recusado
+
+Se o cliente tenta descer para uma combinação com um limite de sites menor do que ele tem **ativado hoje** (contando só ativações que não são de ambiente de teste — a mesma regra de sempre), a troca é **barrada antes de entrar no carrinho**. Ele vê uma mensagem dizendo **quantos sites precisa desativar**, com um link direto para a aba **"Minhas licenças"**, onde ele mesmo desativa (veja a seção anterior).
+
+{: .warning }
+> **O sistema nunca desativa site por conta própria.** Foi decisão de produto deliberada — desativar um site em produção sem a pessoa escolher qual derrubaria a atualização dele sem aviso. A saída é sempre o cliente decidir e agir, nunca automática.
+
+Consequência prática para o suporte: **"quero mais sites" e "quero pagar menos" deixam de ser chamado** — o cliente troca sozinho. O chamado que sobra é **"não consigo descer de plano"**, e a resposta é a própria mensagem que a tela já mostra: desativar o excedente na aba "Minhas licenças" primeiro.
+
 ### Licença sem valer mostra o caminho de volta
 
 Quando a licença não está em dia, a aba oferece o caminho de regularizar — e o caminho depende da **situação real**, não só do rótulo do status:
@@ -163,7 +179,10 @@ Quando uma versão nova de um plugin é publicada no V3RLicense, todo cliente co
 : Um domínio em que o cliente instalou e ativou o plugin com uma chave de licença. Conta contra a cota da licença, salvo ambiente de teste.
 
 **Chave de licença** (`license_key`)
-: O código que o cliente cola no campo de licença do plugin. Não muda ao longo da vida da licença — nem em renovação.
+: O código que o cliente cola no campo de licença do plugin. Não muda ao longo da vida da licença — nem em renovação, nem em troca de plano.
+
+**Combinação**
+: Um par duração (tipo de licença) × número de sites, com preço próprio, cadastrado na **[Oferta na loja](/modulos/oferta-na-loja/)** — cada combinação vira uma variação do produto único na loja.
 
 **Origem**
 : O motivo de uma licença existir (venda, cortesia, isenção RIT…). Cadastro livre, sem regra de negócio própria — é rótulo, não lógica.
