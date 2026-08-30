@@ -14,7 +14,7 @@ nav_order: 1
 Este manual é para a equipe da V3RTECH e da RIT, em dois papéis: quem **opera** o V3RLicense (emite licença, cadastra produto, gera token de publicação, resolve o chamado de "meu plugin não atualiza") e quem **desenvolve** um plugin da casa e precisa prepará-lo para o licenciamento e a auto-atualização. Não é para o cliente que instalou um plugin — esse nunca entra aqui; o que ele precisa saber mora na aba de licença do próprio plugin.
 
 {: .note }
-> **Uma exceção:** a página **[Como funciona a licença](/como-funciona/)** descreve a política de licenciamento em si — o que uma licença dá direito, o que acontece quando vence, como funciona a isenção RIT. Essa página é a referência que os manuais dos outros plugins apontam quando o cliente final quer entender a própria licença.
+> **Uma exceção:** a página **[Como funciona a licença](/como-funciona/)** descreve a política de licenciamento em si — o que uma licença dá direito, o que acontece quando vence, como funciona a isenção RIT, e o que o cliente vê e resolve sozinho na aba "Minhas licenças" da própria conta. Essa página é a referência que os manuais dos outros plugins apontam quando o cliente final quer entender a própria licença.
 
 [Primeiros passos](/primeiros-passos/){: .btn .btn-primary .mr-2 }
 [Como funciona a licença](/como-funciona/){: .btn }
@@ -62,7 +62,7 @@ Veja o índice completo em **[Como faço…](/processos/)**.
 - **Publica release** — normalmente sozinho, quando quem desenvolve empurra uma tag no repositório do plugin (a pipeline publica por token); manualmente pela tela é o caminho de exceção. Os dois passam pela mesma conferência tripla, que impede publicar pacote trocado.
 
 {: .note }
-> **Versão instalada:** `v0.13.0`. Este manual descreve o que existe **hoje**. Um dashboard de métricas de negócio ainda não foi construído; quando existir, este manual é atualizado.
+> **Versão instalada:** `v0.16.1`. Este manual descreve o que existe **hoje**. Um dashboard de métricas de negócio ainda não foi construído; quando existir, este manual é atualizado.
 
 ---
 

@@ -113,6 +113,42 @@ Quando o cliente muda de domínio (staging virou produção, ou o site mudou de 
 
 Renovar uma licença expirada **reativa a mesma chave** — o cliente não recebe uma chave nova, e as ativações que ele já tinha continuam valendo, sem precisar reativar nada. Veja o passo a passo em **[Renovar uma licença](/processos/renovar-licenca/)**.
 
+## A aba "Minhas licenças", na conta do cliente
+
+Desde a v0.14.0, o cliente tem uma aba própria — **"Minhas licenças"**, dentro de "Minha conta" no site — onde vê e resolve sozinho boa parte do que antes só o suporte podia dizer. Isso muda o que chega até você: "perdi a chave", "até quando vale" e "quantos sites ainda posso usar" deixam de ser chamado.
+
+### O que o cliente vê
+
+Para cada licença dele — comprada, concedida por parceria ou por isenção, tanto faz: a aba mostra as licenças da **pessoa**, não as compras dela —, o cliente vê o produto coberto, a chave inteira (sem máscara), até quando vale e quanto falta, o estado, e em quais sites está ativada com quantas ativações ainda cabem. **Quando uma licença cobre mais de um produto, a cota aparece separada por produto**, nunca somada — a mesma regra de sempre, só que agora visível para ele também.
+
+### O cliente desativa um site sozinho
+
+O cliente pode desativar um domínio direto por ali. É a **mesma operação** que você faz em **[Liberar uma ativação](/processos/liberar-ativacao/)** — não existe um caminho de desativação paralelo, o plugin cliente e a aba usam o mesmo mecanismo por baixo. Desativar libera a vaga e **não mexe na validade**: quem desativa não perde tempo pago nem ganha tempo. O site desativado para de receber atualização e correção; a licença continua valendo e pode ser ativada em outro lugar, ou nele mesmo de novo.
+
+Consequência prática: "troquei de domínio" e "estourei a cota" deixam de exigir sua intervenção na maior parte dos casos.
+
+### Licença sem valer mostra o caminho de volta
+
+Quando a licença não está em dia, a aba oferece o caminho de regularizar — e o caminho depende da **situação real**, não só do rótulo do status:
+
+| Situação | Para onde a aba leva |
+|---|---|
+| Em carência ou suspensa, com cobrança em aberto | Aba "Assinaturas" — o cliente já paga ali |
+| Vencida, com assinatura encerrada | Reassinar (mecanismo nativo do WooCommerce Subscriptions) |
+| Vencida, sem assinatura (compra avulsa) | Comprar de novo o mesmo produto |
+
+{: .note }
+> **A cobrança nova conta a partir da data em que a pessoa volta a pagar, nunca da validade anterior.** Quem ficou seis meses sem renovar não paga por um período que não usou — é a mesma lógica de sempre (veja **[Renovar uma licença](/processos/renovar-licenca/)**), só que agora é o próprio cliente quem inicia. Essa é uma resposta frequente de suporte; vale ter decorada.
+
+Se o produto original da licença **saiu de venda ou foi despublicado**, a aba não vira um link quebrado: ela oferece a **[página de produtos disponíveis](/modulos/configuracoes/)** configurada pelo gestor (quando houver) e o contato. Sem essa configuração preenchida, o cliente vê só o contato.
+
+### Armadilha de suporte — o nome do estado não é o mesmo dos dois lados
+
+{: .important }
+> **O painel e o cliente usam palavras diferentes para o mesmo estado, de propósito.** Onde você vê "Expirada", "Suspensa por falta de pagamento" e "Em carência", o cliente vê **"Vencida"** nos dois primeiros e **"Vencida — renovação em aberto"** no terceiro. A distinção entre esses três estados é operacional — importa para você decidir cobrança —, mas o texto do painel acusaria de calote quem talvez só tenha decidido não renovar.
+
+Se você abrir a tela do cliente por cima do ombro dele (ou olhar um print que ele mandou) esperando ver a mesma palavra do painel, vai estranhar. Não é bug: é a mesma licença, vista com vocabulário diferente para cada lado. (Até a v0.16.0 essa distinção vazava — uma licença simplesmente vencida chegou a aparecer como "Suspensa por falta de pagamento" para o cliente; corrigido na v0.16.1.)
+
 ## Isenção para organizações filiadas à RIT
 
 Organizações do terceiro setor filiadas à RIT recebem licença **gratuita** — sem passar por venda. Hoje isso é feito emitindo a licença pela origem "Isenção — filiada à RIT", com validade normalmente anual, **renovada manualmente** pela mesma tela de renovação. Não existe hoje verificação automática contra uma fonte externa de filiação — está registrado como funcionalidade futura (V3RLicense-Code#4). Veja o passo a passo em **[Emitir uma isenção](/processos/emitir-isencao/)**.

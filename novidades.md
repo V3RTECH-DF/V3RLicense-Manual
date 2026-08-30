@@ -7,6 +7,23 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.16.1 — 30/08/2026
+
+- **Correção:** o rótulo escrito para o operador vazava para a tela do cliente — uma licença simplesmente vencida chegou a aparecer como "Suspensa por falta de pagamento", que contradizia a frase logo abaixo dizendo que a licença tinha vencido. Painel e cliente agora usam vocabulários independentes de propósito. Veja **[Como funciona a licença](/como-funciona/)**.
+
+## v0.16.0 — 30/08/2026
+
+- **Licença sem valer mostra o caminho de voltar a valer, direto na aba do cliente** — o caminho depende da situação real (cobrança em aberto leva às Assinaturas, assinatura encerrada leva a reassinar, compra avulsa vencida leva a comprar de novo), nunca de um link fixo. Produto que saiu de venda não vira link quebrado: oferece a página de produtos disponíveis (nova configuração) e o contato.
+- **Configuração nova em [Configurações](/modulos/configuracoes/):** o gestor escolhe a página de produtos disponíveis, usada quando o produto original de uma licença foi despublicado.
+
+## v0.15.0 — 30/08/2026
+
+- **O cliente desativa um site sozinho**, pela aba "Minhas licenças" — a mesma operação que **[Liberar uma ativação](/processos/liberar-ativacao/)** já fazia pelo painel. Libera a vaga e não mexe na validade da licença.
+
+## v0.14.0 — 30/08/2026
+
+- **Nova aba "Minhas licenças", na conta do cliente no site.** Pela primeira vez o cliente vê sozinho o que antes só o suporte podia dizer: qual produto a licença cobre, a chave inteira, até quando vale e quanto falta, o estado, e em quais sites está ativada com quantas ativações ainda cabem — por produto, quando a licença cobre mais de um. Licença concedida por parceria ou isenção aparece junto das compradas. Veja **[Como funciona a licença](/como-funciona/)**.
+
 ## v0.13.2 — 30/08/2026
 
 - **Ajuste fino na identidade visual dos e-mails do cliente:** a logomarca no cabeçalho passou a ficar alinhada à esquerda, igual à dos e-mails da loja — antes das duas alinharem, título e logomarca ficavam desencontrados entre um e-mail e outro.

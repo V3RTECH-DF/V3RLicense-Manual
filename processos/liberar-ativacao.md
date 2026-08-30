@@ -8,7 +8,10 @@ nav_order: 8
 
 ## Por que isto importa
 
-Cada domínio em que o cliente ativa o plugin consome uma vaga — contada **por produto**, não pela licença inteira. Quando o cliente troca de domínio, migra de staging para produção, ou simplesmente atingiu o limite de um dos produtos cobertos, ele não consegue ativar aquele produto num site novo até alguém liberar uma vaga aqui. É uma das dúvidas mais comuns — "por que meu plugin diz que a licença já está em uso em outro lugar".
+Cada domínio em que o cliente ativa o plugin consome uma vaga — contada **por produto**, não pela licença inteira. Quando o cliente troca de domínio, migra de staging para produção, ou simplesmente atingiu o limite de um dos produtos cobertos, ele não consegue ativar aquele produto num site novo até alguém liberar uma vaga.
+
+{: .note }
+> **Desde a v0.15.0, o cliente pode fazer isso sozinho**, pela aba "Minhas licenças" na própria conta (veja **[Como funciona a licença](/como-funciona/)**). É a **mesma operação** descrita nesta página, só que disparada por ele — não existe um caminho de desativação paralelo. Isso resolve a maior parte dos casos de "troquei de domínio" e "estourei a cota" sem precisar chegar até você; esta página continua valendo para quando o cliente pede que você faça, ou quando ele não consegue.
 
 ## Passo a passo
 

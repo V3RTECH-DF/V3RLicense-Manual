@@ -44,10 +44,18 @@ licenciamento, 14 páginas de processo, referência por tela — incluindo
 licença cobrindo mais de um produto e listas de acesso (V3RLicense-Code#26)
 e a integração com o WooCommerce: produtos vendáveis, carência/suspensão,
 avisos automáticos e renovação em lote (V3RLicense-Code#2) —, FAQ,
-novidades cobrindo até a v0.13.0, legal, mais a seção `integrar-plugin/`
+novidades cobrindo até a v0.16.1, legal, mais a seção `integrar-plugin/`
 para quem desenvolve) e ilustrado com as capturas de
 `assets/screenshots/`. Falta só o modal do token recém-gerado (não
 capturável sem gerar um token real em produção) — descrito em palavras em
 [`modulos/tokens-de-publicacao.md`](modulos/tokens-de-publicacao.md). A
 seção `integrar-plugin/` não tem captura — é material de código, sem tela
 própria a ilustrar.
+
+A v0.14.0–v0.16.1 (30/08/2026) acrescentou a aba "Minhas licenças" na
+conta do cliente no site (V3RLicense-Code#34) — cliente vê a própria
+licença, desativa um site sozinho e recebe o caminho de volta a valer;
+documentado em `como-funciona.md`, com o campo novo de Configurações, a
+nota em `processos/liberar-ativacao.md` e as FAQs correspondentes. **Sem
+captura ainda** — a versão está sendo publicada durante esta redação; ver
+lista de telas pendentes no relatório desta passada.

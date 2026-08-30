@@ -54,7 +54,19 @@ Não hoje. A validade é controlada manualmente, do mesmo jeito que qualquer lic
 
 ## Uma licença ficou "Suspensa por falta de pagamento". O que eu faço?
 
-Renove — individualmente ou pela **[renovação em lote](/processos/renovar-licenca/)**. Assim que a data de vencimento avança, a licença volta a "Ativa" na hora, e o plugin do cliente volta a receber atualização. Nada precisa ser reativado do lado dele: a chave e as ativações continuam as mesmas. Veja **[Como funciona a licença](/como-funciona/)** para a diferença entre "Em carência" e "Suspensa".
+Renove — individualmente ou pela **[renovação em lote](/processos/renovar-licenca/)**. Assim que a data de vencimento avança, a licença volta a "Ativa" na hora, e o plugin do cliente volta a receber atualização. Nada precisa ser reativado do lado dele: a chave e as ativações continuam as mesmas. Veja **[Como funciona a licença](/como-funciona/)** para a diferença entre "Em carência" e "Suspensa". Desde a v0.16.0, o próprio cliente também vê um caminho de regularizar na aba "Minhas licenças" — muitas vezes ele resolve sozinho antes de abrir chamado.
+
+## O cliente falou que a licença dele está "Vencida", mas no painel ela está "Suspensa por falta de pagamento" ou "Em carência". Isso é inconsistência?
+
+Não — é proposital. O painel usa nomes que distinguem o motivo (importa para você decidir cobrança); a aba do cliente ("Minhas licenças") mostra "Vencida" para "Expirada" e "Suspensa por falta de pagamento", e "Vencida — renovação em aberto" para "Em carência". O texto do painel acusaria de calote quem talvez só tenha decidido não renovar. Veja **[Como funciona a licença](/como-funciona/)**.
+
+## O cliente reativou uma licença que ficou meses vencida. Ele paga o período que ficou parado?
+
+Não. A cobrança nova conta a partir da data em que ele volta a pagar, nunca da validade anterior — quem ficou parado não paga por um período que não usou. Vale tanto para renovação feita pelo operador quanto para a renovação/nova compra que o próprio cliente inicia pela aba "Minhas licenças". Veja **[Como funciona a licença](/como-funciona/)**.
+
+## O produto de uma licença saiu de venda. O que o cliente vê na aba dele?
+
+Se a **[página de produtos disponíveis](/modulos/configuracoes/)** estiver configurada, ele vê essa página como alternativa, mais o contato. Se não estiver, ele vê só o contato — nunca um link quebrado.
 
 ## Excluí o cadastro de um produto vendável. Ele sumiu da loja?
 
