@@ -30,11 +30,17 @@ Toda licença emitida precisa de um **tipo** (define a periodicidade e, com ela,
 2. Preencha:
    - **Identificador (slug)** — travado depois de criado.
    - **Rótulo exibido**.
+   - **Gera cobrança** — marque se licença emitida por esta origem é vendida; deixe desmarcado para origem concedida (isenção, cortesia), sem pagamento.
    - Marque **Ativa** se ela deve aparecer no formulário de emissão.
 3. Salve.
 
 {: .example }
-> **Exemplo:** "Isenção — filiada à RIT" — slug `rit_grant`, ativa. Usada em **[Emitir uma isenção](/processos/emitir-isencao/)**.
+> **Exemplo — concedida:** "Isenção — filiada à RIT" — slug `rit_grant`, "Gera cobrança" desmarcado, ativa. Usada em **[Emitir uma isenção](/processos/emitir-isencao/)**.
+>
+> **Exemplo — cobrada:** "Venda (WooCommerce)" — slug `purchase`, "Gera cobrança" marcado, ativa. É a origem que a loja usa para toda licença emitida por uma compra.
+
+{: .warning }
+> **"Gera cobrança" não é sobre desconto ou preço** — isso continua sendo cupom na loja. É sobre o que acontece quando a licença vence: origem que gera cobrança entra em carência e pode ser suspensa por falta de pagamento; origem concedida vai direto para expirada, sem carência, e quem é avisado do vencimento é o operador, não o cliente. Veja **[Como funciona a licença](/como-funciona/)**.
 
 ## Dicas e armadilhas
 

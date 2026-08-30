@@ -22,16 +22,72 @@ Uma mesma chave de licença pode cobrir **mais de um plugin** — é o caso de o
 >
 > Isso é decisão de política, não limitação técnica: o endpoint que o plugin usa para saber o próprio status (`/validate`) sempre responde com sucesso, informando o status real (`active`, `expired`, `revoked`) — nunca nega a resposta por causa do status. Só os endpoints de atualização e download recusam quando a licença não está em dia, porque é exatamente isso que a licença cobre.
 
-## Os três status de uma licença
+## A venda pela loja emite a licença sozinha
+
+Um [produto vendável](/processos/cadastrar-produto-vendavel/) publicado na loja WooCommerce não precisa de ninguém do lado do V3RLicense para virar licença — o pedido pago é que dispara tudo:
+
+- **Compra avulsa** (produto de licença perpétua) — pedido pago emite **uma licença por unidade comprada**, e o V3RLicense manda a chave ao cliente por e-mail. Comprou 3, o cliente recebe 3 chaves.
+- **Assinatura** (produto de licença mensal, trimestral, semestral ou anual) — o pagamento inicial emite a licença do mesmo jeito; cada cobrança de renovação seguinte **estende essa mesma licença** — mesma chave, mesmas ativações preservadas — em vez de criar uma segunda. O cliente não reconfigura nada a cada cobrança, e a renovação automática não manda e-mail (o próprio WooCommerce já confirma a cobrança).
+
+Em ambos os casos o cliente é sempre identificado pela **conta com que fez o pedido** na loja, nunca por um e-mail digitado à parte.
+
+## Os cinco status de uma licença
 
 | Status | O que significa | O que o plugin cliente sente |
 |---|---|---|
 | **Ativa** | dentro da validade, não revogada | atualização normal |
-| **Expirada** | passou da data de validade | plugin funciona; atualização e download bloqueados até renovar |
-| **Revogada** | cancelada manualmente (reembolso, fraude, decisão da casa) | plugin funciona; atualização e download bloqueados até nova decisão |
+| **Em carência** | venceu, mas dentro dos 15 dias seguintes ao vencimento — só para licença que **gera cobrança** | atualização normal, como se ainda estivesse ativa |
+| **Suspensa por falta de pagamento** | venceu e passou dos 15 dias de carência, sem renovar — só para licença que gera cobrança | plugin funciona; atualização e download bloqueados até renovar |
+| **Expirada** | venceu e a origem **não gera cobrança** (licença concedida) — vai direto para expirada, sem carência | plugin funciona; atualização e download bloqueados até renovar |
+| **Revogada** | cancelada manualmente (reembolso total, fraude, decisão da casa) | plugin funciona; atualização e download bloqueados até nova decisão |
 
 {: .note }
 > **Revogação é decisão que só se desfaz emitindo outra coisa.** A tela de Licenças não tem um botão de "reverter revogação" — uma licença revogada permanece revogada. Se o motivo da revogação deixar de existir, a saída é **[emitir uma licença nova](/processos/emitir-licenca/)** ou, quando fizer sentido, ajustar o cadastro manualmente com apoio técnico.
+
+## Carência e suspensão — só para quem paga
+
+![Lista de licenças mostrando os cinco status lado a lado: Ativa, Suspensa por falta de pagamento, Revogada, Expirada e Em carência](/assets/screenshots/licencas-status-novos.png)
+
+Uma licença vencida não vira "suspensa" automaticamente — o que acontece depende de a **origem** dela [gerar cobrança ou não](/modulos/origens/):
+
+- **Origem que gera cobrança** (ex.: "Venda (WooCommerce)") — a licença vencida entra em **carência por 15 dias corridos**, contados do vencimento. Durante a carência, o plugin do cliente continua recebendo atualização normalmente, como se a licença estivesse ativa. Passados os 15 dias sem renovar, a licença vira **suspensa por falta de pagamento**.
+- **Origem que não gera cobrança** (ex.: "Isenção — filiada à RIT") — vence e vira **expirada** direto, sem carência nenhuma. Faz sentido: não há cobrança pendente para dar tempo de regularizar.
+
+{: .important }
+> **Suspensa não derruba nada no site do cliente.** É a mesma regra de sempre para licença sem cobertura: o plugin já instalado continua funcionando normalmente — só para de receber novas versões e correções. `activate`/`validate` continuam liberados; só atualização e download ficam bloqueados.
+
+Regularizar o pagamento — pela renovação manual, pela [renovação em lote](/processos/renovar-licenca/), ou pela cobrança automática de uma assinatura — devolve a licença a "Ativa" na hora, porque o status é sempre recalculado a partir da data de vencimento, nunca depende de um processo agendado ter rodado.
+
+### Estorno
+
+O WooCommerce dispara o mesmo evento para estorno total e parcial; o que diferencia um do outro é o pedido ter ficado **inteiramente** reembolsado ou não:
+
+- **Estorno total** — revoga a licença.
+- **Estorno parcial** — não mexe na licença. Um desconto ou ajuste parcial no pedido não tira a cobertura do cliente.
+
+Cancelamento de assinatura, por si só, **não revoga nada**: o cliente mantém o acesso normal até o fim do período que já foi pago.
+
+## Avisos automáticos por e-mail
+
+O V3RLicense avisa por conta própria, sem que o operador precise lembrar de nada. A régua muda conforme o tipo de cobrança da licença:
+
+**Antes do vencimento**, ao cliente de uma licença comprada:
+
+| Tipo de licença | Antecedência dos avisos |
+|---|---|
+| Mensal | 7 e 1 dia antes |
+| Trimestral | 15, 7 e 1 dia antes |
+| Semestral e Anual | 30, 15, 7 e 1 dia antes |
+| Vitalícia/Perpétua | nenhum aviso — nunca vence |
+
+**Assinatura recorrente ativa** foge dessa régua: o cliente recebe **um aviso só**, sempre 7 dias antes da cobrança automática — a régua completa faria pouco sentido para quem paga sozinho, sem precisar agir.
+
+**Durante a carência** (só licença que gera cobrança), o cliente recebe mais avisos: um no dia em que a carência começa, um quando faltam 8 dias para a suspensão, um no último dia do prazo, e um quando a suspensão de fato acontece.
+
+**Licença concedida** segue outra regra por completo: **quem é avisado é o operador, nunca o cliente**, porque a renovação dessas licenças é sempre manual. O e-mail vai para o endereço cadastrado em **[Configurações](/modulos/configuracoes/)**, na mesma antecedência da tabela acima, e sugere usar a renovação em lote.
+
+{: .note }
+> **A régua roda mesmo sem loja.** Ela usa o agendador do próprio WordPress, não o mecanismo do WooCommerce — continua funcionando mesmo para licença vendida fora da loja (sem pedido vinculado) ou se a loja for desativada. O que decide se uma licença entra na régua é a origem estar marcada como "gera cobrança", nunca a existência de um pedido.
 
 ## Ativação por domínio, e a cota
 

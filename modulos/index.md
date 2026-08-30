@@ -19,3 +19,5 @@ Referência de campo por campo de cada aba — o que ensina o **por quê** e o p
 | Listas de acesso | **[Listas de acesso](/modulos/listas-de-acesso/)** | [Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/) |
 | Tokens de publicação | **[Tokens de publicação](/modulos/tokens-de-publicacao/)** | [Gerenciar tokens](/processos/gerenciar-tokens-publicacao/) |
 | Releases | **[Releases](/modulos/releases/)** | [Publicar uma versão](/processos/publicar-uma-versao/), [Remover release](/processos/remover-release/) |
+| Produtos vendáveis | **[Produtos vendáveis](/modulos/produtos-vendaveis/)** | [Cadastrar um produto vendável](/processos/cadastrar-produto-vendavel/) |
+| Configurações | **[Configurações](/modulos/configuracoes/)** | — |

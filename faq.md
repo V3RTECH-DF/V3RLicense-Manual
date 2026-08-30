@@ -51,3 +51,19 @@ Não. Remover de uma lista só impede que licenças futuras recebam aquele produ
 ## Organizações filiadas à RIT têm renovação automática da isenção?
 
 Não hoje. A validade é controlada manualmente, do mesmo jeito que qualquer licença anual — está registrado como funcionalidade futura. Veja **[Emitir uma isenção RIT](/processos/emitir-isencao/)**.
+
+## Uma licença ficou "Suspensa por falta de pagamento". O que eu faço?
+
+Renove — individualmente ou pela **[renovação em lote](/processos/renovar-licenca/)**. Assim que a data de vencimento avança, a licença volta a "Ativa" na hora, e o plugin do cliente volta a receber atualização. Nada precisa ser reativado do lado dele: a chave e as ativações continuam as mesmas. Veja **[Como funciona a licença](/como-funciona/)** para a diferença entre "Em carência" e "Suspensa".
+
+## Excluí o cadastro de um produto vendável. Ele sumiu da loja?
+
+Não. Excluir aqui remove só o cadastro que liga o V3RLicense à loja — o produto que já foi publicado no WooCommerce continua existindo lá, com o preço, os pedidos e o histórico intactos. Veja **[Cadastrar um produto vendável](/processos/cadastrar-produto-vendavel/)**.
+
+## Um pedido foi estornado. A licença é revogada automaticamente?
+
+Só se o estorno for **total**. Estorno parcial (um desconto, um ajuste no pedido) não mexe na licença — o cliente mantém a cobertura normalmente. Veja **[Como funciona a licença](/como-funciona/)**.
+
+## O cliente cancelou a assinatura. Ele perde o acesso na hora?
+
+Não. Cancelar a assinatura não revoga nada — o cliente mantém o acesso normal até o fim do período que já foi pago, sem tratamento especial. Só deixa de haver cobrança seguinte.
