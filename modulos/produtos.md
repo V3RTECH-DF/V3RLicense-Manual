@@ -20,7 +20,7 @@ Identificador (slug, travado depois de criado) · Nome · Ativações padrão (v
 
 ## Ações
 
-**Oferta na loja** (ícone de loja) — leva à tela de **[Oferta na loja](/modulos/oferta-na-loja/)**, onde se cadastram as combinações de duração e sites por que este plugin é vendido por assinatura. Para licença perpétua ou plano negociado, use **[Produtos vendáveis](/modulos/produtos-vendaveis/)** em vez desta.
+**Venda do plugin** (ícone de loja) — leva à tela de **[Venda do plugin](/modulos/venda-do-plugin/)**, onde se cadastra tanto o plano por assinatura (combinações de duração e sites) quanto a licença perpétua ou a venda negociada, cada uma na sua seção.
 
 {: .note }
 > **"PHP mínimo" não é decorativo.** É o valor que o servidor manda no aviso de atualização — se o PHP do site do cliente for menor, o WordPress dele não oferece a atualização, sem erro visível. Veja **[Registrar um plugin novo](/processos/cadastrar-produto/)** e **[Diagnóstico: cliente diz que não atualiza](/processos/diagnostico-sem-atualizacao/)**.

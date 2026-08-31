@@ -24,7 +24,7 @@ Uma mesma chave de licença pode cobrir **mais de um plugin** — é o caso de o
 
 ## A venda pela loja emite a licença sozinha
 
-Um produto publicado na loja WooCommerce — pela **[Oferta na loja](/modulos/oferta-na-loja/)** (combinações de duração e sites) ou por **[Produtos vendáveis](/modulos/produtos-vendaveis/)** (perpétua e negociado) — não precisa de ninguém do lado do V3RLicense para virar licença: o pedido pago é que dispara tudo:
+Um produto publicado na loja WooCommerce a partir da tela **[Venda do plugin](/modulos/venda-do-plugin/)** — seja pela seção de assinatura (combinações de duração e sites) ou pela seção de perpétua e negociada — não precisa de ninguém do lado do V3RLicense para virar licença: o pedido pago é que dispara tudo:
 
 - **Compra avulsa** (produto de licença perpétua) — pedido pago emite **uma licença por unidade comprada**, e o V3RLicense manda a chave ao cliente por e-mail. Comprou 3, o cliente recebe 3 chaves.
 - **Assinatura** (produto de licença mensal, trimestral, semestral ou anual) — o pagamento inicial emite a licença do mesmo jeito; cada cobrança de renovação seguinte **estende essa mesma licença** — mesma chave, mesmas ativações preservadas — em vez de criar uma segunda. O cliente não reconfigura nada a cada cobrança, e a renovação automática não manda e-mail (o próprio WooCommerce já confirma a cobrança).
@@ -129,7 +129,7 @@ Consequência prática: "troquei de domínio" e "estourei a cota" deixam de exig
 
 ### Troca de plano, pela própria assinatura
 
-Desde a v0.19.0, o cliente com assinatura ativa (produto vendido pela **[Oferta na loja](/modulos/oferta-na-loja/)**, com combinações de duração e sites) pode trocar de combinação direto na própria assinatura, pelo mecanismo nativo do WooCommerce Subscriptions — subir para mais sites, mudar a periodicidade, ou descer. A licença acompanha a troca automaticamente: número de ativações e tipo passam a ser os da combinação nova, **mantendo a mesma chave e os sites já ativos**.
+Desde a v0.19.0, o cliente com assinatura ativa (produto vendido pela seção de assinatura de **[Venda do plugin](/modulos/venda-do-plugin/)**, com combinações de duração e sites) pode trocar de combinação direto na própria assinatura, pelo mecanismo nativo do WooCommerce Subscriptions — subir para mais sites, mudar a periodicidade, ou descer. A licença acompanha a troca automaticamente: número de ativações e tipo passam a ser os da combinação nova, **mantendo a mesma chave e os sites já ativos**.
 
 {: .important }
 > **Descer de plano não tem multa nem custo adicional.** A cobrança menor passa a valer normalmente a partir da própria troca — o preço em si é assunto do WooCommerce Subscriptions; o V3RLicense só decide se a **cobertura** cabe (próxima seção).
@@ -182,7 +182,7 @@ Quando uma versão nova de um plugin é publicada no V3RLicense, todo cliente co
 : O código que o cliente cola no campo de licença do plugin. Não muda ao longo da vida da licença — nem em renovação, nem em troca de plano.
 
 **Combinação**
-: Um par duração (tipo de licença) × número de sites, com preço próprio, cadastrado na **[Oferta na loja](/modulos/oferta-na-loja/)** — cada combinação vira uma variação do produto único na loja.
+: Um par duração (tipo de licença) × número de sites, com preço próprio, cadastrado na seção de assinatura de **[Venda do plugin](/modulos/venda-do-plugin/)** — cada combinação vira uma variação do produto único na loja.
 
 **Origem**
 : O motivo de uma licença existir (venda, cortesia, isenção RIT…). Cadastro livre, sem regra de negócio própria — é rótulo, não lógica.

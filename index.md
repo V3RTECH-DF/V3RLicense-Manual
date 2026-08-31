@@ -26,7 +26,8 @@ Este manual é para a equipe da V3RTECH e da RIT, em dois papéis: quem **opera*
 <div class="grid" markdown="1">
 
 - **[…emitir uma licença?](/processos/emitir-licenca/)**
-- **[…cadastrar um produto para vender na loja?](/processos/cadastrar-produto-vendavel/)**
+- **[…vender um plugin por assinatura na loja?](/processos/vender-por-assinatura/)**
+- **[…vender uma licença perpétua ou um plano negociado?](/processos/vender-perpetua-negociada/)**
 - **[…emitir uma isenção RIT?](/processos/emitir-isencao/)**
 - **[…renovar uma licença vencida?](/processos/renovar-licenca/)**
 - **[…revogar uma licença?](/processos/revogar-licenca/)**
@@ -55,7 +56,7 @@ Veja o índice completo em **[Como faço…](/processos/)**.
 ## O que o V3RLicense faz
 
 - **Emite e controla licenças** — por cliente, cobrindo um produto ou vários (marcados um a um, ou seguindo uma [lista de acesso](/processos/gerenciar-lista-acesso/)), com tipo (mensal, anual, perpétua…), origem (venda, cortesia, isenção…) e limite de ativações por produto.
-- **Vende pela loja WooCommerce** — um [produto vendável](/processos/cadastrar-produto-vendavel/) publicado na loja emite a licença sozinho quando o pedido é pago, manda a chave por e-mail, e — no caso de assinatura — renova a mesma licença a cada cobrança seguinte. Licença vencida sem pagamento entra em carência antes de ser suspensa; veja **[Como funciona a licença](/como-funciona/)**.
+- **Vende pela loja WooCommerce** — um produto cadastrado em **[Venda do plugin](/modulos/venda-do-plugin/)** e publicado na loja emite a licença sozinho quando o pedido é pago, manda a chave por e-mail, e — no caso de assinatura — renova a mesma licença a cada cobrança seguinte. Licença vencida sem pagamento entra em carência antes de ser suspensa; veja **[Como funciona a licença](/como-funciona/)**.
 - **Valida a licença do lado do plugin cliente** — o endpoint que cada plugin consulta para saber o próprio status, sem nunca travar o plugin por causa disso.
 - **Controla ativação por domínio** — cada site em que o plugin roda conta como uma ativação; ambientes de teste não contam.
 - **Distribui atualização** — o mesmo mecanismo que o WordPress usa para plugins do repositório oficial, mas para os nossos: verifica versão nova, entrega o changelog, libera o download.

@@ -11,8 +11,8 @@ Uma página por tarefa do dia a dia de quem opera o V3RLicense. Cada página exp
 ## Cadastro-base (uma vez, ou raramente)
 
 - **[Registrar um plugin novo](/processos/cadastrar-produto/)**
-- **[Montar a oferta de um plugin na loja](/processos/cadastrar-oferta-na-loja/)** — plano por assinatura, o caminho mais comum
-- **[Cadastrar um produto vendável](/processos/cadastrar-produto-vendavel/)** — licença perpétua ou plano negociado
+- **[Vender um plugin por assinatura](/processos/vender-por-assinatura/)** — o caminho mais comum
+- **[Vender uma licença perpétua ou um plano negociado](/processos/vender-perpetua-negociada/)**
 - **[Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/)**
 - **[Cadastrar tipo de licença e origem](/processos/cadastrar-tipo-e-origem/)**
 - **[Cadastrar cliente](/processos/cadastrar-cliente/)**

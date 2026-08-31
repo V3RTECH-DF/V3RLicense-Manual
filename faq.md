@@ -68,9 +68,9 @@ Não. A cobrança nova conta a partir da data em que ele volta a pagar, nunca da
 
 Se a **[página de produtos disponíveis](/modulos/configuracoes/)** estiver configurada, ele vê essa página como alternativa, mais o contato. Se não estiver, ele vê só o contato — nunca um link quebrado.
 
-## Excluí o cadastro de um produto vendável. Ele sumiu da loja?
+## Excluí um cadastro em Venda do plugin. Ele sumiu da loja?
 
-Não. Excluir aqui remove só o cadastro que liga o V3RLicense à loja — o produto que já foi publicado no WooCommerce continua existindo lá, com o preço, os pedidos e o histórico intactos. Veja **[Cadastrar um produto vendável](/processos/cadastrar-produto-vendavel/)**.
+Não. Excluir aqui remove só o cadastro que liga o V3RLicense à loja — o produto que já foi publicado no WooCommerce continua existindo lá, com o preço, os pedidos e o histórico intactos. Veja **[Vender uma licença perpétua ou um plano negociado](/processos/vender-perpetua-negociada/)**.
 
 ## Um pedido foi estornado. A licença é revogada automaticamente?
 
@@ -86,7 +86,7 @@ Desde a v0.13.1, os avisos que o WooCommerce manda ao administrador da loja (nov
 
 ## Um cliente quer mais sites ou uma periodicidade diferente na assinatura dele. Preciso emitir licença nova?
 
-Não, desde a v0.19.0. Se o plugin foi vendido pela **[Oferta na loja](/modulos/oferta-na-loja/)**, o cliente troca de combinação sozinho, direto na própria assinatura — a licença acompanha automaticamente (mesma chave, mesmos sites já ativos, só o limite e o tipo mudam). Veja **[Como funciona a licença](/como-funciona/)**.
+Não, desde a v0.19.0. Se o plugin foi vendido pela seção de assinatura de **[Venda do plugin](/modulos/venda-do-plugin/)**, o cliente troca de combinação sozinho, direto na própria assinatura — a licença acompanha automaticamente (mesma chave, mesmos sites já ativos, só o limite e o tipo mudam). Veja **[Como funciona a licença](/como-funciona/)**.
 
 ## Um cliente diz que não consegue descer para um plano menor. Por quê?
 
@@ -94,8 +94,8 @@ Porque ele tem mais sites ativados hoje do que o plano novo permite — a troca 
 
 ## Cadastrei uma combinação de duração e sites, mas o tipo de licença que eu queria não aparece no seletor. Por quê?
 
-Confira se o tipo está ativo em **[Tipos de licença](/modulos/tipos-de-licenca/)** e se não é o tipo perpétuo — perpétua não entra na **[Oferta na loja](/modulos/oferta-na-loja/)**; ela só é vendida pelo caminho antigo, em **[Produtos vendáveis](/modulos/produtos-vendaveis/)**.
+Confira se o tipo está ativo em **[Tipos de licença](/modulos/tipos-de-licenca/)** e se não é o tipo perpétuo — perpétua não entra na seção de assinatura de **[Venda do plugin](/modulos/venda-do-plugin/)**; ela só é vendida pela outra seção da mesma tela, veja **[Vender uma licença perpétua ou um plano negociado](/processos/vender-perpetua-negociada/)**.
 
-## Quando eu uso Produtos vendáveis e quando eu uso Oferta na loja?
+## Qual seção eu uso em Venda do plugin: assinatura ou perpétua/negociada?
 
-**[Oferta na loja](/modulos/oferta-na-loja/)** é o caminho comum: um plugin vendido por assinatura, com opções de duração e de número de sites que o cliente escolhe na página do produto. **[Produtos vendáveis](/modulos/produtos-vendaveis/)** continua só para licença **perpétua** (não é assinatura) e para plano **negociado** com uma empresa específica (oculto da vitrine pública — toda combinação da Oferta na loja aparece para todo mundo).
+**Produto por assinatura (duração × sites)** é o caminho comum: um plugin vendido por assinatura, com opções de duração e de número de sites que o cliente escolhe na página do produto. **Licença perpétua e venda negociada** é para licença **perpétua** (não é assinatura) e para venda **negociada** com uma empresa específica (oculta da vitrine pública — toda combinação da seção de assinatura aparece para todo mundo). Veja **[Venda do plugin](/modulos/venda-do-plugin/)**.

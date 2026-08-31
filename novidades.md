@@ -7,6 +7,14 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.20.0 a v0.21.0 — 30/08/2026
+
+- **"Oferta na loja" e "Produtos vendáveis" viram uma tela só: [Venda do plugin](/modulos/venda-do-plugin/).** As duas seções continuam fazendo exatamente o que faziam — assinatura de um lado, perpétua e negociada do outro —, só que agora numa página só, acessada pelo mesmo ícone de loja na lista de produtos. Veja **[Vender por assinatura](/processos/vender-por-assinatura/)** e **[Vender perpétua ou negociada](/processos/vender-perpetua-negociada/)**.
+- **A seção de perpétua e negociada ganha campo de preço.** Antes, o preço de uma licença perpétua ou de um plano negociado só era definido direto no WooCommerce. Agora dá para preencher o preço já no cadastro do V3RLicense — e, se você preencher, ele passa a valer na loja a cada publicação, do mesmo jeito que já acontecia na seção de assinatura. Deixar o campo em branco preserva o preço que já estiver na loja.
+
+{: .warning }
+> **Atenção ao migrar o hábito antigo:** se você tinha o costume de ajustar preço direto na tela do WooCommerce para um plano perpétuo ou negociado, isso continua funcionando — mas só enquanto o campo Preço, aqui no V3RLicense, ficar em branco. Preenchido, ele manda a partir da próxima publicação.
+
 ## v0.19.0 e v0.19.1 — 30/08/2026
 
 - **Um plugin por assinatura passa a ter um produto só na loja.** Antes, cada forma de vender o mesmo plugin (mensal, anual, com 1 site, com 5 sites…) era um produto separado — agora você cadastra as **combinações** de duração e número de sites numa tela só, a nova **[Oferta na loja](/modulos/oferta-na-loja/)**, cada uma com o próprio preço. Quem compra escolhe as duas coisas na página do produto, e o preço acompanha a escolha. Veja **[Montar a oferta de um plugin na loja](/processos/cadastrar-oferta-na-loja/)**.
