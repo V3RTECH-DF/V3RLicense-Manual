@@ -49,6 +49,10 @@ Rótulo · Produto · Tipo de licença · Catálogo (Visível / Oculto — negoc
 
 **Editar** · **Excluir cadastro** — excluir aqui remove só o cadastro; o produto já publicado na loja (se houver) permanece intacto.
 
+## O produto já nasce pronto para vender
+
+Ao publicar pela primeira vez (nas duas seções), o produto criado no WooCommerce já vem **virtual** — sem pedir endereço de entrega nem frete no checkout — e com o **ícone do plugin como imagem do produto**. Se o produto já tiver uma imagem posta à mão, ela não é sobrescrita nas publicações seguintes.
+
 ## O preço passou a ser nosso
 
 Nas duas seções, o preço definido aqui é o que vale: quem alterar o valor direto pelo WooCommerce vê a alteração ser **sobrescrita** na próxima vez que alguém publicar a partir desta tela. A única exceção é o cadastro antigo que nunca teve preço definido aqui — o campo aparece vazio, e publicar assim **não apaga** o preço que já estiver na loja.

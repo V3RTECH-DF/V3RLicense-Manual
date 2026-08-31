@@ -21,3 +21,4 @@ Referência de campo por campo de cada aba — o que ensina o **por quê** e o p
 | Tokens de publicação | **[Tokens de publicação](/modulos/tokens-de-publicacao/)** | [Gerenciar tokens](/processos/gerenciar-tokens-publicacao/) |
 | Releases | **[Releases](/modulos/releases/)** | [Publicar uma versão](/processos/publicar-uma-versao/), [Remover release](/processos/remover-release/) |
 | Configurações | **[Configurações](/modulos/configuracoes/)** | — |
+| Faturamento | **[Faturamento](/modulos/faturamento/)** | — |

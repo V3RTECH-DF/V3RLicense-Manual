@@ -7,6 +7,12 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.22.0 a v0.26.1 — 30/08/2026
+
+- **Nova tela [Faturamento](/modulos/faturamento/)**, a visão gerencial do negócio: faturamento líquido do mês (comparado com o mês anterior), licenças emitidas e receita por produto, licenças a vencer em 30/60/90 dias, ativações por licença, taxa de renovação e licenças revogadas. A tela avisa quando não sabe algo — licença sem valor apurado, ou sem origem informada — em vez de mostrar um número errado calado.
+- **O produto já nasce pronto para vender.** Um produto criado pelo V3RLicense na loja passa a nascer **virtual** (sem pedir endereço nem frete no checkout) e com o **ícone do plugin como imagem** — antes, os dois precisavam de um ajuste manual depois de publicar. Produto que já tinha imagem posta à mão não é afetado.
+- **Compra de várias licenças gera um e-mail só**, com todas as chaves, cada uma identificada pelo produto. Antes, cinco licenças compradas de uma vez mandavam cinco e-mails separados. Um pedido que mistura item avulso com item de assinatura continua gerando dois e-mails, porque são emitidos em momentos diferentes — não é defeito. Veja **[Como funciona a licença](/como-funciona/)**.
+
 ## v0.20.0 a v0.21.0 — 30/08/2026
 
 - **"Oferta na loja" e "Produtos vendáveis" viram uma tela só: [Venda do plugin](/modulos/venda-do-plugin/).** As duas seções continuam fazendo exatamente o que faziam — assinatura de um lado, perpétua e negociada do outro —, só que agora numa página só, acessada pelo mesmo ícone de loja na lista de produtos. Veja **[Vender por assinatura](/processos/vender-por-assinatura/)** e **[Vender perpétua ou negociada](/processos/vender-perpetua-negociada/)**.

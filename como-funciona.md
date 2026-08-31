@@ -26,10 +26,13 @@ Uma mesma chave de licença pode cobrir **mais de um plugin** — é o caso de o
 
 Um produto publicado na loja WooCommerce a partir da tela **[Venda do plugin](/modulos/venda-do-plugin/)** — seja pela seção de assinatura (combinações de duração e sites) ou pela seção de perpétua e negociada — não precisa de ninguém do lado do V3RLicense para virar licença: o pedido pago é que dispara tudo:
 
-- **Compra avulsa** (produto de licença perpétua) — pedido pago emite **uma licença por unidade comprada**, e o V3RLicense manda a chave ao cliente por e-mail. Comprou 3, o cliente recebe 3 chaves.
+- **Compra avulsa** (produto de licença perpétua) — pedido pago emite **uma licença por unidade comprada**, e o V3RLicense manda ao cliente **um e-mail só**, com todas as chaves, cada uma identificada pelo produto correspondente. Comprou 5, o cliente recebe 1 e-mail com as 5 chaves. Comprar uma unidade continua igual, num e-mail com uma chave.
 - **Assinatura** (produto de licença mensal, trimestral, semestral ou anual) — o pagamento inicial emite a licença do mesmo jeito; cada cobrança de renovação seguinte **estende essa mesma licença** — mesma chave, mesmas ativações preservadas — em vez de criar uma segunda. O cliente não reconfigura nada a cada cobrança, e a renovação automática não manda e-mail (o próprio WooCommerce já confirma a cobrança).
 
 Em ambos os casos o cliente é sempre identificado pela **conta com que fez o pedido** na loja, nunca por um e-mail digitado à parte.
+
+{: .note }
+> **Um pedido com item avulso e item de assinatura gera dois e-mails, não um.** Compra avulsa e assinatura são emitidas em momentos diferentes do processamento do pedido — misturar os dois tipos no mesmo carrinho não é defeito, é o motivo de chegarem separados.
 
 ## Os cinco status de uma licença
 
