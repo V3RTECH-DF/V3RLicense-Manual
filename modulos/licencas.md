@@ -8,16 +8,9 @@ nav_order: 1
 
 Veja o passo a passo em **[Emitir uma licença ou acesso](/processos/emitir-licenca/)**, **[Renovar](/processos/renovar-licenca/)** (individual e em lote), **[Revogar](/processos/revogar-licenca/)** e **[Emitir uma isenção RIT](/processos/emitir-isencao/)**. Sobre o token de um acesso, veja **[Gerenciar tokens de serviço](/processos/gerenciar-tokens-de-servico/)**. Sobre a cobertura por lista, veja **[Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/)** e **[Listas de acesso](/modulos/listas-de-acesso/)**. Sobre os status de carência e suspensão, veja **[Como funciona a licença](/como-funciona/)**.
 
-![Formulário "Emitir licença manualmente" com a escolha "Segue uma lista de acesso" / "Produtos específicos", e uma linha de licença cobrindo V3RLGPD, V3RHelp! e mais 1, com ativações listadas por produto](/assets/screenshots/licencas-emitir-lista-acesso.png)
+![Lista "Licenças e acessos" mostrando as colunas Categoria (Licença ou Acesso) e Token de acesso (trava e validade, ou "Não emitido"), lado a lado com Cobertura, Cliente, Status e Ações](/assets/screenshots/licencas-lista-categoria-token.png)
 
-![Lista de licenças mostrando a coluna Cobertura (produtos cobertos e a lista de acesso seguida, quando houver) e a coluna Ativações detalhada por produto](/assets/screenshots/licencas-cobertura.png)
-
-![Cartões de estatística no topo da tela: total de licenças, ativas, suspensas por falta de pagamento e revogadas](/assets/screenshots/licencas-cards-status.png)
-
-![Lista de licenças mostrando os cinco status lado a lado: Ativa, Revogada, Expirada, Suspensa por falta de pagamento e Em carência](/assets/screenshots/licencas-status-novos.png)
-
-{: .note }
-> Estas quatro capturas ainda mostram a tela **antes** da unificação da v0.33.0 — a coluna **Categoria** e as ações de token na linha, descritas abaixo, ainda não aparecem nelas. Recaptura pendente, ver `README.md`.
+![Três cartões no topo da tela mostrando os tokens ativos por trava: Acessos sem trava, Acessos com certificado e Acessos por organização](/assets/screenshots/licencas-indicadores-trava.png)
 
 ## Licença ou acesso — a mesma tela, dois vocabulários
 
@@ -49,6 +42,8 @@ Uma licença cobre **um ou mais produtos** — desde a licença de um cliente co
 
 Status, Produto (filtra licenças que cobrem aquele produto, mesmo cobrindo outros também), Cliente (nome ou e-mail), **Categoria** (Todos / Só licenças / Só acessos).
 
+![Filtro Categoria aberto, mostrando as três opções: Licenças e acessos, Só licenças, Só acessos](/assets/screenshots/licencas-filtro-categoria-aberto.png)
+
 ## Indicadores de trava, no topo
 
 Três cartões mostram quantos **tokens ativos** existem hoje em cada trava — Sem trava, Com certificado, Por organização (reservada para uso futuro) — somando todos os acessos da conta, sem depender do filtro aplicado. É o mesmo indicador que a antiga tela separada de tokens mostrava; aqui ele acompanha a listagem unificada.
@@ -61,6 +56,8 @@ O formulário de emissão muda de nome sozinho conforme o que você escolhe:
 - Escolhendo produto **ligado a um serviço da casa**, dizem **"Emitir acesso"** — e o **token sai junto, na mesma ação**, sem precisar de uma segunda tela nem de uma venda antes.
 - Escolhendo uma lista de acesso que mistura os dois tipos de produto (caso raro), o formulário fica com o rótulo neutro **"Emitir licença ou acesso"**.
 
+![Formulário de emissão com o título mudado para "Emitir acesso manualmente" depois de marcar um produto ligado a serviço (V3RSigner) em "Produtos específicos"](/assets/screenshots/licencas-emitir-produto-servico.png)
+
 Antes da v0.32.0, só compra e renovação emitiam token — se você precisasse dar acesso a alguém fora do fluxo de venda, não tinha caminho manual. Hoje o operador emite pelo painel exatamente como emitiria uma licença comum. Veja o passo a passo completo, com os campos do formulário, em **[Emitir uma licença ou acesso](/processos/emitir-licenca/)**.
 
 {: .important }
@@ -72,6 +69,8 @@ Só uma linha de **Acesso** mostra ações de token, e só quando fizer sentido 
 
 - **Emitir token de acesso** — aparece quando o acesso ainda não tem token vigente (por exemplo, foi emitido antes de o produto ganhar audiência, ou o token anterior foi revogado sem substituto). Confirma e emite na hora.
 - **Revogar token de acesso** — aparece quando já existe um token vigente. Revoga sem emitir outro no lugar; o consumidor do serviço para de aceitar aquele token em **até 1 hora** (a janela de propagação da lista de cancelados), não imediatamente.
+
+![Linha de um acesso com token vigente, mostrando os ícones de ação: Ver ativações, Renovar licença, Revogar acesso e Revogar token de acesso](/assets/screenshots/licencas-linha-acoes-token.png)
 
 Marcando mais de uma linha de acesso com token, aparece **Revogar tokens selecionados (N)** para revogar em lote. Veja o passo a passo com exemplos em **[Gerenciar tokens de serviço](/processos/gerenciar-tokens-de-servico/)**.
 

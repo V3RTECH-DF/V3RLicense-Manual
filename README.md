@@ -77,7 +77,14 @@ listagem só — **Licenças e acessos** —, com o vocabulário "acesso" para
 produto ligado a serviço. `modulos/tokens-de-servico.md` virou stub
 apontando para lá; `modulos/licencas.md`, `processos/emitir-licenca.md`,
 `processos/gerenciar-tokens-de-servico.md`, `como-funciona.md`,
-`faq.md` e `novidades.md` foram atualizados. **Sem captura ainda** —
-roteiro refeito, ver relatório desta passada; as quatro capturas antigas
-referenciadas em `modulos/licencas.md` ficaram desatualizadas e
-precisam ser refeitas.
+`faq.md` e `novidades.md` foram atualizados. As quatro capturas antigas
+de `modulos/licencas.md` foram recapturadas em 05/09/2026 (v0.33.1):
+listagem com Categoria e Token de acesso, indicadores de trava, filtro
+Categoria aberto, formulário de emissão com produto de serviço e a
+linha de ações de token. **Ainda pendentes:** o diálogo de confirmação
+da emissão (o clique em "Emitir" foi bloqueado pelo classificador de
+segurança da sessão, por parecer ação irreversível — não forçado) e,
+na conta do cliente, o bloco "Gerar token" e o bloco do token com a
+linha de sobreposição (nenhum acesso em produção está hoje no estado
+que os produz — sem token pendente de emissão pelo cliente, e sem
+renovação recente com token anterior ainda vigente).
