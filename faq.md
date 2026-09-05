@@ -108,9 +108,20 @@ Não precisa — e você não tem como, de qualquer forma (o painel não guarda 
 
 Não, dentro da primeira hora. Quem confere o token do lado do serviço (V3RSigner) trabalha com uma lista de cancelados que demora até 1 hora para incorporar a revogação — não consulta o V3RLicense a cada uso, para não parar se o V3RLicense cair. Oriente o cliente a trocar o valor do token no sistema que usa **assim que revogar**, sem esperar a hora passar. Veja **[Token de acesso a serviço da casa](/como-funciona/#reemitir-e-revogar--e-por-que-não-é-instantâneo)**.
 
-## O token de acesso a serviço de um cliente "venceu" mesmo com a licença em dia. Por quê?
+## Renovei o acesso de um cliente. O token dele também foi renovado?
 
-Porque a validade do token é calculada **uma vez, na emissão**, e não acompanha sozinha uma renovação posterior da licença. Oriente o cliente a clicar em **Reemitir**, na própria conta: o botão gera um token novo, já calculado com a validade atual. Veja **[Validade do token, e o que a renovação da licença muda](/como-funciona/#validade-do-token-e-o-que-a-renovação-da-licença-muda)**.
+Sim, desde a v0.31.0 — automaticamente, sem precisar de "Reemitir". A renovação paga emite um **token novo**, com o prazo recalculado a partir do vencimento novo do acesso. O token **anterior não é revogado**: continua valendo até a própria data dele, e essa sobreposição é a janela para o cliente trocar o valor no sistema dele sem parar nada, dentro do próprio prazo — sem pressa. Na conta, o cliente vê o token mais recente e uma linha dizendo até quando o anterior ainda vale. Veja **[Validade do token, e o que a renovação do acesso muda](/como-funciona/#validade-do-token-e-o-que-a-renovação-do-acesso-muda)**.
+
+{: .note }
+> Isso corrige um comportamento anterior à v0.31.0, em que a renovação não estendia o token — nesse caso a saída era o cliente clicar em **Reemitir**. Não é mais preciso: reemitir continua existindo, mas só para os casos de sempre (suspeita de vazamento, trocar a trava).
+
+## Um produto foi ligado a um serviço da casa. As licenças dele viram "acesso"?
+
+O **termo** muda a partir dali — o item passa a ser chamado de **acesso**, não mais de licença, na coluna Categoria de **[Licenças e acessos](/modulos/licencas/)** e no vocabulário de toda a tela. Mas isso vale só para **emissões novas** desse produto (venda ou emissão manual); um cadastro de audiência não reclassifica retroativamente o que já foi emitido antes da ligação. Veja **[Licenças e acessos](/modulos/licencas/#licença-ou-acesso--a-mesma-tela-dois-vocabulários)**.
+
+## Preciso emitir um token de acesso para um cliente que nunca comprou o serviço pela loja. Dá para fazer isso pelo painel?
+
+Sim, desde a v0.32.0. Antes, só compra e renovação emitiam token — hoje você emite (ou o próprio cliente gera, pela conta dele, se a licença já der direito) a qualquer momento, sem depender de uma venda. Veja **[Gerenciar tokens de serviço](/processos/gerenciar-tokens-de-servico/)**.
 
 ## Por que um token de acesso a serviço nasce "sem trava"?
 

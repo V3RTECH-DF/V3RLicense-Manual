@@ -7,6 +7,21 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.33.0 — 05/09/2026
+
+- **Produto ligado a um serviço da casa não se chama mais "licença": chama-se ACESSO.** "Acessos", "Emitir acesso", "este acesso vence em…", "o token deste acesso" — o vocabulário muda em toda a tela e no manual. Licença de plugin continua sendo licença, do jeito de sempre. Veja **[Licenças e acessos](/modulos/licencas/#licença-ou-acesso--a-mesma-tela-dois-vocabulários)**.
+- **A tela separada de "Tokens de serviço" deixou de existir como lugar de emitir.** Emitir e revogar token de acesso agora acontece na mesma listagem de licenças — renomeada **[Licenças e acessos](/modulos/licencas/)** —, com uma coluna **Categoria** (Licença/Acesso) e um filtro por ela. O endereço antigo redireciona para lá, com o filtro já aplicado.
+- **Emitir passou a ser uma ação só, mesmo quando sai token junto.** Antes, o operador emitia a licença numa aba e tinha de trocar de tela para gerar o token; agora escolher um produto ligado a serviço já emite os dois juntos. As ações de token (emitir, revogar) ficam na própria linha do acesso.
+- **Configurar a trava do token continua sendo só do cliente**, na própria conta — o painel só lê e mostra o que está configurado.
+
+## v0.32.0 — 05/09/2026
+
+- **Emitir um token de acesso deixou de depender de compra.** Antes, só uma compra paga ou uma renovação criavam token. Agora o **cliente também gera pela própria conta**, quando a licença já dá direito ao serviço e ainda não existe token vigente — antes, sem token, o bloco inteiro simplesmente não aparecia, e ele não tinha saída. O **operador** também passa a emitir pelo painel, a qualquer momento. Nunca existem dois tokens vigentes na mesma licença: havendo um, os dois caminhos recusam — trocar é reemitir, que revoga o anterior.
+
+## v0.31.0 — 05/09/2026
+
+- **Correção:** a renovação paga de um acesso não estendia o token — era preciso o cliente clicar em **Reemitir** manualmente sempre que o acesso renovasse. Agora a renovação emite um **token novo** junto, com o prazo recalculado a partir do vencimento novo. O token **anterior não é revogado**: continua valendo até a própria data dele, e essa sobreposição é a janela para o cliente trocar o valor no sistema dele sem parar nada. Na conta, o cliente vê o token mais recente e uma linha dizendo até quando o anterior ainda vale. Veja **[Validade do token, e o que a renovação do acesso muda](/como-funciona/#validade-do-token-e-o-que-a-renovação-do-acesso-muda)**.
+
 ## v0.28.0 a v0.30.0 — 05/09/2026
 
 - **O V3RLicense passa a vender acesso a serviço da casa, não só plugin.** O primeiro é o **V3RSigner**, o serviço que assina PDF: um produto ligado a ele (cadastro novo, **[Audiências de serviço](/modulos/audiencias-de-servico/)**) emite, junto da licença de sempre, um **token de acesso** que o cliente cola no sistema que consome o serviço. Veja **[Token de acesso a serviço da casa](/como-funciona/#token-de-acesso-a-serviço-da-casa)**.
@@ -15,8 +30,8 @@ O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o hist�
 - **Licença que deixa de valer leva o token junto, automaticamente** — suspensa, expirada ou revogada revoga o token dela; licença em carência não revoga, porque ela ainda vale (a mesma regra de sempre).
 - **Configurações ganha a seção "Chave de assinatura"**: qual fonte está em uso (variável de ambiente, constante ou banco de dados), a chave pública, e as ações de exportar (backup) e importar (recuperação). O plugin já não depende de configurar a chave por fora — sem nenhuma das outras fontes, ele gera e guarda a própria chave.
 
-{: .warning }
-> **A validade do token não acompanha sozinha uma renovação de licença.** Ela é calculada uma vez, na emissão. Se a licença renovar e o token estiver perto de vencer, a saída é o cliente clicar em **Reemitir** — não existe reemissão automática hoje.
+{: .note }
+> Nesta versão, a validade do token ainda não acompanhava a renovação da licença sozinha — corrigido na v0.31.0, acima.
 
 ## v0.22.0 a v0.26.1 — 30/08/2026
 

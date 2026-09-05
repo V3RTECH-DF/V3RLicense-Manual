@@ -114,7 +114,7 @@ Quando o cliente muda de domínio (staging virou produção, ou o site mudou de 
 
 ## Renovação
 
-Renovar uma licença expirada **reativa a mesma chave** — o cliente não recebe uma chave nova, e as ativações que ele já tinha continuam valendo, sem precisar reativar nada. Veja o passo a passo em **[Renovar uma licença](/processos/renovar-licenca/)**.
+Renovar uma licença expirada **reativa a mesma chave** — o cliente não recebe uma chave nova, e as ativações que ele já tinha continuam valendo, sem precisar reativar nada. Quando é um **acesso** (produto ligado a serviço), a renovação leva o token junto — veja **[Validade do token, e o que a renovação do acesso muda](#validade-do-token-e-o-que-a-renovação-do-acesso-muda)**. Veja o passo a passo em **[Renovar uma licença](/processos/renovar-licenca/)**.
 
 ## A aba "Minhas licenças", na conta do cliente
 
@@ -170,14 +170,25 @@ Se você abrir a tela do cliente por cima do ombro dele (ou olhar um print que e
 
 ## Token de acesso a serviço da casa
 
-Desde a v0.30.0, uma licença pode dar acesso a mais do que atualização de plugin: ela pode dar acesso a um **serviço da casa** — hoje, o **V3RSigner**, o serviço que assina PDF. Quando isso acontece, o cliente recebe, além da chave de licença, um **token**: uma cadeia de texto longa que ele mesmo cola no sistema que vai consumir o serviço (por exemplo, no lugar onde o site dele integra com o V3RSigner).
+Desde a v0.30.0, um produto pode dar acesso a mais do que atualização de plugin: ele pode dar acesso a um **serviço da casa** — hoje, o **V3RSigner**, o serviço que assina PDF. Um produto ligado a um serviço não é chamado de "licença": é chamado de **acesso** (desde a v0.33.0 — veja **[Licenças e acessos](/modulos/licencas/#licença-ou-acesso--a-mesma-tela-dois-vocabulários)**). O cliente recebe, além da chave, um **token**: uma cadeia de texto longa que ele mesmo cola no sistema que vai consumir o serviço (por exemplo, no lugar onde o site dele integra com o V3RSigner).
 
 {: .note }
-> **Nem toda licença tem token.** Só quando o produto comprado está ligado a um serviço (cadastro que o operador faz em **[Audiências de serviço](/modulos/audiencias-de-servico/)**). A imensa maioria das licenças — que só cobrem plugin — nunca mostra esse bloco.
+> **Nem toda licença tem token — só o acesso tem.** Só quando o produto está ligado a um serviço (cadastro que o operador faz em **[Audiências de serviço](/modulos/audiencias-de-servico/)**) o item vira acesso e ganha token. A imensa maioria das licenças — que só cobrem plugin — nunca mostra esse bloco.
+
+### Como o token nasce
+
+Um token de acesso sai de três jeitos, todos gerando exatamente o mesmo tipo de token:
+
+- **Compra ou renovação** de um produto ligado a serviço — o token sai (ou é renovado, veja abaixo) automaticamente, sem nenhuma ação de ninguém.
+- **O cliente gera pela própria conta** (desde a v0.32.0) — quando o acesso já dá direito ao serviço mas ainda não existe token vigente (por exemplo, um acesso concedido por parceria, ou emitido antes de o produto ganhar audiência), a aba "Minhas licenças" mostra um botão **Gerar token** no lugar do bloco de token. Antes da v0.32.0 esse bloco simplesmente não aparecia, e o cliente não tinha saída própria.
+- **O operador emite pelo painel** (desde a v0.32.0) — em **[Licenças e acessos](/modulos/licencas/)**, na linha do acesso, com o ícone **Emitir token de acesso**. Útil para dar acesso fora do fluxo de venda.
+
+{: .important }
+> **Nunca existem dois tokens vigentes ao mesmo tempo para o mesmo acesso.** Emitir de novo quando já existe um vigente é recusado nos três caminhos acima — para trocar, o caminho é **reemitir** (veja adiante), que revoga o anterior.
 
 ### O que o cliente vê
 
-Na aba "Minhas licenças", a licença que tem token mostra um bloco próprio, logo abaixo da tabela de produtos:
+Na aba "Minhas licenças", o acesso que tem token mostra um bloco próprio, logo abaixo da tabela de produtos:
 
 ![Bloco "Token de acesso a serviço da casa" na aba Minhas licenças, com o token em claro, um botão Copiar, a validade e a frase descrevendo a trava atual](/assets/screenshots/minhas-licencas-token-servico.png)
 
@@ -211,22 +222,24 @@ O cliente tem dois botões, além de configurar a trava:
 >
 > **O que fazer nesse intervalo:** se o motivo for suspeita de vazamento, o cliente deve trocar o valor do token no sistema que o usa **assim que reemitir ou revogar** — não esperar a hora passar para agir. O token antigo continuar tecnicamente aceito por mais alguns minutos não é um bug a reportar; é a mecânica de propagação, e o passo seguro é sempre trocar o valor primeiro.
 
-### Validade do token, e o que a renovação da licença muda
+### Validade do token, e o que a renovação do acesso muda
 
-A validade do token é calculada **uma vez, na emissão** — não é recalculada sozinha depois:
+A validade do token é calculada **na emissão**:
 
-- Licença com data de vencimento: o token vale até essa data mais os mesmos 15 dias de carência da própria licença.
-- Licença perpétua (sem vencimento): o token vale 12 meses a partir de quando foi emitido.
+- Licença/acesso com data de vencimento: o token vale até essa data mais os mesmos 15 dias de carência da própria licença.
+- Licença/acesso perpétuo (sem vencimento): o token vale 12 meses a partir de quando foi emitido.
 - Em qualquer um dos dois casos, o token nunca passa de **13 meses a partir da emissão** — é um teto de segurança, para limitar o estrago de um token que vaze e nunca seja revogado.
 
-{: .warning }
-> **Renovar a licença não estende sozinho o token já emitido.** A data de "Válido até" do token não acompanha automaticamente a nova validade da licença renovada — ela fica congelada no que foi calculado quando o token nasceu. Se o cliente perceber que o token está perto de vencer, mas a licença está em dia, a saída é **Reemitir**: o botão gera um token novo, já calculado com a validade atual da licença. Avise o cliente disso quando ele perguntar "minha licença está ativa, por que o token venceu?" — a resposta é reemitir, não esperar.
+{: .important }
+> **Desde a v0.31.0, renovar o acesso emite um token novo automaticamente**, com o prazo recalculado a partir do vencimento novo — o cliente não precisa clicar em nada. O token **anterior não é revogado**: continua valendo até a própria data dele, e essa sobreposição é justamente a janela para o cliente trocar o valor no sistema dele sem parar nada, dentro desse prazo, sem pressa. Na conta, o cliente vê o token mais recente e uma linha dizendo até quando o anterior ainda vale.
+>
+> Antes da v0.31.0, a renovação não estendia o token — a saída era clicar em **Reemitir**. Reemitir continua existindo, mas hoje é só para os casos de sempre: suspeita de vazamento, ou trocar a trava.
 
-### O que acontece se a licença deixar de valer
+### O que acontece se o acesso deixar de valer
 
-O token segue o destino da licença, com uma exceção:
+O token segue o destino do acesso, com uma exceção:
 
-| Situação da licença | O que acontece com o token |
+| Situação do acesso | O que acontece com o token |
 |---|---|
 | Em carência (venceu, dentro dos 15 dias) | **Continua funcionando normalmente** — carência nunca revoga token, a mesma regra de sempre para atualização de plugin. |
 | Suspensa por falta de pagamento, expirada ou revogada | Entra na lista de cancelados automaticamente, dentro de até 1 hora — sem precisar de nenhuma ação do cliente ou do operador. |

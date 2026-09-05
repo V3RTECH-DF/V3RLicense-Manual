@@ -21,7 +21,7 @@ Uma página por tarefa do dia a dia de quem opera o V3RLicense. Cada página exp
 
 ## Licenças, no dia a dia
 
-- **[Emitir uma licença](/processos/emitir-licenca/)**
+- **[Emitir uma licença ou acesso](/processos/emitir-licenca/)**
 - **[Emitir uma isenção RIT](/processos/emitir-isencao/)**
 - **[Renovar uma licença](/processos/renovar-licenca/)**
 - **[Revogar uma licença](/processos/revogar-licenca/)**

@@ -1,14 +1,17 @@
 ---
-title: Emitir uma licença
+title: Emitir uma licença ou acesso
 parent: Como faço…
 nav_order: 4
 ---
 
-# Emitir uma licença
+# Emitir uma licença ou acesso
 
 ## Por que isto importa
 
 Emitir a licença é o que dá ao cliente a chave que ele cola no plugin — sem isso, o plugin dele não recebe atualização (veja **[Como funciona a licença](/como-funciona/)**). É a ação mais frequente deste painel.
+
+{: .note }
+> **Escolhendo um produto ligado a um serviço da casa, você está emitindo um acesso, não uma licença** — e o token sai junto, na mesma ação (veja **[Licenças e acessos](/modulos/licencas/#emitir--uma-ação-só-mesmo-quando-sai-token-junto)**). O formulário e o botão trocam de nome sozinhos conforme o que você escolhe; o passo a passo abaixo é o mesmo nos dois casos.
 
 ## Antes de começar
 
@@ -26,8 +29,8 @@ O produto, ao menos uma origem ativa e ao menos um tipo de licença ativo precis
    - **Máximo de ativações (vazio = padrão do produto)** — deixe em branco para cada produto coberto usar o próprio padrão; preenchido, o número vale **igualmente para todos os produtos** desta emissão (veja a armadilha abaixo).
    - **Origem**
    - **Anotação (opcional)** — texto livre, útil para registrar o motivo ou o número do pedido.
-4. Clique em **Emitir licença**.
-5. A chave gerada aparece na confirmação (`Licença emitida: ...`) — copie e entregue ao cliente. É a **mesma chave** que o cliente cola em cada um dos plugins cobertos.
+4. Clique em **Emitir licença** (ou **Emitir acesso**, se o produto escolhido estiver ligado a um serviço da casa).
+5. A chave gerada aparece na confirmação (`Licença emitida: ...` ou `Acesso emitido: ...`) — copie e entregue ao cliente. É a **mesma chave** que o cliente cola em cada um dos plugins cobertos.
 
 {: .example }
 > **Exemplo — licença de um produto só, o caso comercial de hoje:** "Produtos específicos" com só o V3REvent marcado, cliente "Instituto Vida Nova" (`contato@institutovidanova.org.br`), tipo "Anual", ativações padrão do produto, origem "Venda direta", anotação "Pedido #4821 — boleto pago em 20/08".
@@ -50,6 +53,7 @@ O produto, ao menos uma origem ativa e ao menos um tipo de licença ativo precis
 
 - **"Não foi possível emitir a licença — confira produto, nome e e-mail"** — algum campo obrigatório está vazio ou o e-mail não é um e-mail válido.
 - Erro de origem ou tipo inválido — normalmente porque a opção selecionada foi desativada por outra pessoa entre você abrir a tela e enviar o formulário. Recarregue e tente de novo.
+- **"…mas o token de acesso não pôde ser emitido agora. Emita manualmente na linha do acesso."** — emitindo um acesso, a licença saiu normalmente, mas o token não. Isso nunca fica em silêncio: vá até a linha do acesso recém-emitido em **[Licenças e acessos](/modulos/licencas/)** e clique em **Emitir token de acesso**.
 
 ## Limites do papel
 

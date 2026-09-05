@@ -15,16 +15,19 @@ Revogar é a ação para reembolso, fraude ou qualquer decisão de cancelar uma 
 
 ## Passo a passo
 
-**Uma licença:**
-1. Na aba **Licenças**, localize a licença.
-2. Clique no ícone **Revogar licença** na linha dela.
+**Uma licença ou acesso:**
+1. Na aba **Licenças e acessos**, localize a linha.
+2. Clique no ícone **Revogar licença** (ou **Revogar acesso**, se a Categoria da linha for Acesso) na linha dela.
 3. Leia o aviso — "Esta licença deixará de validar/atualizar. A ação não pode ser desfeita pela tela" — e confirme.
 
 **Várias de uma vez:**
-1. Marque as caixas de seleção das licenças a revogar (ou "selecionar todas").
+1. Marque as caixas de seleção das licenças/acessos a revogar (ou "selecionar todas").
 2. Clique em **Revogar selecionadas (N)**.
 3. Confirme — o diálogo mostra quantas serão afetadas.
 4. O resultado mostra três números: concluídas, recusadas por regra e falhas — confira que bate com o que você esperava, principalmente se algum item foi recusado.
+
+{: .note }
+> **Revogar um acesso revoga o token dele junto**, automaticamente, dentro de até 1 hora — sem precisar de uma segunda ação em **[Gerenciar tokens de serviço](/processos/gerenciar-tokens-de-servico/)**.
 
 ## Exemplo
 

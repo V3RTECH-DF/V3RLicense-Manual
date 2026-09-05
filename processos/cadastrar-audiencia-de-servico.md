@@ -16,18 +16,18 @@ Antes de qualquer produto poder emitir token de acesso a um serviço da casa (V3
 2. Clique em **Nova audiência**.
 3. Preencha:
    - **Identificador (slug)** — minúsculo, sem espaço, no padrão `algo` ou `algo-com-hifen`. Vira o valor gravado dentro de todo token emitido para este serviço (o `aud`, no jargão de quem verifica). Travado depois de criado.
-   - **Rótulo** — o nome de exibição, usado nesta lista e nos filtros de **[Tokens de serviço](/modulos/tokens-de-servico/)**.
+   - **Rótulo** — o nome de exibição, usado nesta lista e na coluna "Token de acesso" de **[Licenças e acessos](/modulos/licencas/)**.
 4. Salve. A audiência nasce **Ativa**.
 5. Vá em **[Produtos](/modulos/produtos/)**, abra o produto que deve dar acesso a esse serviço, e escolha-o no campo **Serviço da casa (opcional — token de acesso)**.
 
 ## Exemplo concreto
 
-O V3RSigner precisa que quem compra o plano "V3RSigner Profissional" receba também um token de acesso. Você cadastra a audiência com identificador `v3rsigner` e rótulo "V3RSigner", depois abre o produto correspondente e escolhe "V3RSigner" no campo de serviço. A partir da próxima venda desse produto, cada licença emitida já sai com o token.
+O V3RSigner precisa que quem compra o plano "V3RSigner Profissional" receba também um token de acesso. Você cadastra a audiência com identificador `v3rsigner` e rótulo "V3RSigner", depois abre o produto correspondente e escolhe "V3RSigner" no campo de serviço. A partir daí, cada emissão desse produto — por venda, ou manual pelo painel (veja **[Emitir uma licença ou acesso](/processos/emitir-licenca/)**) — já sai com o token, e passa a ser chamada de **acesso**, não mais de licença.
 
 ## Dicas e armadilhas
 
 - **O slug é para sempre.** Ele fica gravado dentro de cada token já emitido — mudar depois quebraria a verificação do lado do serviço para todo token existente. Por isso é travado na tela.
-- **Cadastrar a audiência não emite nada sozinho.** O efeito só aparece quando um produto é ligado a ela (passo 5) e uma venda **nova** acontece — vendas anteriores àquela ligação não recebem token retroativamente.
+- **Cadastrar a audiência não emite nada sozinho.** O efeito só aparece quando um produto é ligado a ela (passo 5) e uma emissão **nova** acontece — venda ou emissão manual anterior àquela ligação não recebe token retroativamente.
 - **Desativar não é excluir.** Uma audiência inativa mantém os tokens já emitidos funcionando (a revogação deles é outra decisão, feita em **[Gerenciar tokens de serviço](/processos/gerenciar-tokens-de-servico/)**); ela só sai da lista de opções para **novas** ligações de produto.
 
 ## Quando dá errado

@@ -12,6 +12,8 @@ Renovar é o que devolve a uma licença expirada o direito a atualização e cor
 
 {: .note }
 > **Licença de assinatura recorrente já se renova sozinha** a cada cobrança paga na loja — a mesma licença é estendida automaticamente, sem passar por aqui. Esta página serve para o resto: isenção/cortesia (sempre manual, veja **[Configurações](/modulos/configuracoes/)**), venda avulsa e qualquer licença que a cobrança automática não alcançou.
+>
+> **Renovando um acesso** (produto ligado a serviço), o token dele é renovado junto, automaticamente — veja **[Validade do token, e o que a renovação do acesso muda](/como-funciona/#validade-do-token-e-o-que-a-renovação-do-acesso-muda)**.
 
 ## Passo a passo
 

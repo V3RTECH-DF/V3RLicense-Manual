@@ -63,9 +63,21 @@ lista de telas pendentes no relatório desta passada.
 A v0.28.0–v0.30.0 (05/09/2026) acrescentou o **token de acesso a serviço
 da casa** (V3RLicense-Code#57, #58) — o primeiro consumidor é o
 V3RSigner. Documentado em `como-funciona.md` (seção própria, com
-glossário), `modulos/audiencias-de-servico.md`,
-`modulos/tokens-de-servico.md`, a seção "Chave de assinatura" acrescida
-a `modulos/configuracoes.md`, o campo novo de `modulos/produtos.md`, os
-dois processos novos (`processos/cadastrar-audiencia-de-servico.md`,
+glossário), `modulos/audiencias-de-servico.md`, a seção "Chave de
+assinatura" acrescida a `modulos/configuracoes.md`, o campo novo de
+`modulos/produtos.md`, os dois processos novos
+(`processos/cadastrar-audiencia-de-servico.md`,
 `processos/gerenciar-tokens-de-servico.md`) e as FAQs correspondentes.
-**Sem captura ainda** — roteiro pronto, ver relatório desta passada.
+
+A v0.31.0–v0.33.0 (05/09/2026, V3RLicense-Code#60) corrigiu a renovação
+do token (antes não acompanhava a renovação do acesso), tirou a emissão
+de token da dependência de compra (cliente gera pela conta, operador
+emite pelo painel) e unificou "Licenças" e "Tokens de serviço" numa
+listagem só — **Licenças e acessos** —, com o vocabulário "acesso" para
+produto ligado a serviço. `modulos/tokens-de-servico.md` virou stub
+apontando para lá; `modulos/licencas.md`, `processos/emitir-licenca.md`,
+`processos/gerenciar-tokens-de-servico.md`, `como-funciona.md`,
+`faq.md` e `novidades.md` foram atualizados. **Sem captura ainda** —
+roteiro refeito, ver relatório desta passada; as quatro capturas antigas
+referenciadas em `modulos/licencas.md` ficaram desatualizadas e
+precisam ser refeitas.
