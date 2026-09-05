@@ -59,3 +59,13 @@ documentado em `como-funciona.md`, com o campo novo de Configurações, a
 nota em `processos/liberar-ativacao.md` e as FAQs correspondentes. **Sem
 captura ainda** — a versão está sendo publicada durante esta redação; ver
 lista de telas pendentes no relatório desta passada.
+
+A v0.28.0–v0.30.0 (05/09/2026) acrescentou o **token de acesso a serviço
+da casa** (V3RLicense-Code#57, #58) — o primeiro consumidor é o
+V3RSigner. Documentado em `como-funciona.md` (seção própria, com
+glossário), `modulos/audiencias-de-servico.md`,
+`modulos/tokens-de-servico.md`, a seção "Chave de assinatura" acrescida
+a `modulos/configuracoes.md`, o campo novo de `modulos/produtos.md`, os
+dois processos novos (`processos/cadastrar-audiencia-de-servico.md`,
+`processos/gerenciar-tokens-de-servico.md`) e as FAQs correspondentes.
+**Sem captura ainda** — roteiro pronto, ver relatório desta passada.

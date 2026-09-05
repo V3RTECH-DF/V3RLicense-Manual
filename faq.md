@@ -99,3 +99,19 @@ Confira se o tipo está ativo em **[Tipos de licença](/modulos/tipos-de-licenca
 ## Qual seção eu uso em Venda do plugin: assinatura ou perpétua/negociada?
 
 **Produto por assinatura (duração × sites)** é o caminho comum: um plugin vendido por assinatura, com opções de duração e de número de sites que o cliente escolhe na página do produto. **Licença perpétua e venda negociada** é para licença **perpétua** (não é assinatura) e para venda **negociada** com uma empresa específica (oculta da vitrine pública — toda combinação da seção de assinatura aparece para todo mundo). Veja **[Venda do plugin](/modulos/venda-do-plugin/)**.
+
+## Um cliente diz que perdeu o token de acesso ao serviço. Eu reenvio?
+
+Não precisa — e você não tem como, de qualquer forma (o painel não guarda o valor em claro). Ele mesmo copia de novo, a qualquer momento, na aba "Minhas licenças" da própria conta: o token fica sempre visível ali, não é "mostrado uma vez só" como o token de publicação. Veja **[Token de acesso a serviço da casa](/como-funciona/#token-de-acesso-a-serviço-da-casa)**.
+
+## Revoguei (ou o cliente revogou) um token de serviço, e ele diz que ainda está funcionando. É bug?
+
+Não, dentro da primeira hora. Quem confere o token do lado do serviço (V3RSigner) trabalha com uma lista de cancelados que demora até 1 hora para incorporar a revogação — não consulta o V3RLicense a cada uso, para não parar se o V3RLicense cair. Oriente o cliente a trocar o valor do token no sistema que usa **assim que revogar**, sem esperar a hora passar. Veja **[Token de acesso a serviço da casa](/como-funciona/#reemitir-e-revogar--e-por-que-não-é-instantâneo)**.
+
+## O token de acesso a serviço de um cliente "venceu" mesmo com a licença em dia. Por quê?
+
+Porque a validade do token é calculada **uma vez, na emissão**, e não acompanha sozinha uma renovação posterior da licença. Oriente o cliente a clicar em **Reemitir**, na própria conta: o botão gera um token novo, já calculado com a validade atual. Veja **[Validade do token, e o que a renovação da licença muda](/como-funciona/#validade-do-token-e-o-que-a-renovação-da-licença-muda)**.
+
+## Por que um token de acesso a serviço nasce "sem trava"?
+
+É o estado inicial de toda emissão pela venda — no momento da compra ainda não existe certificado nenhum para vincular. O cliente configura a trava por certificado depois, pela própria conta, informando a impressão digital de um ou mais certificados aceitos. Veja **[A trava do token](/como-funciona/#a-trava-do-token--o-que-muda-a-segurança-de-quem-compra)**.

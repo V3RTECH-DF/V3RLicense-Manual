@@ -168,6 +168,82 @@ Se o produto original da licença **saiu de venda ou foi despublicado**, a aba n
 
 Se você abrir a tela do cliente por cima do ombro dele (ou olhar um print que ele mandou) esperando ver a mesma palavra do painel, vai estranhar. Não é bug: é a mesma licença, vista com vocabulário diferente para cada lado. (Até a v0.16.0 essa distinção vazava — uma licença simplesmente vencida chegou a aparecer como "Suspensa por falta de pagamento" para o cliente; corrigido na v0.16.1.)
 
+## Token de acesso a serviço da casa
+
+Desde a v0.30.0, uma licença pode dar acesso a mais do que atualização de plugin: ela pode dar acesso a um **serviço da casa** — hoje, o **V3RSigner**, o serviço que assina PDF. Quando isso acontece, o cliente recebe, além da chave de licença, um **token**: uma cadeia de texto longa que ele mesmo cola no sistema que vai consumir o serviço (por exemplo, no lugar onde o site dele integra com o V3RSigner).
+
+{: .note }
+> **Nem toda licença tem token.** Só quando o produto comprado está ligado a um serviço (cadastro que o operador faz em **[Audiências de serviço](/modulos/audiencias-de-servico/)**). A imensa maioria das licenças — que só cobrem plugin — nunca mostra esse bloco.
+
+### O que o cliente vê
+
+Na aba "Minhas licenças", a licença que tem token mostra um bloco próprio, logo abaixo da tabela de produtos:
+
+![Bloco "Token de acesso a serviço da casa" na aba Minhas licenças, com o token em claro, um botão Copiar, a validade e a frase descrevendo a trava atual](/assets/screenshots/minhas-licencas-token-servico.png)
+
+- **O token em claro**, com um botão **Copiar** — sempre visível, sempre disponível. Isso é diferente do e-mail de chave de licença, que é enviado uma vez: aqui, o cliente pode voltar a essa aba a qualquer momento e copiar o token de novo, sem precisar guardar o e-mail original nem pedir para o suporte reenviar.
+- **Válido até:** a data (e hora) em que o token deixa de valer, ou "não expira" para os poucos casos sem prazo.
+- **A trava atual**, sempre escrita por extenso — nunca em silêncio, nem quando não há trava nenhuma.
+
+### A trava do token — o que muda a segurança de quem compra
+
+A trava decide **quem** consegue usar o token, além de quem tem o valor dele em mãos:
+
+- **Sem trava** — é como todo token **nasce**. Quem estiver com a cadeia de texto pode assinar em nome do cliente, de qualquer lugar, sem mais nenhuma verificação. É simples de configurar (não exige nada do cliente) e é adequado para um primeiro teste, mas não protege contra o token vazar — por e-mail encaminhado à toa, por exemplo, ou por um arquivo de configuração commitado por engano.
+- **Com trava por certificado** — o token só funciona **junto** de um certificado que o cliente informou. Vazou o token sozinho? De nada serve a quem não tiver também o certificado correspondente. É a opção que recomendamos para qualquer uso além de teste.
+
+{: .tip }
+> **Mais de um certificado ao mesmo tempo, de propósito.** O cliente pode cadastrar mais de uma impressão digital de certificado na mesma trava. Isso existe para a **renovação de certificado nunca virar um corte seco**: quando o certificado antigo está para vencer, o cliente cadastra o novo **antes**, o token passa a aceitar os dois, e só depois de confirmar que tudo funciona com o novo ele remove o antigo da lista. Sem essa sobreposição, trocar de certificado significaria um intervalo em que nada assina.
+
+### Impressão digital do certificado
+
+O "identificador" de um certificado, para efeito da trava — um resumo curto e único calculado a partir do certificado inteiro. Dois certificados diferentes nunca têm a mesma impressão digital; o mesmo certificado sempre calcula a mesma. É esse valor que o cliente cola no campo de certificados aceitos, nunca o arquivo do certificado em si.
+
+### Reemitir e revogar — e por que não é instantâneo
+
+O cliente tem dois botões, além de configurar a trava:
+
+- **Reemitir** — gera um token novo com a trava atual, sem mudar mais nada. Útil quando ele suspeita que o token vazou, mas quer manter a mesma trava.
+- **Revogar** — cancela o token, sem emitir outro no lugar.
+
+{: .important }
+> **Nem reemitir nem revogar cortam o acesso na hora.** O token anterior deixa de ser aceito em **até 1 hora**. Isso acontece porque quem confere o token do lado do serviço (o V3RSigner) não consulta o V3RLicense a cada uso — ele guarda uma lista de tokens cancelados e a atualiza periodicamente, para continuar funcionando mesmo se o V3RLicense estiver fora do ar num momento qualquer. É essa mesma lista que leva até 1 hora para refletir a revogação.
+>
+> **O que fazer nesse intervalo:** se o motivo for suspeita de vazamento, o cliente deve trocar o valor do token no sistema que o usa **assim que reemitir ou revogar** — não esperar a hora passar para agir. O token antigo continuar tecnicamente aceito por mais alguns minutos não é um bug a reportar; é a mecânica de propagação, e o passo seguro é sempre trocar o valor primeiro.
+
+### Validade do token, e o que a renovação da licença muda
+
+A validade do token é calculada **uma vez, na emissão** — não é recalculada sozinha depois:
+
+- Licença com data de vencimento: o token vale até essa data mais os mesmos 15 dias de carência da própria licença.
+- Licença perpétua (sem vencimento): o token vale 12 meses a partir de quando foi emitido.
+- Em qualquer um dos dois casos, o token nunca passa de **13 meses a partir da emissão** — é um teto de segurança, para limitar o estrago de um token que vaze e nunca seja revogado.
+
+{: .warning }
+> **Renovar a licença não estende sozinho o token já emitido.** A data de "Válido até" do token não acompanha automaticamente a nova validade da licença renovada — ela fica congelada no que foi calculado quando o token nasceu. Se o cliente perceber que o token está perto de vencer, mas a licença está em dia, a saída é **Reemitir**: o botão gera um token novo, já calculado com a validade atual da licença. Avise o cliente disso quando ele perguntar "minha licença está ativa, por que o token venceu?" — a resposta é reemitir, não esperar.
+
+### O que acontece se a licença deixar de valer
+
+O token segue o destino da licença, com uma exceção:
+
+| Situação da licença | O que acontece com o token |
+|---|---|
+| Em carência (venceu, dentro dos 15 dias) | **Continua funcionando normalmente** — carência nunca revoga token, a mesma regra de sempre para atualização de plugin. |
+| Suspensa por falta de pagamento, expirada ou revogada | Entra na lista de cancelados automaticamente, dentro de até 1 hora — sem precisar de nenhuma ação do cliente ou do operador. |
+
+Isso significa que **deixar de pagar não corta o acesso no mesmo dia**: o cliente tem os 15 dias de carência de sempre para regularizar, e só depois disso o token para de funcionar.
+
+### Glossário desta seção
+
+**Token de acesso a serviço da casa**
+: A cadeia de texto que o cliente cola no sistema que consome um serviço da casa (ex.: V3RSigner). Diferente da chave de licença, aparece em claro na conta a qualquer momento — não é "mostrado uma vez só".
+
+**Trava** (do token)
+: A regra que decide quem, além de ter o valor do token, consegue usá-lo. Hoje só há a opção "sem trava" e "com certificado" pela conta do cliente.
+
+**Impressão digital** (do certificado)
+: Resumo curto e único calculado a partir de um certificado inteiro — é o que identifica o certificado dentro da trava, sem precisar do arquivo completo.
+
 ## Isenção para organizações filiadas à RIT
 
 Organizações do terceiro setor filiadas à RIT recebem licença **gratuita** — sem passar por venda. Hoje isso é feito emitindo a licença pela origem "Isenção — filiada à RIT", com validade normalmente anual, **renovada manualmente** pela mesma tela de renovação. Não existe hoje verificação automática contra uma fonte externa de filiação — está registrado como funcionalidade futura (V3RLicense-Code#4). Veja o passo a passo em **[Emitir uma isenção](/processos/emitir-isencao/)**.
@@ -192,6 +268,9 @@ Quando uma versão nova de um plugin é publicada no V3RLicense, todo cliente co
 
 **Tipo de licença**
 : A periodicidade (mensal, anual, perpétua…) usada para calcular a data de expiração na emissão e na renovação.
+
+**Token de acesso a serviço da casa**
+: A cadeia de texto que dá acesso a um serviço da casa (ex.: V3RSigner) ligado ao produto da licença — veja **[Token de acesso a serviço da casa](#token-de-acesso-a-serviço-da-casa)**, acima. Não confundir com o token de publicação, abaixo.
 
 **Token de publicação**
 : Credencial de máquina que publica release por API, sem passar pela tela — usada por pipeline de CI. Veja **[Gerenciar tokens de publicação](/processos/gerenciar-tokens-publicacao/)**.

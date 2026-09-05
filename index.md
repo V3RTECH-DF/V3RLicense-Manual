@@ -61,10 +61,11 @@ Veja o índice completo em **[Como faço…](/processos/)**.
 - **Controla ativação por domínio** — cada site em que o plugin roda conta como uma ativação; ambientes de teste não contam.
 - **Distribui atualização** — o mesmo mecanismo que o WordPress usa para plugins do repositório oficial, mas para os nossos: verifica versão nova, entrega o changelog, libera o download.
 - **Publica release** — normalmente sozinho, quando quem desenvolve empurra uma tag no repositório do plugin (a pipeline publica por token); manualmente pela tela é o caminho de exceção. Os dois passam pela mesma conferência tripla, que impede publicar pacote trocado.
+- **Vende acesso a serviço da casa, junto da licença** — desde a v0.30.0, um produto pode dar direito não só a atualização de plugin, mas a um **token de acesso** a um serviço da casa (hoje, o V3RSigner). Veja **[Token de acesso a serviço da casa](/como-funciona/#token-de-acesso-a-serviço-da-casa)**.
 - **Mostra a visão gerencial do negócio** — faturamento do mês, licenças a vencer, ativações por licença e taxa de renovação, em **[Faturamento](/modulos/faturamento/)**.
 
 {: .note }
-> **Versão instalada:** `v0.26.1`. Este manual descreve o que existe **hoje**.
+> **Versão instalada:** `v0.30.0`. Este manual descreve o que existe **hoje**.
 
 ---
 

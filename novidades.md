@@ -7,6 +7,17 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.28.0 a v0.30.0 — 05/09/2026
+
+- **O V3RLicense passa a vender acesso a serviço da casa, não só plugin.** O primeiro é o **V3RSigner**, o serviço que assina PDF: um produto ligado a ele (cadastro novo, **[Audiências de serviço](/modulos/audiencias-de-servico/)**) emite, junto da licença de sempre, um **token de acesso** que o cliente cola no sistema que consome o serviço. Veja **[Token de acesso a serviço da casa](/como-funciona/#token-de-acesso-a-serviço-da-casa)**.
+- **O cliente vê, configura e gerencia o próprio token na aba "Minhas licenças"** — em claro, sempre disponível, nunca "mostrado uma vez só". Ele escolhe se o token fica sem trava (o padrão de toda emissão) ou travado a um ou mais certificados, reemite e revoga — sabendo, antes de confirmar, que o token anterior leva até 1 hora para deixar de valer.
+- **O painel ganha duas telas novas**: **[Audiências de serviço](/modulos/audiencias-de-servico/)** (cadastro dos serviços que aceitam token) e **[Tokens de serviço](/modulos/tokens-de-servico/)** (listagem com filtro, contagem por trava e revogação individual ou em lote). O operador nunca vê o valor do token em claro — só o próprio cliente.
+- **Licença que deixa de valer leva o token junto, automaticamente** — suspensa, expirada ou revogada revoga o token dela; licença em carência não revoga, porque ela ainda vale (a mesma regra de sempre).
+- **Configurações ganha a seção "Chave de assinatura"**: qual fonte está em uso (variável de ambiente, constante ou banco de dados), a chave pública, e as ações de exportar (backup) e importar (recuperação). O plugin já não depende de configurar a chave por fora — sem nenhuma das outras fontes, ele gera e guarda a própria chave.
+
+{: .warning }
+> **A validade do token não acompanha sozinha uma renovação de licença.** Ela é calculada uma vez, na emissão. Se a licença renovar e o token estiver perto de vencer, a saída é o cliente clicar em **Reemitir** — não existe reemissão automática hoje.
+
 ## v0.22.0 a v0.26.1 — 30/08/2026
 
 - **Nova tela [Faturamento](/modulos/faturamento/)**, a visão gerencial do negócio: faturamento líquido do mês (comparado com o mês anterior), licenças emitidas e receita por produto, licenças a vencer em 30/60/90 dias, ativações por licença, taxa de renovação e licenças revogadas. A tela avisa quando não sabe algo — licença sem valor apurado, ou sem origem informada — em vez de mostrar um número errado calado.

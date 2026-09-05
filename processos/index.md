@@ -15,6 +15,8 @@ Uma página por tarefa do dia a dia de quem opera o V3RLicense. Cada página exp
 - **[Vender uma licença perpétua ou um plano negociado](/processos/vender-perpetua-negociada/)**
 - **[Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/)**
 - **[Cadastrar tipo de licença e origem](/processos/cadastrar-tipo-e-origem/)**
+- **[Cadastrar uma audiência de serviço](/processos/cadastrar-audiencia-de-servico/)**
+- **[Gerenciar tokens de serviço](/processos/gerenciar-tokens-de-servico/)**
 - **[Cadastrar cliente](/processos/cadastrar-cliente/)**
 
 ## Licenças, no dia a dia
