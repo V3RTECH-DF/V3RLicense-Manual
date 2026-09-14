@@ -9,22 +9,27 @@ O V3RLicense é o plugin WordPress que roda no site que hospeda o servidor de li
 
 ## 1. Onde fica o painel
 
-Acesse `https://v3rtech.com.br/wp-admin/` e faça login com sua conta de administrador. No menu lateral do WordPress, o item **V3RLicense** abre o painel — uma aplicação de página única com oito abas, uma por tipo de cadastro.
+Acesse `https://v3rtech.com.br/wp-admin/` e faça login com sua conta de administrador. No menu lateral do WordPress, o item **V3RLicense** abre o painel — uma aplicação de página única com onze abas, uma por tipo de cadastro.
 
 ![Menu lateral do WordPress com o item V3RLicense destacado em azul, entre Plugins e Hello](/assets/screenshots/menu-wp-admin.png)
 
-## 2. As oito abas, em ordem de uso
+No topo, o cabeçalho traz o logo, o nome da tela em que você está, a versão do servidor e o botão **Manual do Usuário** — que abre este manual numa aba nova, de qualquer lugar do painel. Logo abaixo, a barra de abas: a aba em que você está fica marcada com um traço vermelho embaixo do nome. Quando o WordPress tem algum aviso para mostrar (de outro plugin, ou do próprio núcleo), ele aparece nessa faixa, entre a barra de abas e o conteúdo da tela — nunca dentro do cabeçalho.
+
+## 2. As onze abas, em ordem de uso
 
 | Aba | Para que serve |
 |---|---|
-| **Licenças** | emitir, listar, renovar e revogar licenças |
+| **Licenças e acessos** | emitir, listar, renovar e revogar licenças e acessos |
+| **Faturamento** | acompanhar a receita gerada pelas vendas do servidor |
+| **Releases** | as versões publicadas de cada produto, por onde você também publica manualmente |
 | **Produtos** | cadastrar os plugins que o servidor licencia |
 | **Clientes** | ver e editar quem recebeu licença |
 | **Origens** | os motivos de emissão (venda, cortesia, isenção RIT…) |
 | **Tipos de licença** | as periodicidades (mensal, anual, perpétua…) |
 | **Listas de acesso** | conjuntos nomeados de produtos que uma licença pode seguir, para não emitir uma chave por plugin |
 | **Tokens de publicação** | credenciais que publicam release, para pipeline de CI |
-| **Releases** | as versões publicadas de cada produto, por onde você também publica manualmente |
+| **Audiências de serviço** | os serviços da casa (como o V3RSigner) que um produto pode emitir token de acesso para |
+| **Configurações** | preferências gerais do servidor, como o aviso ao operador |
 
 {: .tip }
 > **A ordem importa na primeira vez.** Produtos, Origens e Tipos de licença são cadastro-base: a tela de Licenças só emite para o que já existe ali. Antes de emitir a primeira licença de um plugin novo, ele precisa estar cadastrado em Produtos — veja **[Registrar um plugin novo](/processos/cadastrar-produto/)**.

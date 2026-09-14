@@ -10,6 +10,9 @@ nav_order: 12
 
 É a dúvida que mais chega — o cliente vê a versão nova anunciada, mas o wp-admin dele não mostra o aviso de atualização. Antes de mexer em qualquer cadastro, siga esta ordem: a causa mais provável está no topo.
 
+{: .note }
+> **Exceção conhecida: o site da própria V3RTECH.** Nos plugins da casa instalados no site que hospeda o servidor de licenças (o mesmo onde você está agora), o botão **Atualizar** do WordPress não funciona — a atualização termina em **"Falha no download. Service Unavailable"**. Isso é esperado, não indica defeito do servidor de licenças, e não precisa de diagnóstico: nesse site a atualização é feita por implantação, não pelo botão. Não é preciso fazer nada além de aguardar a implantação. Esse roteiro vale normalmente para os sites dos clientes, onde a atualização automática funciona sem essa exceção.
+
 ## Roteiro de verificação
 
 1. **A licença dele está ativa?** Abra **Licenças**, filtre pelo nome ou e-mail do cliente. Se o status for "Expirada" ou "Revogada", é isso — atualização e download são bloqueados enquanto a licença não estiver ativa (veja **[Como funciona a licença](/como-funciona/)**). A saída é **[renovar](/processos/renovar-licenca/)** (se expirada) ou emitir uma licença nova (se revogada).
