@@ -7,6 +7,13 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.36.0 — 21/10/2026
+
+- **A chave de assinatura deixa de depender das chaves de segurança do WordPress.** Plugins de segurança trocam essas chaves de tempos em tempos, e isso já deixou a chave de assinatura ilegível uma vez. Agora o plugin protege a chave com uma **chave-mestra própria**, guardada num arquivo dentro da pasta de uploads do site — a troca periódica feita pelos plugins de segurança não afeta mais nada.
+- **Novo botão "Gerar nova chave"** em **Configurações → Chave de assinatura**, com confirmação. É último recurso: a chave pública muda, e todo plugin cliente que conhece a chave antiga deixa de aceitar as respostas do servidor (ativação, validação e atualização) até ser reinstalado numa versão com a chave nova — isso não chega por atualização automática.
+- **Aviso de backup.** Enquanto a chave em uso não for exportada, o painel mostra um aviso. Exportar e guardar no cofre é obrigatório: é a única forma de recuperar a chave se o arquivo da chave-mestra se perder.
+- **Ao restaurar o site a partir de backup, restaure o banco e a pasta de uploads juntos.** Banco sem o arquivo da chave-mestra deixa a chave ilegível. Veja **[Chave de assinatura](/modulos/configuracoes/#chave-de-assinatura)**, que também explica a mensagem de chave ilegível e como recuperar.
+
 ## v0.33.0 — 05/09/2026
 
 - **Produto ligado a um serviço da casa não se chama mais "licença": chama-se ACESSO.** "Acessos", "Emitir acesso", "este acesso vence em…", "o token deste acesso" — o vocabulário muda em toda a tela e no manual. Licença de plugin continua sendo licença, do jeito de sempre. Veja **[Licenças e acessos](/modulos/licencas/#licença-ou-acesso--a-mesma-tela-dois-vocabulários)**.
