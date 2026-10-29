@@ -85,13 +85,12 @@ O cadastro de cliente e o histórico de licença e de ativações são mantidos 
 O titular (a pessoa de contato cadastrada, ou o representante da organização) tem os direitos previstos na LGPD — confirmação, acesso, correção, eliminação, portabilidade, entre outros.
 
 {: .important }
-> **Exclusão de cliente (regra em revisão).** Hoje, a ação **Excluir**
-> da tela de Clientes, num cliente que tem licença, **revoga as licenças
-> pendentes e apaga o cadastro**, deixando as licenças sem o registro do
-> titular. Essa regra está **em revisão** (V3RLicense-Code#72): a
-> proposta é que cliente com licença deixe de ser excluído e passe a ser
-> **anonimizado**, que preserva o histórico exigido pela retenção. Esta
-> minuta será ajustada quando a decisão for tomada.
+> **Exclusão de cliente (regra vigente desde a versão 0.38.1, de
+> 29/10/2026).** Cliente que tem licença, em qualquer estado, **não é
+> excluído**: a ação **Excluir** da tela de Clientes é recusada, nada é
+> revogado nem apagado, e o caminho é **anonimizar** o cadastro. O
+> **histórico das licenças é preservado** pela retenção de cinco anos
+> descrita acima. Só cliente sem nenhuma licença pode ser excluído.
 
 {: .important }
 > **Eliminação de cliente com histórico de licença: anonimização (desde a

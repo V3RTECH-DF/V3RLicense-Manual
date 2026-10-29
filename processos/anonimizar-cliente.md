@@ -8,7 +8,7 @@ nav_order: 3.5
 
 ## Por que isto importa
 
-Quando uma pessoa pede que seus dados sejam eliminados (direito previsto na LGPD) e o cliente dela **tem licença**, você não pode simplesmente excluir o cadastro: o histórico da licença precisa ser guardado por cinco anos (veja **[Política de Privacidade](/legal/privacidade/)**). O que não precisa ser guardado é a **identificação da pessoa** por trás desse histórico.
+Quando uma pessoa pede que seus dados sejam eliminados (direito previsto na LGPD) e o cliente dela **tem licença**, o cadastro não pode ser excluído — e, desde a v0.38.1, o painel nem deixa: ao tentar excluir, ele recusa e oferece **Anonimizar este cliente** no lugar. O histórico da licença precisa ser guardado por cinco anos (veja **[Política de Privacidade](/legal/privacidade/)**). O que não precisa ser guardado é a **identificação da pessoa** por trás desse histórico.
 
 **Anonimizar** faz exatamente essa separação: o nome e o e-mail somem, a licença e as ativações continuam existindo.
 
@@ -20,6 +20,7 @@ Quando uma pessoa pede que seus dados sejam eliminados (direito previsto na LGPD
 - **Pedido de eliminação de dados** de um cliente que tem licença vinculada. É o caso para o qual a ação existe.
 - **Não use** para corrigir nome ou e-mail digitado errado (isso é **Editar**, em **[Cadastrar cliente](/processos/cadastrar-cliente/)**) nem como forma de "limpar" a lista de clientes.
 - **Cliente sem nenhuma licença** também pode ser anonimizado, mas nesse caso costuma bastar excluir.
+- **Você tentou excluir um cliente que tem licença** e a tela recusou: é o caminho certo. Clique em **Anonimizar este cliente** na própria janela, ou use o ícone de anonimizar da linha.
 
 ## O que muda e o que não muda
 
@@ -36,7 +37,7 @@ Se também for preciso eliminar o usuário do WordPress e os pedidos, isso é fe
 ## Passo a passo
 
 1. Abra **Clientes** e localize o cadastro.
-2. Clique no ícone **Anonimizar cliente** (o olho riscado, em vermelho) da linha.
+2. Clique no ícone **Anonimizar cliente** (o olho riscado, em vermelho) da linha. (Se você tentou **Excluir** e a tela recusou por haver licença, o botão **Anonimizar este cliente** da janela de recusa leva ao mesmo passo.)
 3. A janela de confirmação mostra o nome e o e-mail que serão substituídos, **quantas licenças** estão vinculadas e o aviso de que a ação é irreversível.
 4. Se alguma licença do cliente tem **anotação**, ela é listada ali, com o texto. **Leia cada uma** e escolha:
    - **Limpar estas anotações** — apaga o texto das anotações (e das observações de revogação) dessas licenças.
@@ -57,7 +58,7 @@ A Cooperativa Mãos Unidas pede a eliminação dos dados do contato dela. O cada
 ## Dicas e armadilhas
 
 - **A anotação é onde o dado pessoal costuma escapar.** O campo é livre e ninguém garante o que foi colado ali. Por isso o sistema não decide por você: se escolher **Manter** sem ler, o nome que estava na anotação continua gravado, e o pedido de eliminação não foi atendido por inteiro. Só mantenha uma anotação depois de ler e ter certeza de que ela não identifica ninguém.
-- **Não existe anonimização em lote, de propósito.** Cada cliente exige a leitura das anotações dele; um botão para vários tiraria justamente essa leitura.
+- **Não existe anonimização em lote, de propósito.** Cada cliente exige a leitura das anotações dele; um botão para vários tiraria justamente essa leitura. Na exclusão em lote, os clientes recusados por terem licença ganham o atalho para anonimizar **um de cada vez**.
 - **Anonimizar não resolve o pedido sozinho.** Se a pessoa também tem usuário no site e pedidos na loja, esses dados continuam lá. Combine com quem administra o WordPress e a loja o que fazer em cada um.
 - **Não anonimize para "desfazer" um cadastro errado.** Cliente com e-mail duplicado ou nome trocado se corrige editando; anonimizado, o cadastro não volta.
 

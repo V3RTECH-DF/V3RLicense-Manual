@@ -153,7 +153,7 @@ Não. Arquivar só muda onde a licença aparece no painel; ela continua validand
 
 ## Um cliente pediu para eliminar os dados dele, mas tem licença. Excluo o cadastro?
 
-Não: use **Anonimizar** na tela de Clientes. Ela troca o nome e o e-mail por marcadores e preserva o histórico da licença pelo prazo de retenção. É irreversível, não apaga o usuário do WordPress nem os pedidos da loja, e pede que você leia as anotações das licenças e escolha limpar ou manter. Veja **[Anonimizar um cliente](/processos/anonimizar-cliente/)**.
+Não — e o painel nem deixa: excluir cliente com licença é recusado, e a própria tela oferece **Anonimizar**. Ela troca o nome e o e-mail por marcadores e preserva o histórico da licença pelo prazo de retenção. É irreversível, não apaga o usuário do WordPress nem os pedidos da loja, e pede que você leia as anotações das licenças e escolha limpar ou manter. Veja **[Anonimizar um cliente](/processos/anonimizar-cliente/)**.
 
 ## Um plugin gratuito precisa de licença para receber atualização?
 

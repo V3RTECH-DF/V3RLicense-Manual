@@ -7,6 +7,13 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.38.1 — 29/10/2026
+
+- **Cliente que tem licença não pode mais ser excluído.** Em qualquer estado da licença (ativa, vencida, revogada ou arquivada), a tela recusa a exclusão, mostra as licenças do cliente e oferece **Anonimizar este cliente**. Nada é revogado nem apagado: antes, excluir revogava as licenças que ainda valiam e apagava o cadastro, e as licenças ficavam sem dono. Cliente **sem licença** continua podendo ser excluído, agora com uma só confirmação. Veja **[Cadastrar cliente](/processos/cadastrar-cliente/)** e **[Anonimizar um cliente](/processos/anonimizar-cliente/)**.
+- **Exclusão de vários clientes separa o resultado.** A janela diz quantos serão excluídos e quantos recusados por terem licença; ao final, o resultado mostra **excluídos**, **recusados por regra** e **falhas**, e os recusados ganham o atalho para anonimizar um a um.
+- **O painel passa a funcionar em sites com endereços simples** (sem a estrutura de links "bonita" do WordPress), onde algumas telas deixavam de carregar.
+- **Correção de texto:** a janela de exclusão em lote dizia "seráão" no lugar de "serão".
+
 ## v0.38.0 — 29/10/2026
 
 - **Licenças revogadas e expiradas podem ser arquivadas.** Arquivar tira a licença da lista sem apagar nada: ela continua guardada, continua validando como antes e volta com **Mostrar arquivadas** e **Desarquivar**. Funciona por licença e em lote, com confirmação que diz quantas serão afetadas. Licença que ainda vale — ativa, em carência ou suspensa — nunca é arquivada, e **renovar uma arquivada a desarquiva sozinho**. Veja **[Arquivar licenças antigas](/processos/arquivar-licenca/)**.
