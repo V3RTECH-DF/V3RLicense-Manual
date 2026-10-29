@@ -56,9 +56,10 @@ A v0.14.0–v0.16.1 (30/08/2026) acrescentou a aba "Minhas licenças" na
 conta do cliente no site (V3RLicense-Code#34) — cliente vê a própria
 licença, desativa um site sozinho e recebe o caminho de volta a valer;
 documentado em `como-funciona.md`, com o campo novo de Configurações, a
-nota em `processos/liberar-ativacao.md` e as FAQs correspondentes. **Sem
-captura ainda** — a versão está sendo publicada durante esta redação; ver
-lista de telas pendentes no relatório desta passada.
+nota em `processos/liberar-ativacao.md` e as FAQs correspondentes. Capturada em
+29/10/2026 (v0.38.0):
+`minhas-licencas-cartao-desktop.png`, `minhas-licencas-cartao-mobile.png`
+e `minhas-licencas-token-servico.png`, em `assets/screenshots/`.
 
 A v0.28.0–v0.30.0 (05/09/2026) acrescentou o **token de acesso a serviço
 da casa** (V3RLicense-Code#57, #58) — o primeiro consumidor é o
@@ -88,3 +89,12 @@ na conta do cliente, o bloco "Gerar token" e o bloco do token com a
 linha de sobreposição (nenhum acesso em produção está hoje no estado
 que os produz — sem token pendente de emissão pelo cliente, e sem
 renovação recente com token anterior ainda vigente).
+
+A v0.38.0 (29/10/2026, V3RLicense-Code#41, #19, #69, #61) acrescentou
+arquivar licenças, anonimizar cliente, produto gratuito (com a tela de
+sites) e a aparência nova da aba "Minhas licenças". Documentado em
+`processos/arquivar-licenca.md`, `processos/anonimizar-cliente.md`,
+`processos/produto-gratuito.md`, nas referências `modulos/licencas.md`,
+`modulos/clientes.md`, `modulos/produtos.md`, em `como-funciona.md`, `faq.md`
+e `novidades.md`. Onze capturas novas em `assets/screenshots/`, inclusive a
+do bloco de token na conta do cliente, que o texto já citava e não existia.

@@ -18,6 +18,8 @@ Uma página por tarefa do dia a dia de quem opera o V3RLicense. Cada página exp
 - **[Cadastrar uma audiência de serviço](/processos/cadastrar-audiencia-de-servico/)**
 - **[Gerenciar tokens de serviço](/processos/gerenciar-tokens-de-servico/)**
 - **[Cadastrar cliente](/processos/cadastrar-cliente/)**
+- **[Anonimizar um cliente](/processos/anonimizar-cliente/)** — pedido de eliminação de dados
+- **[Marcar um produto como gratuito](/processos/produto-gratuito/)**
 
 ## Licenças, no dia a dia
 
@@ -26,6 +28,7 @@ Uma página por tarefa do dia a dia de quem opera o V3RLicense. Cada página exp
 - **[Renovar uma licença](/processos/renovar-licenca/)**
 - **[Revogar uma licença](/processos/revogar-licenca/)**
 - **[Reenviar a chave por e-mail](/processos/reenviar-chave/)**
+- **[Arquivar licenças antigas](/processos/arquivar-licenca/)**
 - **[Liberar uma ativação](/processos/liberar-ativacao/)**
 
 ## Publicação de versão

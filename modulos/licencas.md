@@ -6,7 +6,7 @@ nav_order: 1
 
 # Licenças e acessos
 
-Veja o passo a passo em **[Emitir uma licença ou acesso](/processos/emitir-licenca/)**, **[Renovar](/processos/renovar-licenca/)** (individual e em lote), **[Revogar](/processos/revogar-licenca/)**, **[Reenviar a chave por e-mail](/processos/reenviar-chave/)** e **[Emitir uma isenção RIT](/processos/emitir-isencao/)**. Sobre o token de um acesso, veja **[Gerenciar tokens de serviço](/processos/gerenciar-tokens-de-servico/)**. Sobre a cobertura por lista, veja **[Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/)** e **[Listas de acesso](/modulos/listas-de-acesso/)**. Sobre os status de carência e suspensão, veja **[Como funciona a licença](/como-funciona/)**.
+Veja o passo a passo em **[Emitir uma licença ou acesso](/processos/emitir-licenca/)**, **[Renovar](/processos/renovar-licenca/)** (individual e em lote), **[Revogar](/processos/revogar-licenca/)**, **[Reenviar a chave por e-mail](/processos/reenviar-chave/)**, **[Arquivar licenças antigas](/processos/arquivar-licenca/)** e **[Emitir uma isenção RIT](/processos/emitir-isencao/)**. Sobre o token de um acesso, veja **[Gerenciar tokens de serviço](/processos/gerenciar-tokens-de-servico/)**. Sobre a cobertura por lista, veja **[Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/)** e **[Listas de acesso](/modulos/listas-de-acesso/)**. Sobre os status de carência e suspensão, veja **[Como funciona a licença](/como-funciona/)**.
 
 ![Lista "Licenças e acessos" mostrando as colunas Categoria (Licença ou Acesso) e Token de acesso (trava e validade, ou "Não emitido"), lado a lado com Cobertura, Cliente, Status e Ações](/assets/screenshots/licencas-lista-categoria-token.png)
 
@@ -46,9 +46,13 @@ O link **Envios da chave com falha**, no alto da tela, abre uma tela só com os 
 
 ## Filtros
 
-Status, Produto (filtra licenças que cobrem aquele produto, mesmo cobrindo outros também), Cliente (nome ou e-mail), **Categoria** (Todos / Só licenças / Só acessos).
+Status, Produto (filtra licenças que cobrem aquele produto, mesmo cobrindo outros também), Cliente (nome ou e-mail), **Categoria** (Todos / Só licenças / Só acessos) e **Mostrar arquivadas** (desde a v0.38.0). Sem essa caixa marcada, as licenças arquivadas **não aparecem** — nem na lista, nem nos filtros; é a primeira coisa a conferir quando uma licença "sumiu". Veja a seção seguinte.
 
 ![Filtro Categoria aberto, mostrando as três opções: Licenças e acessos, Só licenças, Só acessos](/assets/screenshots/licencas-filtro-categoria-aberto.png)
+
+## Arquivar e desarquivar
+
+Desde a v0.38.0, uma licença **revogada ou expirada** pode ser **arquivada**: sai da lista padrão, mas nada é apagado, o estado não muda e ela continua validando e atualizando como antes. **Ativa, Em carência e Suspensa por falta de pagamento não podem ser arquivadas** — o ícone nem aparece na linha. Uma licença arquivada mostra a marca **Arquivada** embaixo do estado, e o ícone da linha vira **Desarquivar licença**. **Renovar uma licença arquivada a desarquiva sozinho.** Passo a passo e armadilhas em **[Arquivar licenças antigas](/processos/arquivar-licenca/)**.
 
 ## Indicadores de trava, no topo
 
@@ -89,4 +93,4 @@ O que a licença/acesso cobre (Segue uma lista de acesso / Produtos específicos
 
 ## Ações
 
-Ver ativações · Reenviar chave (envelope; só licença de plugin não revogada) · Renovar licença (também renova o token, quando é um acesso — veja **[Renovar uma licença](/processos/renovar-licenca/)**) · Revogar licença/acesso (linha a linha e em lote) · Emitir/Revogar token de acesso, só na linha de um acesso. Selecionando mais de uma licença aparecem os botões **Renovar selecionadas** e **Revogar selecionadas**; a confirmação do lote avisa quando a seleção mistura tipos de licença diferentes, porque cada uma renova com o próprio vencimento (veja **[Renovar uma licença](/processos/renovar-licenca/)**).
+Ver ativações · Reenviar chave (envelope; só licença de plugin não revogada) · **Arquivar licença / Desarquivar licença** (só revogada ou expirada; só arquivada, respectivamente) · Renovar licença (também renova o token, quando é um acesso — veja **[Renovar uma licença](/processos/renovar-licenca/)**) · Revogar licença/acesso (linha a linha e em lote) · Emitir/Revogar token de acesso, só na linha de um acesso. Selecionando mais de uma licença aparecem os botões **Renovar selecionadas**, **Arquivar selecionadas (N)** e **Revogar selecionadas** (e **Desarquivar selecionadas (N)** quando as arquivadas estão à mostra); a confirmação do lote avisa quando a seleção mistura tipos de licença diferentes, porque cada uma renova com o próprio vencimento (veja **[Renovar uma licença](/processos/renovar-licenca/)**).

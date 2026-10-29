@@ -8,7 +8,7 @@ nav_order: 3
 
 ## Por que isto importa
 
-Você raramente precisa cadastrar um cliente por conta própria — **[emitir uma licença](/processos/emitir-licenca/)** já cria o cliente automaticamente se o e-mail informado não existir. Esta tela serve para os casos em que o cadastro automático não basta: corrigir um nome digitado errado, atualizar um e-mail, ou excluir um cliente antigo.
+Você raramente precisa cadastrar um cliente por conta própria — **[emitir uma licença](/processos/emitir-licenca/)** já cria o cliente automaticamente se o e-mail informado não existir. Esta tela serve para os casos em que o cadastro automático não basta: corrigir um nome digitado errado, atualizar um e-mail, excluir um cliente antigo, ou **[anonimizar](/processos/anonimizar-cliente/)** quando houver pedido de eliminação de dados.
 
 ## Passo a passo
 
@@ -25,11 +25,11 @@ Um cliente pediu para trocar o e-mail cadastrado de `financeiro@exemplo.org.br` 
 {: .important }
 > **O cadastro automático da emissão de licença busca por e-mail exato.** Se o cliente já existe com `contato@exemplo.com` e uma licença nova é emitida para `Contato@exemplo.com` ou com um espaço a mais, o sistema **não reconhece como o mesmo cliente** — cria um registro novo e duplicado. Revise o e-mail antes de emitir; corrigir depois significa editar manualmente aqui e, se for o caso, reatribuir a licença ao cliente certo.
 
-- **Excluir um cliente com licença vinculada é recusado.** Não é possível excluir por engano um cliente que ainda tem histórico de licença — a tela recusa a exclusão nesse caso, em vez de apagar em cascata.
+- **Excluir um cliente que tem licença revoga as licenças e apaga o cadastro.** A tela avisa quais licenças ainda valem e serão revogadas e pede uma segunda confirmação ("Tem certeza?"); depois disso o cadastro some e as licenças ficam sem o registro de quem era o cliente. Se o motivo da exclusão é um **pedido de eliminação de dados**, não exclua: **[anonimize](/processos/anonimizar-cliente/)**, que tira o nome e o e-mail e preserva o histórico da licença.
 
 ## Quando dá errado
 
-- **"Excluir" não teve efeito e o cliente continua na lista** — ele tem licença vinculada. Verifique nas licenças filtrando pelo nome/e-mail dele.
+- **Cliente anonimizado não pode ser editado nem receber licença nova.** O cadastro fica travado de propósito; se a pessoa voltar a ser cliente, cadastre-a de novo.
 
 ## Limites do papel
 

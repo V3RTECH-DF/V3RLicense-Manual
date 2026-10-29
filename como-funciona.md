@@ -124,6 +124,20 @@ Desde a v0.14.0, o cliente tem uma aba própria — **"Minhas licenças"**, dent
 
 Para cada licença dele — comprada, concedida por parceria ou por isenção, tanto faz: a aba mostra as licenças da **pessoa**, não as compras dela —, o cliente vê o produto coberto, a chave inteira (sem máscara), até quando vale e quanto falta, o estado, e em quais sites está ativada com quantas ativações ainda cabem. **Quando uma licença cobre mais de um produto, a cota aparece separada por produto**, nunca somada — a mesma regra de sempre, só que agora visível para ele também.
 
+![Cartão de uma licença na aba Minhas licenças: selo "Ativa", chave em bloco próprio com botão Copiar, validade e a tabela de produtos com dois sites ativados, cada um com o botão Desativar em vermelho](/assets/screenshots/minhas-licencas-cartao-desktop.png)
+
+**A aparência mudou na v0.38.0** (o comportamento é o mesmo de antes). Cada licença é um **cartão**, e o que o cliente mais usa ficou fácil de achar:
+
+- **Selo de situação** no canto do cartão (Ativa, Vencida…), com as mesmas palavras de sempre — veja a armadilha de vocabulário mais abaixo.
+- **Chave e token em bloco próprio**, com um botão **Copiar** ao lado. O valor inteiro quebra em várias linhas em vez de estourar a tela, e o botão copia **a chave ou o token completos**, sem o cliente precisar selecionar texto.
+- **Ações de rotina e ações de risco separadas.** **Desativar** (um site) e **Revogar** (o token) aparecem em vermelho; **Copiar** e **Reemitir** seguem o estilo comum. Quando o cliente pergunta "qual botão cancela?", a cor já diz que é o vermelho — e o texto da confirmação diz o que cada um faz.
+- **No celular**, a tabela de produtos empilha: cada informação vira uma linha com o seu rótulo, sem rolagem horizontal.
+
+![A mesma licença no celular: chave em bloco com o botão Copiar embaixo, e a tabela de produtos empilhada com Desativar em vermelho](/assets/screenshots/minhas-licencas-cartao-mobile.png)
+
+{: .tip }
+> **Para o suporte:** se o cliente mandar um print da aba, vai ser este layout. A **Chave** e o **token** que aparecem nele são os dele; peça para ele **não colar o print em lugar público** sem cobrir esses dois valores.
+
 ### O cliente desativa um site sozinho
 
 O cliente pode desativar um domínio direto por ali. É a **mesma operação** que você faz em **[Liberar uma ativação](/processos/liberar-ativacao/)** — não existe um caminho de desativação paralelo, o plugin cliente e a aba usam o mesmo mecanismo por baixo. Desativar libera a vaga e **não mexe na validade**: quem desativa não perde tempo pago nem ganha tempo. O site desativado para de receber atualização e correção; a licença continua valendo e pode ser ativada em outro lugar, ou nele mesmo de novo.
@@ -192,7 +206,7 @@ Na aba "Minhas licenças", o acesso que tem token mostra um bloco próprio, logo
 
 ![Bloco "Token de acesso a serviço da casa" na aba Minhas licenças, com o token em claro, um botão Copiar, a validade e a frase descrevendo a trava atual](/assets/screenshots/minhas-licencas-token-servico.png)
 
-- **O token em claro**, com um botão **Copiar** — sempre visível, sempre disponível. Isso é diferente do e-mail de chave de licença, que é enviado uma vez: aqui, o cliente pode voltar a essa aba a qualquer momento e copiar o token de novo, sem precisar guardar o e-mail original nem pedir para o suporte reenviar.
+- **O token em claro**, em bloco próprio com um botão **Copiar** que copia o valor inteiro — sempre visível, sempre disponível. Isso é diferente do e-mail de chave de licença, que é enviado uma vez: aqui, o cliente pode voltar a essa aba a qualquer momento e copiar o token de novo, sem precisar guardar o e-mail original nem pedir para o suporte reenviar.
 - **Válido até:** a data (e hora) em que o token deixa de valer, ou "não expira" para os poucos casos sem prazo.
 - **A trava atual**, sempre escrita por extenso — nunca em silêncio, nem quando não há trava nenhuma.
 

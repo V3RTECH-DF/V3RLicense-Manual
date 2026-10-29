@@ -7,6 +7,13 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.38.0 — 29/10/2026
+
+- **Licenças revogadas e expiradas podem ser arquivadas.** Arquivar tira a licença da lista sem apagar nada: ela continua guardada, continua validando como antes e volta com **Mostrar arquivadas** e **Desarquivar**. Funciona por licença e em lote, com confirmação que diz quantas serão afetadas. Licença que ainda vale — ativa, em carência ou suspensa — nunca é arquivada, e **renovar uma arquivada a desarquiva sozinho**. Veja **[Arquivar licenças antigas](/processos/arquivar-licenca/)**.
+- **Anonimizar cliente**, para pedido de eliminação de dados. Troca o nome e o e-mail por marcadores e preserva o histórico das licenças; a tela mostra as anotações das licenças e você escolhe limpar ou manter. É **irreversível**, não apaga o usuário do WordPress nem os pedidos da loja, e é feita um cliente por vez. Veja **[Anonimizar um cliente](/processos/anonimizar-cliente/)**.
+- **Produto gratuito.** Um produto marcado como gratuito recebe atualização sem chave de licença, e a nova tela **Sites do produto gratuito** mostra quantos sites o usam (em produção e em teste), com remoção por item e em lote. Os plugins precisam de uma versão nova do componente de licenciamento para usar esse modo. Veja **[Marcar um produto como gratuito](/processos/produto-gratuito/)**.
+- **A aba "Minhas licenças" do cliente ganhou aparência nova.** Cada licença é um cartão com selo de situação, chave e token em blocos com botão **Copiar**, ações de risco (**Desativar**, **Revogar**) em vermelho e, no celular, a tabela empilhada. O comportamento não mudou. Veja **[Como funciona a licença](/como-funciona/#a-aba-minhas-licenças-na-conta-do-cliente)**.
+
 ## v0.37.0 — 29/10/2026
 
 - **Toda revogação passa a guardar o motivo e a data.** Ao revogar, o painel pede o motivo — estorno total, pedido cancelado, revogação manual ou outro — e uma observação opcional. A lista de licenças mostra os dois na licença revogada; as revogadas antes desta versão aparecem como "Data e motivo não registrados". Veja **[Revogar uma licença](/processos/revogar-licenca/)**.
@@ -63,9 +70,9 @@ O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o hist�
 
 ## v0.19.0 e v0.19.1 — 30/08/2026
 
-- **Um plugin por assinatura passa a ter um produto só na loja.** Antes, cada forma de vender o mesmo plugin (mensal, anual, com 1 site, com 5 sites…) era um produto separado — agora você cadastra as **combinações** de duração e número de sites numa tela só, a nova **[Oferta na loja](/modulos/oferta-na-loja/)**, cada uma com o próprio preço. Quem compra escolhe as duas coisas na página do produto, e o preço acompanha a escolha. Veja **[Montar a oferta de um plugin na loja](/processos/cadastrar-oferta-na-loja/)**.
+- **Um plugin por assinatura passa a ter um produto só na loja.** Antes, cada forma de vender o mesmo plugin (mensal, anual, com 1 site, com 5 sites…) era um produto separado — agora você cadastra as **combinações** de duração e número de sites numa tela só, a nova **[Venda do plugin](/modulos/venda-do-plugin/)**, cada uma com o próprio preço. Quem compra escolhe as duas coisas na página do produto, e o preço acompanha a escolha. Veja **[Vender um plugin por assinatura](/processos/vender-por-assinatura/)**.
 - **O cliente troca de combinação a partir da própria assinatura** — mais sites, outra periodicidade, ou menos sites. A licença acompanha (mesma chave, mesmos sites ativos); descer de plano não tem multa. Descer para menos sites do que ele tem ativado hoje é recusado, com uma mensagem dizendo quantos sites desativar antes — ele mesmo resolve pela aba "Minhas licenças". Veja **[Como funciona a licença](/como-funciona/)**.
-- **Licença perpétua e plano negociado continuam pelo caminho de sempre**, em **[Produtos vendáveis](/modulos/produtos-vendaveis/)** — sem mudança de comportamento.
+- **Licença perpétua e plano negociado continuam pelo caminho de sempre**, em **[Venda do plugin](/modulos/venda-do-plugin/)** (veja **[Vender uma licença perpétua ou um plano negociado](/processos/vender-perpetua-negociada/)**) — sem mudança de comportamento.
 - **Correção:** uma assinatura que passava a valer **sem** cobrança associada — teste gratuito, ativação manual pelo operador, meio de pagamento com fluxo próprio — não emitia licença, em silêncio. A compra normal pela loja nunca dependeu disso; agora qualquer caminho que ativa a assinatura emite a licença corretamente.
 
 ## v0.16.1 — 30/08/2026
@@ -112,7 +119,7 @@ O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o hist�
 
 ## v0.10.0 — 29/08/2026
 
-- **Produtos vendáveis** — nova tela que liga um produto do V3RLicense a um tipo de licença e o publica na loja WooCommerce. Nasce **em rascunho e sem preço**: o operador define o preço e publica na loja depois. Publicar de novo ajusta o mesmo produto; trocar o tipo de licença reclassifica entre avulso e assinatura; excluir o cadastro **não** apaga o produto já publicado na loja. Veja **[Cadastrar um produto vendável](/processos/cadastrar-produto-vendavel/)**.
+- **Produtos vendáveis** — nova tela que liga um produto do V3RLicense a um tipo de licença e o publica na loja WooCommerce. Nasce **em rascunho e sem preço**: o operador define o preço e publica na loja depois. Publicar de novo ajusta o mesmo produto; trocar o tipo de licença reclassifica entre avulso e assinatura; excluir o cadastro **não** apaga o produto já publicado na loja. Essa tela foi depois incorporada à **[Venda do plugin](/modulos/venda-do-plugin/)**, em **[Produtos](/modulos/produtos/)**.
 - **Correção:** reclassificar um produto vendável (de avulso para assinatura, ou o inverso) não trocava de fato o tipo do produto na loja, por causa de um cache interno do WooCommerce — e ainda relatava sucesso.
 
 ## v0.9.0 — 29/08/2026

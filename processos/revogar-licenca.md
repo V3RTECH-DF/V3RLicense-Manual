@@ -75,6 +75,7 @@ Um pedido foi estornado pelo cliente 10 dias depois da compra. A licença corres
 - **Não há desfazer pela tela.** Se revogou por engano, a saída é **[emitir uma licença nova](/processos/emitir-licenca/)** para o mesmo cliente — o que obriga o cliente a trocar a chave no plugin dele. Confirme antes de revogar.
 - **Escolha o motivo certo, não o que já vem marcado.** Deixar tudo em "Revogação manual" por preguiça apaga a diferença entre fraude, estorno e cancelamento — justamente o que o motivo existe para guardar. A consequência aparece quando alguém pergunta quantas revogações do trimestre foram por estorno, e ninguém sabe responder.
 - **Não cole dado pessoal na Observação.** O campo é livre e fica gravado; escreva "estorno do pedido 1842", não o nome nem o telefone do cliente.
+- **Para tirar licenças revogadas da frente sem perder o histórico, arquive.** Revogar não apaga nem esconde nada; depois de um tempo, **[arquivar](/processos/arquivar-licenca/)** as revogadas deixa a lista só com o que importa.
 - **Em lote, leia o resultado, não só o "concluído".** "Recusados por regra" e "falhos" não aparecem sozinhos — se você esperava revogar 10 e o resultado mostra 8 concluídas e 2 recusadas, algo precisa de atenção antes de considerar a tarefa terminada.
 
 ## Quando dá errado

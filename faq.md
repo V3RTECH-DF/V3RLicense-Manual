@@ -138,3 +138,23 @@ Sim, desde a v0.32.0. Antes, só compra e renovação emitiam token — hoje voc
 ## Por que um token de acesso a serviço nasce "sem trava"?
 
 É o estado inicial de toda emissão pela venda — no momento da compra ainda não existe certificado nenhum para vincular. O cliente configura a trava por certificado depois, pela própria conta, informando a impressão digital de um ou mais certificados aceitos. Veja **[A trava do token](/como-funciona/#a-trava-do-token--o-que-muda-a-segurança-de-quem-compra)**.
+
+## Procurei uma licença revogada e ela sumiu da lista. Alguém apagou?
+
+Provavelmente foi arquivada: arquivar tira a licença da lista padrão sem apagar nada. Marque **Mostrar arquivadas** nos filtros e clique em **Filtrar** — ela aparece com a marca "Arquivada", e dá para desarquivar. Veja **[Arquivar licenças antigas](/processos/arquivar-licenca/)**.
+
+## Posso arquivar uma licença suspensa por falta de pagamento, ou uma que ainda está valendo?
+
+Não. Só licenças **revogadas ou expiradas** podem ser arquivadas; ativa, em carência e suspensa continuam na lista porque ainda valem ou ainda podem ser regularizadas. Tentar arquivar uma delas mostra "Só licenças revogadas ou expiradas podem ser arquivadas." Veja **[Arquivar licenças antigas](/processos/arquivar-licenca/)**.
+
+## Arquivei uma licença. O plugin do cliente para de atualizar?
+
+Não. Arquivar só muda onde a licença aparece no painel; ela continua validando e atualizando como antes. Para cortar atualização, o caminho é **[revogar](/processos/revogar-licenca/)**.
+
+## Um cliente pediu para eliminar os dados dele, mas tem licença. Excluo o cadastro?
+
+Não: use **Anonimizar** na tela de Clientes. Ela troca o nome e o e-mail por marcadores e preserva o histórico da licença pelo prazo de retenção. É irreversível, não apaga o usuário do WordPress nem os pedidos da loja, e pede que você leia as anotações das licenças e escolha limpar ou manter. Veja **[Anonimizar um cliente](/processos/anonimizar-cliente/)**.
+
+## Um plugin gratuito precisa de licença para receber atualização?
+
+Não, se o produto estiver marcado como **gratuito** em **Produtos**. Qualquer site recebe a atualização sem chave, e os sites que perguntam ficam registrados em **Sites do produto gratuito**. O plugin só aproveita isso depois de atualizado para uma versão nova do componente de licenciamento; até lá, ele continua pedindo uma chave. Veja **[Marcar um produto como gratuito](/processos/produto-gratuito/)**.

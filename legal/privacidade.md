@@ -58,13 +58,15 @@ Normalmente, não diretamente: um domínio de site pertence a uma organização,
 
 **Proposta de base legal para esse caso:** **legítimo interesse** (Art. 7º, IX, LGPD), pela necessidade operacional de controlar a cota contratada e de oferecer suporte técnico — sujeito ao teste de proporcionalidade e balanceamento que a LGPD exige para essa base, o que cabe à revisão jurídica confirmar.
 
-## O campo de usuário WordPress
+## O vínculo com a conta de usuário do WordPress
 
-O cadastro de cliente reserva um campo para vincular o registro a um usuário do WordPress (`wp_user_id`), mas **nenhum fluxo do sistema usa esse campo hoje** — ele existe, vazio, para uma integração futura. Não há, portanto, tratamento adicional de dado de conta de usuário a descrever nesta versão.
+O cadastro de cliente pode ser vinculado a um usuário do WordPress (a conta que o titular usa na loja). Esse vínculo **é usado**: é por ele que o cliente, logado, vê suas licenças na área "Minhas licenças", desativa um site e gerencia seus tokens de acesso a serviços, e que a compra pelo WooCommerce é associada ao cadastro. Em caso de anonimização (ver "Direitos do titular"), o vínculo é desfeito.
 
-## Envio a terceiros
+## Envio de e-mails e a terceiros
 
-Hoje o V3RLicense **não envia** os dados de cliente, licença ou ativação a nenhum serviço externo — não há integração de e-mail transacional, webhook ou API de terceiro que os leve para fora do próprio banco de dados do servidor.
+O sistema envia **e-mails transacionais** ao contato do cliente — o envio da chave de licença e os avisos de vencimento e renovação. O envio sai pelo **transporte de e-mail do WordPress do próprio site** da V3RTECH, e não por um serviço de e-mail contratado à parte pelo V3RLicense. O sistema guarda um **registro de cada envio**, com o destinatário, o resultado e, em caso de falha, o texto do erro; esse registro é dado pessoal e é limpo na anonimização do cliente.
+
+Fora isso, o V3RLicense **não envia** os dados de cliente, licença ou ativação a nenhum serviço externo — não há webhook nem API de terceiro que os leve para fora do banco de dados do servidor.
 
 ## Retenção
 
@@ -83,27 +85,52 @@ O cadastro de cliente e o histórico de licença e de ativações são mantidos 
 O titular (a pessoa de contato cadastrada, ou o representante da organização) tem os direitos previstos na LGPD — confirmação, acesso, correção, eliminação, portabilidade, entre outros.
 
 {: .important }
-> **Limitação reconhecida no sistema, com correção planejada:** a tela de
-> Clientes **recusa a exclusão** de um cliente que ainda tem alguma licença
-> vinculada — o sistema não apaga em cascata, e hoje **não existe
-> anonimização** como alternativa. A recusa existe para preservar o
-> **histórico da licença**, que precisa sobreviver pelo prazo de retenção
-> de cinco anos acima — mas o que precisa sobreviver é o histórico, não a
-> **identificação da pessoa** por trás dele, e é isso que a anonimização
-> vai resolver. Enquanto o recurso não existe, um pedido de eliminação de
-> um cliente com histórico de licença é **atendido por via manual** pela
-> equipe operadora, fora do fluxo normal da tela. A implementação está
-> registrada em **[V3RLicense-Code#19 — Anonimizar cliente com licença
-> vinculada — hoje a exclusão é apenas recusada](https://github.com/V3RTECH-DF/V3RLicense-Code/issues/19)**.
+> **Exclusão de cliente (regra em revisão).** Hoje, a ação **Excluir**
+> da tela de Clientes, num cliente que tem licença, **revoga as licenças
+> pendentes e apaga o cadastro**, deixando as licenças sem o registro do
+> titular. Essa regra está **em revisão** (V3RLicense-Code#72): a
+> proposta é que cliente com licença deixe de ser excluído e passe a ser
+> **anonimizado**, que preserva o histórico exigido pela retenção. Esta
+> minuta será ajustada quando a decisão for tomada.
+
+{: .important }
+> **Eliminação de cliente com histórico de licença: anonimização (desde a
+> versão 0.38.0, de 29/10/2026).** O cadastro de um cliente que tem
+> licença vinculada não pode simplesmente sumir: o **histórico da
+> licença** precisa sobreviver pelo prazo de retenção de cinco anos acima.
+> O que precisa sobreviver é o histórico, não a **identificação da
+> pessoa** por trás dele, e é isso que a tela de Clientes passa a oferecer
+> com a ação **Anonimizar**.
 >
-> **O campo de anotação livre da licença é um caso à parte.** Ele é texto
-> digitado pelo operador e pode conter dado pessoal colado por descuido
-> (ver alerta acima) — uma rotina de anonimização automática não consegue
-> varrer texto livre com segurança, então esse campo **depende de
-> conferência humana** mesmo depois que a anonimização existir. Se uma
-> anotação já tiver recebido dado pessoal indevido, a correção hoje também
-> é manual: localizar a licença e editar o texto da anotação para retirar
-> o dado, na mesma via usada para atender pedido de eliminação.
+> **O que a anonimização faz.** Troca o nome e o e-mail do cliente por
+> marcadores ("Cliente anonimizado" seguido do número do cadastro, com
+> e-mail inexistente), mantendo a linha do cadastro e as licenças
+> vinculadas. Também apaga o destinatário e o texto de erro do registro de
+> envio de e-mails, o nome que ficou gravado dentro dos tokens de acesso a
+> serviços, e o vínculo do cadastro com a conta de usuário do WordPress.
+> Do valor anterior o sistema guarda **apenas que a anonimização foi feita
+> e quando** — nunca o nome ou o e-mail antigos. Depois dela, o cliente
+> anonimizado não recebe licença nova nem reenvio da chave.
+>
+> **O que a anonimização não faz.** Não apaga o **usuário do WordPress**
+> nem os **pedidos do WooCommerce** do titular, que pertencem a outros
+> sistemas e têm seus próprios dados e prazos; a eliminação desses é
+> tratada à parte, por quem os administra. Também não é desfazível: não há
+> como recuperar o nome e o e-mail depois de anonimizar. E não há
+> anonimização em lote — cada cliente é feito individualmente.
+>
+> **O campo de anotação livre da licença é escolha de quem opera.** Ele é
+> texto digitado pelo operador e pode conter dado pessoal colado por
+> descuido (ver alerta acima); uma rotina automática não consegue varrer
+> texto livre com segurança. Por isso, ao anonimizar, a tela **mostra as
+> anotações das licenças do cliente** e o operador escolhe **limpar ou
+> manter** cada uma. Anotação mantida pode continuar identificando a
+> pessoa, e conferir isso é responsabilidade humana. A anotação já gravada
+> antes da anonimização continua sendo corrigida editando o texto da
+> licença.
+>
+> A implementação está registrada em **[V3RLicense-Code#19 — Anonimizar
+> cliente com licença vinculada](https://github.com/V3RTECH-DF/V3RLicense-Code/issues/19)**.
 
 Correção, acesso e portabilidade dos dados de contato são atendidos manualmente pela equipe operadora, editando o cadastro em **[Cadastrar cliente](/processos/cadastrar-cliente/)**.
 
