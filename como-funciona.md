@@ -42,7 +42,7 @@ Em ambos os casos o cliente é sempre identificado pela **conta com que fez o pe
 | **Em carência** | venceu, mas dentro dos 15 dias seguintes ao vencimento — só para licença que **gera cobrança** | atualização normal, como se ainda estivesse ativa |
 | **Suspensa por falta de pagamento** | venceu e passou dos 15 dias de carência, sem renovar — só para licença que gera cobrança | plugin funciona; atualização e download bloqueados até renovar |
 | **Expirada** | venceu e a origem **não gera cobrança** (licença concedida) — vai direto para expirada, sem carência | plugin funciona; atualização e download bloqueados até renovar |
-| **Revogada** | cancelada manualmente (reembolso total, fraude, decisão da casa) | plugin funciona; atualização e download bloqueados até nova decisão |
+| **Revogada** | cancelada pelo operador (fraude, decisão da casa) ou automaticamente, por estorno total ou pedido pago cancelado | plugin funciona; atualização e download bloqueados até nova decisão |
 
 {: .note }
 > **Revogação é decisão que só se desfaz emitindo outra coisa.** A tela de Licenças não tem um botão de "reverter revogação" — uma licença revogada permanece revogada. Se o motivo da revogação deixar de existir, a saída é **[emitir uma licença nova](/processos/emitir-licenca/)** ou, quando fizer sentido, ajustar o cadastro manualmente com apoio técnico.

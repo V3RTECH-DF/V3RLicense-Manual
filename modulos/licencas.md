@@ -6,7 +6,7 @@ nav_order: 1
 
 # Licenças e acessos
 
-Veja o passo a passo em **[Emitir uma licença ou acesso](/processos/emitir-licenca/)**, **[Renovar](/processos/renovar-licenca/)** (individual e em lote), **[Revogar](/processos/revogar-licenca/)** e **[Emitir uma isenção RIT](/processos/emitir-isencao/)**. Sobre o token de um acesso, veja **[Gerenciar tokens de serviço](/processos/gerenciar-tokens-de-servico/)**. Sobre a cobertura por lista, veja **[Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/)** e **[Listas de acesso](/modulos/listas-de-acesso/)**. Sobre os status de carência e suspensão, veja **[Como funciona a licença](/como-funciona/)**.
+Veja o passo a passo em **[Emitir uma licença ou acesso](/processos/emitir-licenca/)**, **[Renovar](/processos/renovar-licenca/)** (individual e em lote), **[Revogar](/processos/revogar-licenca/)**, **[Reenviar a chave por e-mail](/processos/reenviar-chave/)** e **[Emitir uma isenção RIT](/processos/emitir-isencao/)**. Sobre o token de um acesso, veja **[Gerenciar tokens de serviço](/processos/gerenciar-tokens-de-servico/)**. Sobre a cobertura por lista, veja **[Gerenciar listas de acesso](/processos/gerenciar-lista-acesso/)** e **[Listas de acesso](/modulos/listas-de-acesso/)**. Sobre os status de carência e suspensão, veja **[Como funciona a licença](/como-funciona/)**.
 
 ![Lista "Licenças e acessos" mostrando as colunas Categoria (Licença ou Acesso) e Token de acesso (trava e validade, ou "Não emitido"), lado a lado com Cobertura, Cliente, Status e Ações](/assets/screenshots/licencas-lista-categoria-token.png)
 
@@ -27,16 +27,22 @@ Uma licença cobre **um ou mais produtos** — desde a licença de um cliente co
 
 | Coluna | O que mostra |
 |---|---|
-| Chave | `license_key` |
+| Chave | a chave da licença e, embaixo dela (só em licença de plugin), a situação do envio por e-mail: enviada a quem e quando, falha com o erro, ou "Envio da chave não registrado" — veja **[Reenviar a chave por e-mail](/processos/reenviar-chave/)** |
 | Cobertura | os produtos cobertos; se a licença segue uma lista, o nome da lista aparece abaixo dos produtos |
 | Cliente | nome e e-mail |
 | Categoria | **Licença** (plugin) ou **Acesso** (serviço da casa) — não confundir com a coluna Tipo, abaixo |
-| Status | Ativa / Em carência / Suspensa por falta de pagamento / Expirada / Revogada — veja **[Como funciona a licença](/como-funciona/)** para o que diferencia carência de suspensão |
+| Status | Ativa / Em carência / Suspensa por falta de pagamento / Expirada / Revogada — veja **[Como funciona a licença](/como-funciona/)** para o que diferencia carência de suspensão. Na revogada, uma linha embaixo traz o **motivo e a data** (e a observação, se houver), ou **"Data e motivo não registrados"** quando a revogação é anterior à v0.37.0 — veja **[Revogar uma licença](/processos/revogar-licenca/)** |
 | Ativações | usadas / máximo (ou "ilimitado") **por produto** — uma linha por produto coberto, quando são vários |
 | Expira em | data, ou "sem validade" |
 | Origem | rótulo cadastrado |
 | Tipo de licença | a periodicidade (Mensal, Anual…) — rótulo cadastrado |
 | Token de acesso | só preenchida numa linha de **Acesso**: a trava (Sem trava/Certificado/Organização) e a validade, ou "Não emitido" quando o acesso ainda não tem token. **Nunca o valor do token em claro** — quem vê é só o cliente, na própria conta |
+
+## Envios da chave com falha
+
+O link **Envios da chave com falha**, no alto da tela, abre uma tela só com os e-mails de chave que falharam e ainda não foram refeitos — com seleção múltipla e **Reenviar selecionados (N)**. O resultado separa **enviados, recusados e falhos**. Tudo, com exemplo e armadilhas, em **[Reenviar a chave por e-mail](/processos/reenviar-chave/)**.
+
+![Tela Envios da chave com falha, com três envios listados e um marcado](/assets/screenshots/envios-com-falha.png)
 
 ## Filtros
 
@@ -83,4 +89,4 @@ O que a licença/acesso cobre (Segue uma lista de acesso / Produtos específicos
 
 ## Ações
 
-Ver ativações · Renovar licença (também renova o token, quando é um acesso — veja **[Renovar uma licença](/processos/renovar-licenca/)**) · Revogar licença/acesso (linha a linha e em lote) · Emitir/Revogar token de acesso, só na linha de um acesso. Selecionando mais de uma licença aparecem os botões **Renovar selecionadas** e **Revogar selecionadas**; a confirmação do lote avisa quando a seleção mistura tipos de licença diferentes, porque cada uma renova com o próprio vencimento (veja **[Renovar uma licença](/processos/renovar-licenca/)**).
+Ver ativações · Reenviar chave (envelope; só licença de plugin não revogada) · Renovar licença (também renova o token, quando é um acesso — veja **[Renovar uma licença](/processos/renovar-licenca/)**) · Revogar licença/acesso (linha a linha e em lote) · Emitir/Revogar token de acesso, só na linha de um acesso. Selecionando mais de uma licença aparecem os botões **Renovar selecionadas** e **Revogar selecionadas**; a confirmação do lote avisa quando a seleção mistura tipos de licença diferentes, porque cada uma renova com o próprio vencimento (veja **[Renovar uma licença](/processos/renovar-licenca/)**).

@@ -25,6 +25,7 @@ Uma página por tarefa do dia a dia de quem opera o V3RLicense. Cada página exp
 - **[Emitir uma isenção RIT](/processos/emitir-isencao/)**
 - **[Renovar uma licença](/processos/renovar-licenca/)**
 - **[Revogar uma licença](/processos/revogar-licenca/)**
+- **[Reenviar a chave por e-mail](/processos/reenviar-chave/)**
 - **[Liberar uma ativação](/processos/liberar-ativacao/)**
 
 ## Publicação de versão

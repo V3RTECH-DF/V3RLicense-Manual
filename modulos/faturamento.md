@@ -22,7 +22,7 @@ Até aqui, responder "quanto faturamos este mês" ou "quais clientes não implan
 - **Licenças a vencer** em 30, 60 e 90 dias — janelas **cumulativas**: quem vence em 30 dias também está contado em 60 e em 90.
 - **Ativações por licença** — cota vendida contra sites realmente ativados.
 - **Taxa de renovação**, mostrando os dois números que a compõem (quantas venceram no período e quantas dessas renovaram).
-- **Licenças revogadas** — total corrente, não do mês.
+- **Licenças revogadas** — o total corrente, e embaixo quantas foram revogadas **no mês** escolhido.
 
 ## As regras que evitam ler o número errado
 
@@ -36,7 +36,14 @@ Até aqui, responder "quanto faturamos este mês" ou "quais clientes não implan
 > **"Sem origem informada" não entra em venda nem em isenção.** São licenças que não declaram se foram vendidas ou concedidas. Elas ficam de fora dos dois lados do gráfico "Licenças emitidas por produto" — não some para "venda" achando que é isenção, nem o contrário.
 
 {: .note }
-> **Revogação não tem data nem motivo guardados.** Por isso "Licenças revogadas" mostra o **total corrente** (todas as revogadas até hoje), e não quantas foram revogadas *neste* mês. A tela avisa isso; não tente ler como um número mensal.
+> **Revogada conta no mês em que foi revogada.** O cartão **Licenças revogadas** mostra o total de todas as revogadas até hoje e, na linha de baixo, quantas foram **neste mês** ("2 revogadas em Outubro de 2026"). Vale a mesma regra dos estornos: mês fechado não muda.
+
+{: .warning }
+> **Revogadas sem data não entram em mês nenhum.** As licenças revogadas antes da v0.37.0 não guardaram a data, então a tela as ressalva ("1 sem data registrada (anteriores ao registro) — não entram em nenhum mês"). Elas estão no total, mas **a contagem mensal de meses antigos é menor do que a realidade** na proporção dessas licenças. Não compare a revogação de um mês com a do mês anterior ao registro sem lembrar disso.
+
+![Cartão Licenças revogadas com o total 3 e a legenda: Total corrente, 2 revogadas em Outubro de 2026, 1 sem data registrada, não entram em nenhum mês](/assets/screenshots/faturamento-revogadas.png)
+
+O motivo de cada revogação não aparece aqui — ele está na lista de **[Licenças e acessos](/modulos/licencas/)**.
 
 ## Ativações por licença: o indicador que antecipa perda
 

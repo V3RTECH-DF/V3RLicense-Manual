@@ -7,6 +7,13 @@ nav_order: 7
 
 O que mudou no V3RLicense, versão a versão, em linguagem simples. Para o histórico técnico completo, veja o changelog do projeto.
 
+## v0.37.0 — 29/10/2026
+
+- **Toda revogação passa a guardar o motivo e a data.** Ao revogar, o painel pede o motivo — estorno total, pedido cancelado, revogação manual ou outro — e uma observação opcional. A lista de licenças mostra os dois na licença revogada; as revogadas antes desta versão aparecem como "Data e motivo não registrados". Veja **[Revogar uma licença](/processos/revogar-licenca/)**.
+- **Pedido pago que é cancelado revoga a licença sozinho.** Cancelar a **assinatura** continua não revogando: o cliente mantém o acesso até o fim do período pago.
+- **Cada licença mostra se a chave foi enviada por e-mail**, para qual endereço e quando — ou a falha, com o erro. Há um botão **Reenviar chave**, e uma tela nova, **Envios da chave com falha**, com seleção múltipla e reenvio em lote. O reenvio vai para o e-mail atual do cliente, e licença revogada nunca recebe a chave de novo. Veja **[Reenviar a chave por e-mail](/processos/reenviar-chave/)**.
+- **O Faturamento conta as revogadas por mês**, com a ressalva das que não têm data. Veja **[Faturamento](/modulos/faturamento/)**.
+
 ## v0.36.0 — 21/10/2026
 
 - **A chave de assinatura deixa de depender das chaves de segurança do WordPress.** Plugins de segurança trocam essas chaves de tempos em tempos, e isso já deixou a chave de assinatura ilegível uma vez. Agora o plugin protege a chave com uma **chave-mestra própria**, guardada num arquivo dentro da pasta de uploads do site — a troca periódica feita pelos plugins de segurança não afeta mais nada.

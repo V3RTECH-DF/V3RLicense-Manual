@@ -32,6 +32,18 @@ Não. Desde a v0.6.0, o token só publica o produto escolhido na criação (ou "
 
 Confira o PHP do site dele. Desde 27/08/2026 todos os plugins da casa exigem PHP 8.2 — um site abaixo disso não recebe a atualização, e o WordPress não avisa por quê. Veja o roteiro completo em **[Diagnóstico: cliente diz que não atualiza](/processos/diagnostico-sem-atualizacao/)**.
 
+## Na lista, a licença revogada diz "Data e motivo não registrados". O que houve?
+
+Nada de errado: ela foi revogada antes da v0.37.0, quando o sistema ainda não guardava a data nem o motivo. Essas licenças também não entram na contagem mensal de revogadas do Faturamento. Veja **[Revogar uma licença](/processos/revogar-licenca/)**.
+
+## O cliente diz que não recebeu a chave por e-mail. O que faço?
+
+Olhe a linha embaixo da chave, na lista de licenças: ela diz se o envio saiu e para qual endereço, ou o erro do servidor. Corrija o e-mail do cliente se estiver errado e use **Reenviar chave** — o e-mail novo vai para o endereço atual do cadastro. Para ver todas as falhas de uma vez, abra **Envios da chave com falha**. Veja **[Reenviar a chave por e-mail](/processos/reenviar-chave/)**.
+
+## Por que não consigo reenviar a chave de uma licença revogada?
+
+É de propósito: licença revogada nunca recebe a chave de novo. Se o cliente precisa de uma, emita uma licença nova. Veja **[Reenviar a chave por e-mail](/processos/reenviar-chave/)**.
+
 ## Revoguei uma licença por engano. Tem como desfazer?
 
 Não pela tela. A saída é emitir uma licença nova para o mesmo cliente — o que exige que ele troque a chave no plugin. Veja **[Revogar uma licença](/processos/revogar-licenca/)**.
@@ -74,7 +86,7 @@ Não. Excluir aqui remove só o cadastro que liga o V3RLicense à loja — o pro
 
 ## Um pedido foi estornado. A licença é revogada automaticamente?
 
-Só se o estorno for **total**. Estorno parcial (um desconto, um ajuste no pedido) não mexe na licença — o cliente mantém a cobertura normalmente. Veja **[Como funciona a licença](/como-funciona/)**.
+Só se o estorno for **total**. Estorno parcial (um desconto, um ajuste no pedido) não mexe na licença — o cliente mantém a cobertura normalmente. Pedido **pago que é cancelado** também revoga sozinho. Nos dois casos a licença fica com o motivo e a data gravados (**Estorno total do pedido** ou **Pedido cancelado**). Veja **[Revogar uma licença](/processos/revogar-licenca/)**. Veja **[Como funciona a licença](/como-funciona/)**.
 
 ## O cliente cancelou a assinatura. Ele perde o acesso na hora?
 
